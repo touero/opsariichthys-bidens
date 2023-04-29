@@ -1,5 +1,5 @@
 from constants import *
-from api import API
+from src.api import start_task
 
 
 class Master:
@@ -10,4 +10,4 @@ class Master:
 
     def start(self):
         if self.task_type == TaskType.API.value:
-            API().start_task()
+            start_task()
