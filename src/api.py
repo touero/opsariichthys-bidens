@@ -37,4 +37,4 @@ def province():
 
 
 def start_task():
-    uvicorn.run(app="api:app", port=2518, reload=True)
+    uvicorn.run(app="api:app", host='127.0.0.1', port=2518, reload=True)

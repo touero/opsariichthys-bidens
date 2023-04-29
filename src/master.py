@@ -1,5 +1,5 @@
 from constants import *
-from src.api import start_task
+from api import start_task
 
 
 class Master:
