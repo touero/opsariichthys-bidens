@@ -10,4 +10,4 @@ class Master:
 
     def start(self):
         if self.task_type == TaskType.API.value:
-            start_task()
+            start_task(self.task)

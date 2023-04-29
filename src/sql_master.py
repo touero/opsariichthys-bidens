@@ -10,7 +10,7 @@ class SqlMaster:
 
         self.cursor = self.conn.cursor()
 
-    def submit_sql_with_return(self, sql):
+    def submit_sql_with_return(self, sql: str) -> tuple:
         self.cursor.execute(sql)
         return self.cursor.fetchall()
 
