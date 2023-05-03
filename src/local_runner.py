@@ -13,7 +13,7 @@ default_config = {
     "host": "127.0.0.1",
     "port": 2518,
     "mysql_info": {
-        "host": "localhost",
+        "host": "",
         "port": 3306
     }
 }
