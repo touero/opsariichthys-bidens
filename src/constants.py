@@ -12,7 +12,7 @@ class API(Enum):
 @unique
 class Server(Enum):
     WINDOWS = "nt"
-    LINUX = "proxy"
+    LINUX = "posix"
 
 
 @unique
