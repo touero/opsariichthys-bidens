@@ -85,6 +85,6 @@ def start_task(default_config):
         print('http://' + host + ':' + str(port) + item.value)
     if os.name == Server.WINDOWS.value:
         host = Host.LOCAL.value
-    elif in_server == Server.LINUX.value:
+    elif os.name == Server.LINUX.value:
         host = Host.Server.value
     uvicorn.run(app="api:app", host=host, port=port, reload=True)
