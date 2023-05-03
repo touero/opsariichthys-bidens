@@ -10,9 +10,9 @@ class API(Enum):
 
 
 @unique
-class Server(IntEnum):
-    NOT = 0
-    IN = 1
+class Server(Enum):
+    WINDOWS = "nt"
+    LINUX = "linux"
 
 
 @unique

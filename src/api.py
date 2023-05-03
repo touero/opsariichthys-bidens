@@ -3,6 +3,7 @@ import uvicorn
 from sql_master import SqlMaster
 from abc import ABC
 from constants import *
+import os
 
 
 class GetData(SqlMaster, ABC):
@@ -82,8 +83,8 @@ def start_task(default_config):
     in_server = default_config['in_server']
     for item in API:
         print('http://' + host + ':' + str(port) + item.value)
-    if in_server == Server.IN.value:
-        host = Host.Server.value
-    elif in_server == Server.NOT.value:
+    if os.name == Server.WINDOWS.value:
         host = Host.LOCAL.value
+    elif in_server == Server.LINUX.value:
+        host = Host.Server.value
     uvicorn.run(app="api:app", host=host, port=port, reload=True)
