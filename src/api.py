@@ -79,6 +79,11 @@ def type_count():
 def start_task(default_config):
     host = default_config['host']
     port = default_config['port']
+    in_server = default_config['in_server']
     for item in API:
         print('http://' + host + ':' + str(port) + item.value)
+    if in_server == Server.IN.value:
+        host = Host.Server.value
+    elif in_server == Server.NOT.value:
+        host = Host.LOCAL.value
     uvicorn.run(app="api:app", host=host, port=port, reload=True)

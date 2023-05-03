@@ -6,7 +6,7 @@ class Master:
     def __init__(self, default_config):
         self.task = default_config
         self.task_type = self.task['task_type']
-        self.in_docker = self.task['in_docker']
+        self.in_server = self.task['in_server']
 
     def start(self):
         if self.task_type == TaskType.API.value:

@@ -10,7 +10,7 @@ class API(Enum):
 
 
 @unique
-class Docker(IntEnum):
+class Server(IntEnum):
     NOT = 0
     IN = 1
 
@@ -57,3 +57,9 @@ class Name(Enum):
 @unique
 class Path(Enum):
     READFILE = "part-r-00000"
+
+
+@unique
+class Host(Enum):
+    LOCAL = "127.0.0.1"
+    Server = "0.0.0.0"
