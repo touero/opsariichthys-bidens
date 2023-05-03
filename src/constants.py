@@ -12,14 +12,14 @@ class API(Enum):
 @unique
 class Server(Enum):
     WINDOWS = "nt"
-    LINUX = "linux"
+    LINUX = "proxy"
 
 
 @unique
 class SqlInfo(Enum):
     HOST = 'localhost'
-    USER = 'username'
-    PASSWORD = 'password'
+    USER = 'root'
+    PASSWORD = 'fanqiuyuan'
     PORT = 3306
     DATABASE = 'AllSchoolAPI'
 
