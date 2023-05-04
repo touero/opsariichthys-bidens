@@ -1,0 +1,49 @@
+2023-05-04 14:56:20,714 - rpa - DEBUG - 找到本地文件
+2023-05-04 14:56:27,964 - rpa - DEBUG - 找到本地文件
+2023-05-04 15:12:18,101 - rpa - DEBUG - ('找到本地文件', '1')
+2023-05-04 15:12:57,378 - rpa - DEBUG - 找到本地文件
+2023-05-04 15:14:10,767 - rpa - DEBUG - json写入到result_json/province_count.json
+2023-05-04 15:14:56,334-rpa-DEBUG-找到本地文件
+2023-05-04 15:15:34,792 rpa-DEBUG: 找到本地文件
+2023-05-04 15:15:41,115 rpa-DEBUG: 找到本地文件
+2023-05-04 15:16:10,086 rpa DEBUG: 找到本地文件
+2023-05-04 15:29:19,473 rpa DEBUG: /province_count
+2023-05-04 15:50:45,949 rpa DEBUG: 找到本地文件
+2023-05-04 15:54:01,490 rpa DEBUG: 找到本地文件
+2023-05-04 15:57:27,460 rpa DEBUG: 找到本地文件
+2023-05-04 15:57:27,462 rpa DEBUG: GET /province_count 200
+2023-05-04 15:57:53,922 rpa DEBUG: 找到本地文件
+2023-05-04 15:57:53,925 rpa DEBUG: GET /province_count 200
+2023-05-04 15:58:51,753 rpa DEBUG: 找到本地文件
+2023-05-04 15:58:51,756 rpa DEBUG: GET http://127.0.0.1:2518/province_count 200
+2023-05-04 15:59:00,832 rpa DEBUG: 找到本地文件
+2023-05-04 15:59:25,660 rpa DEBUG: GET http://127.0.0.1:2518/province_count 200
+2023-05-04 16:00:27,867 rpa DEBUG: 找到本地文件
+2023-05-04 16:00:30,214 rpa DEBUG: GET http://127.0.0.1:2518/province_count 200
+2023-05-04 16:01:13,750 rpa DEBUG: 找到本地文件
+2023-05-04 16:01:15,751 rpa DEBUG: GET http://127.0.0.1:2518/province_count 200
+2023-05-04 16:08:00,389 rpa DEBUG: GET http://127.0.0.1:2518/province_count
+2023-05-04 16:08:29,051 rpa DEBUG: GET Address(host='127.0.0.1', port=12947) http://127.0.0.1:2518/province_count
+2023-05-04 16:09:07,815 rpa DEBUG: GET Address(host='127.0.0.1', port=12955) http://127.0.0.1:2518/province_count
+2023-05-04 16:09:33,435 rpa DEBUG: 找到本地文件
+2023-05-04 16:14:15,005 rpa DEBUG: 找到本地文件
+2023-05-04 16:14:15,009 rpa DEBUG: GET Address(host='127.0.0.1', port=13157) http://127.0.0.1:2518/province_count
+2023-05-04 16:16:07,488 rpa DEBUG: 找到本地文件
+2023-05-04 16:16:07,493 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=13174) http://127.0.0.1:2518/province_count
+2023-05-04 16:16:29,101 rpa DEBUG: json写入到result_json/dual_class_count.json
+2023-05-04 16:16:29,104 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=13172) http://127.0.0.1:2518/dual_class_count
+2023-05-04 16:16:38,185 rpa DEBUG: 找到本地文件
+2023-05-04 16:16:38,197 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=13171) http://127.0.0.1:2518/dual_class_count
+2023-05-04 16:17:09,526 rpa DEBUG: json写入到result_json/spacial_name_count.json
+2023-05-04 16:17:09,649 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=13180) http://127.0.0.1:2518/spacial_name_count
+2023-05-04 16:17:21,514 rpa DEBUG: json写入到result_json/type_count.json
+2023-05-04 16:17:21,517 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=13181) http://127.0.0.1:2518/type_count
+2023-05-04 16:17:27,086 rpa DEBUG: 找到本地文件
+2023-05-04 16:17:27,093 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=13183) http://127.0.0.1:2518/type_count
+2023-05-04 16:18:12,765 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-04 16:18:12,765 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-04 16:18:12,766 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-04 16:18:12,766 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-04 16:18:12,766 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-04 16:18:19,570 rpa DEBUG: 找到本地文件
+2023-05-04 16:18:19,572 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=13191) http://127.0.0.1:2518/type_count
