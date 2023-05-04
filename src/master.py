@@ -1,3 +1,5 @@
+import traceback
+
 from constants import *
 from api import start_task
 
@@ -9,5 +11,8 @@ class Master:
         self.in_server = self.task['in_server']
 
     def start(self):
-        if self.task_type == TaskType.API.value:
-            start_task(self.task)
+        try:
+            if self.task_type == TaskType.API.value:
+                start_task(self.task)
+        except Exception:
+            traceback.print_exc()

@@ -1,5 +1,6 @@
 import pymysql
 from constants import *
+from util.tools import *
 
 
 class SqlMaster:
@@ -11,10 +12,12 @@ class SqlMaster:
         self.cursor = self.conn.cursor()
 
     def submit_sql_with_return(self, sql: str) -> tuple:
+        log_t(sql)
         self.cursor.execute(sql)
         return self.cursor.fetchall()
 
     def only_submit_sql(self, sql):
+        log_t(sql)
         self.cursor.execute(sql)
         self.conn.commit()
         # fixme 连接关闭

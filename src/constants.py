@@ -7,6 +7,14 @@ class API(Enum):
     PROVINCE_COUNT = '/province_count'  # 各个省份包含大学
     DUAL_COUNT = '/dual_class_count'  # 各省份包含双一流数量
     TYPE_COUNT = '/type_count'  # 学校类别统计
+    SPECIAL_COUNT = '/spacial_name_count'  # 所有专业统计
+
+
+class MyJson(Enum):
+    PROVINCE_COUNT = 'result_json/province_count.json'  # 各个省份包含大学
+    DUAL_COUNT = 'result_json/dual_class_count.json'  # 各省份包含双一流数量
+    TYPE_COUNT = 'result_json/type_count.json'  # 学校类别统计
+    SPECIAL_COUNT = 'result_json/spacial_name_count.json'  # 所有专业统计
 
 
 @unique
