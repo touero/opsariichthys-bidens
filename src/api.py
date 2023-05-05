@@ -73,7 +73,7 @@ class GetData(SqlMaster, ABC):
         if score_provinceDict:
             return score_provinceDict
         sql = 'SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY ' \
-              'times DESC '
+              'times DESC LIMIT 10'
         score_province = self.submit_sql_with_return(sql)
         score_provinceDict = province_mapping(dict(score_province))
         save_json(str(MyJson.SCORE_PROVINCE.value), score_provinceDict)
