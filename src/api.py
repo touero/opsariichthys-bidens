@@ -1,12 +1,10 @@
-import os
-
 from fastapi import FastAPI
 import uvicorn
 from sql_master import SqlMaster
 from abc import ABC
 from constants import *
 from util.tools import *
-from util.province_map import province_mapping
+from province_map import province_mapping
 
 
 class GetData(SqlMaster, ABC):

@@ -1,4 +1,4 @@
-from src.constants import *
+from constants import *
 
 
 def province_mapping(dictObject: dict):
