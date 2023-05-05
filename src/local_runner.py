@@ -10,6 +10,7 @@ task_type: 任务类型
 default_config = {
     "in_server": 0,
     "task_type": 1,
+    "from_local": 1,
     "host": "127.0.0.1",
     "port": 2518,
     "mysql_info": {

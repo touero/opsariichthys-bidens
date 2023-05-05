@@ -8,6 +8,7 @@ class API(Enum):
     DUAL_COUNT = '/dual_class_count'  # 各省份包含双一流数量
     TYPE_COUNT = '/type_count'  # 学校类别统计
     SPECIAL_COUNT = '/spacial_name_count'  # 所有专业统计
+    SCORE_PROVINCE = '/score_province'  # 招生统计
 
 
 class MyJson(Enum):
@@ -15,6 +16,81 @@ class MyJson(Enum):
     DUAL_COUNT = 'result_json/dual_class_count.json'  # 各省份包含双一流数量
     TYPE_COUNT = 'result_json/type_count.json'  # 学校类别统计
     SPECIAL_COUNT = 'result_json/spacial_name_count.json'  # 所有专业统计
+    SCORE_PROVINCE = 'result_json/score_province.json'  # 招生统计
+
+
+@unique
+class Province(Enum):
+    JIANGSU = "江苏"
+    GUANGDONG = "广东"
+    HENAN = "河南"
+    SHANDONG = "山东"
+    SICHUAN = "四川"
+    HUBEI = "湖北"
+    HUNAN = "湖南"
+    ANHUI = "安徽"
+    HEBEI = "河北"
+    ZHEJIANG = "浙江"
+    LIAONING = "辽宁"
+    JIANGXI = "江西"
+    SHANNXI = "陕西"
+    BEIJING = "北京"
+    FUJIAN = "福建"
+    YUNNAN = "云南"
+    GUANGXI = "广西"
+    SHANXI = "山西"
+    HEILONGJIANG = "黑龙江"
+    CHONGQING = "重庆"
+    GUIZHOU = "贵州"
+    JILIN = "吉林"
+    SHANGHAI = "上海"
+    TIANJIN = "天津"
+    XINJIANG = "新疆"
+    NEIMENGGU = "内蒙古"
+    GANSU = "甘肃"
+    HAINAN = "海南"
+    NINGXIA = "宁夏"
+    XIANGGANG = "香港"
+    QINGHAI = "青海"
+    XIZANG = "西藏"
+    AOMEN = "澳门"
+
+
+@unique
+class ProvinceID(Enum):
+    JIANGSU = "32"
+    GUANGDONG = "44"
+    HENAN = "41"
+    SHANDONG = "37"
+    SICHUAN = "51"
+    HUBEI = "42"
+    HUNAN = "43"
+    ANHUI = "34"
+    HEBEI = "13"
+    ZHEJIANG = "33"
+    LIAONING = "21"
+    JIANGXI = "36"
+    SHANNXI = "61"
+    BEIJING = "11"
+    FUJIAN = "35"
+    YUNNAN = "53"
+    GUANGXI = "45"
+    SHANXI = "14"
+    HEILONGJIANG = "23"
+    CHONGQING = "50"
+    GUIZHOU = "52"
+    JILIN = "22"
+    SHANGHAI = "31"
+    TIANJIN = "12"
+    XINJIANG = "65"
+    NEIMENGGU = "15"
+    GANSU = "62"
+    HAINAN = "46"
+    NINGXIA = "64"
+    XIANGGANG = "81"
+    QINGHAI = "63"
+    XIZANG = "54"
+    AOMEN = "82"
 
 
 @unique
@@ -71,3 +147,9 @@ class Path(Enum):
 class Host(Enum):
     LOCAL = "127.0.0.1"
     Server = "0.0.0.0"
+
+
+@unique
+class IsUpload(IntEnum):
+    LOCAL = 0
+    UPDATE = 1
