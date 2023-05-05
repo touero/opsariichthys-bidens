@@ -61,7 +61,7 @@ class GetData(SqlMaster, ABC):
         if special_nameDict:
             return special_nameDict
         sql = 'SELECT special_name AS special_name,COUNT(*) AS times FROM major GROUP BY special_name ORDER BY times ' \
-              'DESC; '
+              'DESC LIMIT 10; '
         special_names = self.submit_sql_with_return(sql)
         special_nameDict = dict(special_names)
         save_json(str(MyJson.SPECIAL_COUNT.value), special_nameDict)
@@ -73,7 +73,7 @@ class GetData(SqlMaster, ABC):
         if score_provinceDict:
             return score_provinceDict
         sql = 'SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY ' \
-              'times DESC LIMIT 10'
+              'times DESC'
         score_province = self.submit_sql_with_return(sql)
         score_provinceDict = province_mapping(dict(score_province))
         save_json(str(MyJson.SCORE_PROVINCE.value), score_provinceDict)
