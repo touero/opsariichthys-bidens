@@ -16,7 +16,7 @@ class GetData(SqlMaster, ABC):
     @property
     def get_province(self) -> dict:
         provinceDict = get_json(str(MyJson.PROVINCE_COUNT.value))
-        if provinceDict and self.is_upload == IsUpload.LOCAL:
+        if provinceDict:
             return provinceDict
 
         sql = "SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;"
@@ -28,7 +28,7 @@ class GetData(SqlMaster, ABC):
     @property
     def get_dual_class_name(self) -> dict:
         provinceDict = get_json(str(MyJson.DUAL_COUNT.value))
-        if provinceDict and self.is_upload == IsUpload.LOCAL:
+        if provinceDict:
             return provinceDict
 
         sql = 'SELECT province_name, dual_class_name FROM info;'
@@ -47,7 +47,7 @@ class GetData(SqlMaster, ABC):
     @property
     def get_type_name(self) -> dict:
         type_nameDict = get_json(str(MyJson.TYPE_COUNT.value))
-        if type_nameDict and self.is_upload == IsUpload.LOCAL:
+        if type_nameDict:
             return type_nameDict
         sql = 'SELECT type_name AS type_name,count(*) AS times FROM info GROUP BY type_name ORDER BY times DESC;'
         type_name_data = self.submit_sql_with_return(sql)
@@ -58,7 +58,7 @@ class GetData(SqlMaster, ABC):
     @property
     def get_special_count(self) -> dict:
         special_nameDict = get_json(str(MyJson.SPECIAL_COUNT.value))
-        if special_nameDict and self.is_upload == IsUpload.LOCAL:
+        if special_nameDict:
             return special_nameDict
         sql = 'SELECT special_name AS special_name,COUNT(*) AS times FROM major GROUP BY special_name ORDER BY times ' \
               'DESC; '
@@ -70,7 +70,7 @@ class GetData(SqlMaster, ABC):
     @property
     def get_score_count(self) -> dict:
         score_provinceDict = get_json(str(MyJson.SCORE_PROVINCE.value))
-        if score_provinceDict and self.is_upload == IsUpload.LOCAL:
+        if score_provinceDict:
             return score_provinceDict
         sql = 'SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY ' \
               'times DESC '

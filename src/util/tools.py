@@ -4,7 +4,7 @@ import json
 
 
 def log_t(msg):
-    logger = logging.getLogger('rpa')
+    logger = logging.getLogger('api')
     logger.setLevel(logging.DEBUG)
     console_handler = logging.StreamHandler()
     file_handler = logging.FileHandler(filename='log/api.log',
