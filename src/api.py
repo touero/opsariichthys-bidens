@@ -14,70 +14,74 @@ class GetData(SqlMaster, ABC):
         self.is_upload = 0
 
     @property
-    def get_province(self) -> dict:
-        provinceDict = get_json(str(MyJson.PROVINCE_COUNT.value))
-        if provinceDict:
-            return provinceDict
+    def get_province(self) -> json:
+        listResult = get_json(str(MyJson.PROVINCE_COUNT.value))
+        if listResult:
+            return listResult
 
         sql = "SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;"
         province_data = self.submit_sql_with_return(sql)
         provinceDict = dict(province_data)
-        save_json(str(MyJson.PROVINCE_COUNT.value), provinceDict)
-        return provinceDict
+        listResult = turn_to_dict_of_list(provinceDict)
+        save_json(str(MyJson.PROVINCE_COUNT.value), listResult)
+        return listResult
 
     @property
-    def get_dual_class_name(self) -> dict:
-        provinceDict = get_json(str(MyJson.DUAL_COUNT.value))
-        if provinceDict:
-            return provinceDict
+    def get_dual_class_name(self) -> json:
+        listResult = get_json(str(MyJson.DUAL_COUNT.value))
+        if listResult:
+            return listResult
 
-        sql = 'SELECT province_name, dual_class_name FROM info;'
+        sql = 'SELECT province_name, dual_class_name FROM info where dual_class_name = "双一流";'
         dual_data = self.submit_sql_with_return(sql)
-
+        provinceDict = {}
         for item in dual_data:
             province_name = item[0]
-            dual = item[1]
-            if province_name in provinceDict and dual == '双一流':
+            if province_name in provinceDict:
                 provinceDict[item[0]] += 1
             elif province_name not in provinceDict:
                 provinceDict[item[0]] = 1
-        save_json(str(MyJson.DUAL_COUNT.value), provinceDict)
-        return provinceDict
+        listResult = turn_to_dict_of_list(provinceDict)
+        save_json(str(MyJson.DUAL_COUNT.value), listResult)
+        return listResult
 
     @property
-    def get_type_name(self) -> dict:
-        type_nameDict = get_json(str(MyJson.TYPE_COUNT.value))
-        if type_nameDict:
-            return type_nameDict
+    def get_type_name(self) -> json:
+        listResult = get_json(str(MyJson.TYPE_COUNT.value))
+        if listResult:
+            return listResult
         sql = 'SELECT type_name AS type_name,count(*) AS times FROM info GROUP BY type_name ORDER BY times DESC;'
         type_name_data = self.submit_sql_with_return(sql)
         type_nameDict = dict(type_name_data)
-        save_json(str(MyJson.TYPE_COUNT.value), type_nameDict)
-        return type_nameDict
+        listResult = turn_to_dict_of_list(type_nameDict)
+        save_json(str(MyJson.TYPE_COUNT.value), listResult)
+        return listResult
 
     @property
-    def get_special_count(self) -> dict:
-        special_nameDict = get_json(str(MyJson.SPECIAL_COUNT.value))
-        if special_nameDict:
-            return special_nameDict
+    def get_special_count(self) -> json:
+        listResult = get_json(str(MyJson.SPECIAL_COUNT.value))
+        if listResult:
+            return listResult
         sql = 'SELECT special_name AS special_name,COUNT(*) AS times FROM major GROUP BY special_name ORDER BY times ' \
               'DESC LIMIT 10; '
         special_names = self.submit_sql_with_return(sql)
         special_nameDict = dict(special_names)
-        save_json(str(MyJson.SPECIAL_COUNT.value), special_nameDict)
-        return special_nameDict
+        listResult = turn_to_dict_of_list(special_nameDict)
+        save_json(str(MyJson.SPECIAL_COUNT.value), listResult)
+        return listResult
 
     @property
-    def get_score_count(self) -> dict:
-        score_provinceDict = get_json(str(MyJson.SCORE_PROVINCE.value))
-        if score_provinceDict:
-            return score_provinceDict
+    def get_score_count(self) -> json:
+        listResult = get_json(str(MyJson.SCORE_PROVINCE.value))
+        if listResult:
+            return listResult
         sql = 'SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY ' \
               'times DESC'
         score_province = self.submit_sql_with_return(sql)
         score_provinceDict = province_mapping(dict(score_province))
-        save_json(str(MyJson.SCORE_PROVINCE.value), score_provinceDict)
-        return score_provinceDict
+        listResult = turn_to_dict_of_list(score_provinceDict)
+        save_json(str(MyJson.SCORE_PROVINCE.value), listResult)
+        return listResult
 
 
 app = FastAPI()
