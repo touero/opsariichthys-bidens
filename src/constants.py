@@ -101,7 +101,7 @@ class Server(Enum):
 
 @unique
 class SqlInfo(Enum):
-    HOST = 'localhost'
+    HOST = '43.138.149.46'
     USER = 'root'
     PASSWORD = 'fanqiuyuan'
     PORT = 3306
