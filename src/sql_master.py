@@ -20,10 +20,9 @@ class SqlMaster:
         log_t(sql)
         self.cursor.execute(sql)
         self.conn.commit()
-        # fixme 连接关闭
-        # self.conn.close()
 
-    def insert_into(self, table_name, *args):
-        sql = f'insert into {table_name} values{args}'
-        print(sql)
-        self.only_submit_sql(sql)
+    def __del__(self):
+        self.cursor.close()
+        self.conn.close()
+
+
