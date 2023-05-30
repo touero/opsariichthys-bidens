@@ -83,6 +83,50 @@ class GetData(SqlMaster, ABC):
         save_json(str(MyJson.SCORE_PROVINCE.value), listResult)
         return listResult
 
+    @property
+    def get_big_data_count(self) -> json:
+        listResult = get_json(str(MyJson.BIG_DATA_COUNT.value))
+        if listResult:
+            return listResult
+        sql = 'SELECT special_name  FROM major WHERE special_name LIKE "%数据%"'
+        big_data = self.submit_sql_with_return(sql)
+        specialDict = {}
+        for item in big_data:
+            special_name = item[0]
+            if special_name in specialDict:
+                specialDict[item[0]] += 1
+            elif special_name not in specialDict:
+                specialDict[item[0]] = 1
+        listResult = turn_to_dict_of_list(specialDict)
+        save_json(str(MyJson.BIG_DATA_COUNT.value), listResult)
+        return listResult
+
+    @property
+    def get_big_data_province_count(self) -> json:
+        listResult = get_json(str(MyJson.BIG_DATA_PROVINCE_COUNT.value))
+        if listResult:
+            return listResult
+        sql = 'SELECT info.province_id as province, count(*) AS times FROM info,major WHERE major.special_name like ' \
+              '"%数据%" and info.school_id = major.school_id GROUP BY province ORDER BY times DESC; '
+        big_data_province_count = self.submit_sql_with_return(sql)
+        big_data_provinceDict = province_mapping(dict(big_data_province_count))
+        listResult = turn_to_dict_of_list(big_data_provinceDict)
+        save_json(str(MyJson.BIG_DATA_PROVINCE_COUNT.value), listResult)
+        return listResult
+
+    @property
+    def get_big_data_type_count(self) -> json:
+        listResult = get_json(str(MyJson.BIG_DATA_TYPE_COUNT.value))
+        if listResult:
+            return listResult
+        sql = 'SELECT type_name as type_name, count(*) as times FROM major WHERE special_name like "%数据%"  GROUP BY ' \
+              'type_name ORDER BY times DESC; '
+        big_data_type_count = self.submit_sql_with_return(sql)
+        big_data_typeDict = dict(big_data_type_count)
+        listResult = turn_to_dict_of_list(big_data_typeDict)
+        save_json(str(MyJson.BIG_DATA_TYPE_COUNT.value), listResult)
+        return listResult
+
 
 app = FastAPI()
 data = GetData()
@@ -125,6 +169,24 @@ def special_count():
 def score_province_count():
     score_provinceJson = data.get_score_count
     return score_provinceJson
+
+
+@app.get(API.BIG_DATA_COUNT.value)
+def big_data_count():
+    big_dataJson = data.get_big_data_count
+    return big_dataJson
+
+
+@app.get(API.BIG_DATA_PROVINCE_COUNT.value)
+def big_data_province_count():
+    big_data_provinceJson = data.get_big_data_province_count
+    return big_data_provinceJson
+
+
+@app.get(API.BIG_DATA_TYPE_COUNT.value)
+def big_data_province_count():
+    big_data_typeJson = data.get_big_data_type_count
+    return big_data_typeJson
 
 
 def start_task(default_config):

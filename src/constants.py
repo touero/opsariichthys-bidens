@@ -9,6 +9,9 @@ class API(Enum):
     TYPE_COUNT = '/type_count'  # 学校类别统计
     SPECIAL_COUNT = '/spacial_name_count'  # 所有专业统计
     SCORE_PROVINCE = '/score_province'  # 招生统计
+    BIG_DATA_COUNT = '/big_data_count'  # 不同大数据专业统计
+    BIG_DATA_PROVINCE_COUNT = '/big_data_province_count'  # 含大数据专业的省份内大学统计
+    BIG_DATA_TYPE_COUNT = '/big_data_type_count'  # 大数据本科专科统计
 
 
 class MyJson(Enum):
@@ -17,7 +20,9 @@ class MyJson(Enum):
     TYPE_COUNT = 'result_json/type_count.json'  # 学校类别统计
     SPECIAL_COUNT = 'result_json/spacial_name_count.json'  # 所有专业统计
     SCORE_PROVINCE = 'result_json/score_province.json'  # 招生统计
-
+    BIG_DATA_COUNT = 'result_json/big_data_count.json'  # 不同大数据专业统计
+    BIG_DATA_PROVINCE_COUNT = 'result_json/big_data_province_count.json'  # 含大数据专业的省份内大学统计
+    BIG_DATA_TYPE_COUNT = 'result_json/big_data_type_count.json'  # 大数据本科专科统计
 
 @unique
 class Province(Enum):
