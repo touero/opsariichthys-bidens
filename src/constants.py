@@ -50,7 +50,7 @@ class Province(Enum):
     JILIN = "吉林省"
     SHANGHAI = "上海市"
     TIANJIN = "天津市"
-    XINJIANG = "新疆"
+    XINJIANG = "新疆维吾尔自治区"
     NEIMENGGU = "内蒙古自治区"
     GANSU = "甘肃省"
     HAINAN = "海南省"
