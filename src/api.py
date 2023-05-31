@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
 from sql_master import SqlMaster
-from abc import ABC
 from constants import *
 from util.tools import *
 from province_map import province_mapping
@@ -21,8 +20,8 @@ class GetData(SqlMaster):
 
         sql = "SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;"
         province_data = self.submit_sql_with_return(sql)
-        provinceDict = dict(province_data)
-        listResult = turn_to_dict_of_list(provinceDict)
+        province_data_count = province_mapping(dict(province_data), 1)
+        listResult = turn_to_dict_of_list(province_data_count)
         save_json(str(MyJson.PROVINCE_COUNT.value), listResult)
         return listResult
 
