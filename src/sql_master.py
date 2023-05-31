@@ -1,9 +1,10 @@
 import pymysql
 from constants import *
 from util.tools import *
+from abc import ABC
 
 
-class SqlMaster:
+class SqlMaster(ABC):
     def __init__(self):
         self.conn = pymysql.connect(host=SqlInfo.HOST.value, user=SqlInfo.USER.value,
                                     password=SqlInfo.PASSWORD.value, port=SqlInfo.PORT.value,

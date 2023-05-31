@@ -12,6 +12,8 @@ class API(Enum):
     BIG_DATA_COUNT = '/big_data_count'  # 不同大数据专业统计
     BIG_DATA_PROVINCE_COUNT = '/big_data_province_count'  # 含大数据专业的省份内大学统计
     BIG_DATA_TYPE_COUNT = '/big_data_type_count'  # 大数据本科专科统计
+    BIG_DATA_LEVEL2_COUNT = '/big_data_level2_count'  # 大数据二级类目统计
+    BIG_DATA_LEVEL3_COUNT = '/big_data_level3_count'  # 大数据一级类目统计
 
 
 class MyJson(Enum):
@@ -23,6 +25,8 @@ class MyJson(Enum):
     BIG_DATA_COUNT = 'result_json/big_data_count.json'  # 不同大数据专业统计
     BIG_DATA_PROVINCE_COUNT = 'result_json/big_data_province_count.json'  # 含大数据专业的省份内大学统计
     BIG_DATA_TYPE_COUNT = 'result_json/big_data_type_count.json'  # 大数据本科专科统计
+    BIG_DATA_LEVEL2_COUNT = 'result_json/big_data_level2_count.json'  # 大数据二级类目统计
+    BIG_DATA_LEVEL3_COUNT = 'result_json/big_data_level3_count.json'  # 大数据一级类目统计
 
 @unique
 class Province(Enum):

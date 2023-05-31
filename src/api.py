@@ -7,7 +7,7 @@ from util.tools import *
 from province_map import province_mapping
 
 
-class GetData(SqlMaster, ABC):
+class GetData(SqlMaster):
     def __init__(self):
         super().__init__()
         # fixme is_upload是控制是否更新数据的参数，请尝试集成到default_config中
@@ -127,6 +127,32 @@ class GetData(SqlMaster, ABC):
         save_json(str(MyJson.BIG_DATA_TYPE_COUNT.value), listResult)
         return listResult
 
+    @property
+    def get_big_data_level2_count(self) -> json:
+        listResult = get_json(str(MyJson.BIG_DATA_LEVEL2_COUNT.value))
+        if listResult:
+            return listResult
+        sql = 'SELECT level2_name as level2_name, count(*) as times FROM major WHERE major.special_name like "%数据%" ' \
+              'GROUP BY level2_name ORDER BY times DESC limit 5 '
+        big_data_level2_count = self.submit_sql_with_return(sql)
+        big_data_typeDict = dict(big_data_level2_count)
+        listResult = turn_to_dict_of_list(big_data_typeDict)
+        save_json(str(MyJson.BIG_DATA_LEVEL2_COUNT.value), listResult)
+        return listResult
+
+    @property
+    def get_big_data_level3_count(self) -> json:
+        listResult = get_json(str(MyJson.BIG_DATA_LEVEL3_COUNT.value))
+        if listResult:
+            return listResult
+        sql = 'SELECT level3_name as level3_name, count(*) as times FROM major WHERE major.special_name like "%数据%" ' \
+              'GROUP BY level3_name ORDER BY times DESC limit 10 '
+        big_data_level3_count = self.submit_sql_with_return(sql)
+        big_data_typeDict = dict(big_data_level3_count)
+        listResult = turn_to_dict_of_list(big_data_typeDict)
+        save_json(str(MyJson.BIG_DATA_LEVEL3_COUNT.value), listResult)
+        return listResult
+
 
 app = FastAPI()
 data = GetData()
@@ -187,6 +213,18 @@ def big_data_province_count():
 def big_data_province_count():
     big_data_typeJson = data.get_big_data_type_count
     return big_data_typeJson
+
+
+@app.get(API.BIG_DATA_LEVEL2_COUNT.value)
+def big_data_level2_count():
+    big_data_level2Json = data.get_big_data_level2_count
+    return big_data_level2Json
+
+
+@app.get(API.BIG_DATA_LEVEL3_COUNT.value)
+def big_data_level3_count():
+    big_data_level3Json = data.get_big_data_level3_count
+    return big_data_level3Json
 
 
 def start_task(default_config):
