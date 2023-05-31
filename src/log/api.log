@@ -47,3 +47,541 @@
 2023-05-04 16:18:12,766 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
 2023-05-04 16:18:19,570 rpa DEBUG: 找到本地文件
 2023-05-04 16:18:19,572 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=13191) http://127.0.0.1:2518/type_count
+2023-05-05 09:13:02,587 rpa DEBUG: nt
+2023-05-05 09:13:02,589 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 09:13:02,590 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 09:13:02,590 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 09:13:02,591 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 09:13:02,592 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 09:13:08,765 rpa DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-05 09:13:08,776 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=1912) http://127.0.0.1:2518/province_count
+2023-05-05 09:13:09,277 rpa DEBUG: GET 404 Address(host='127.0.0.1', port=1912) http://127.0.0.1:2518/favicon.ico
+2023-05-05 09:14:28,530 rpa DEBUG: nt
+2023-05-05 09:14:28,531 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 09:14:28,531 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 09:14:28,532 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 09:14:28,533 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 09:14:28,533 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 09:14:35,594 rpa DEBUG: SELECT province_name, dual_class_name FROM info;
+2023-05-05 09:14:35,731 rpa DEBUG: json写入到:result_json/dual_class_count.json
+2023-05-05 09:14:35,734 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=1969) http://127.0.0.1:2518/dual_class_count
+2023-05-05 09:14:37,870 rpa DEBUG: SELECT PROVINCE_NAME as province,count(*) as times FROM info group by province order by times DESC;
+2023-05-05 09:30:21,680 rpa DEBUG: nt
+2023-05-05 09:30:21,681 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 09:30:21,681 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 09:30:21,682 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 09:30:21,682 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 09:30:21,683 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 09:30:21,684 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 09:30:26,961 rpa DEBUG: SELECT PROVINCE_NAME as province,count(*) as times FROM info group by province order by times DESC;
+2023-05-05 09:30:26,987 rpa DEBUG: json写入到:result_json/province_count.json
+2023-05-05 09:30:26,990 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=2307) http://127.0.0.1:2518/province_count
+2023-05-05 09:30:46,148 rpa DEBUG: 找到本地文件:result_json/dual_class_count.json
+2023-05-05 09:30:46,150 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=2308) http://127.0.0.1:2518/dual_class_count
+2023-05-05 09:31:15,433 rpa DEBUG: SELECT type_name as type_name,count(*) as times FROM info group by type_name order by times DESC;
+2023-05-05 09:31:15,459 rpa DEBUG: json写入到:result_json/type_count.json
+2023-05-05 09:31:15,461 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=2323) http://127.0.0.1:2518/type_count
+2023-05-05 09:31:35,423 rpa DEBUG: SELECT special_name as special_name,count(*) as times FROM major group by special_name order by times DESC; 
+2023-05-05 09:31:36,195 rpa DEBUG: json写入到:result_json/spacial_name_count.json
+2023-05-05 09:31:36,285 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=2328) http://127.0.0.1:2518/spacial_name_count
+2023-05-05 09:31:57,359 rpa DEBUG: GET 404 Address(host='127.0.0.1', port=2338) http://127.0.0.1:2518/score_province
+2023-05-05 09:33:49,361 rpa DEBUG: GET 404 Address(host='127.0.0.1', port=2359) http://127.0.0.1:2518/score_province
+2023-05-05 09:33:51,825 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 09:33:51,887 rpa DEBUG: json写入到:result_json/score_province.json
+2023-05-05 09:33:51,889 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=2364) http://127.0.0.1:2518/score_province
+2023-05-05 09:33:54,003 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 09:33:54,011 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=2364) http://127.0.0.1:2518/score_province
+2023-05-05 09:41:28,872 rpa DEBUG: nt
+2023-05-05 09:41:28,873 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 09:41:28,874 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 09:41:28,874 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 09:41:28,875 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 09:41:28,875 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 09:41:28,876 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 09:41:31,888 rpa DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-05 09:41:31,891 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=2526) http://127.0.0.1:2518/province_count
+2023-05-05 10:13:38,102 rpa DEBUG: nt
+2023-05-05 10:13:38,103 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:13:38,104 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:13:38,105 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:13:38,105 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:13:38,106 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:13:38,107 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:13:46,770 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:13:46,776 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3037) http://127.0.0.1:2518/score_province
+2023-05-05 10:14:23,786 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:14:23,849 rpa DEBUG: json写入到:result_json/score_province.json
+2023-05-05 10:14:23,852 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3036) http://127.0.0.1:2518/score_province
+2023-05-05 10:14:28,857 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:14:28,865 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3036) http://127.0.0.1:2518/score_province
+2023-05-05 10:15:57,009 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:16:00,377 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:22:18,196 rpa DEBUG: nt
+2023-05-05 10:22:18,197 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:22:18,198 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:22:18,198 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:22:18,199 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:22:18,200 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:22:18,200 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:22:32,411 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:22:56,728 rpa DEBUG: nt
+2023-05-05 10:22:56,729 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:22:56,730 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:22:56,731 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:22:56,732 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:22:56,732 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:22:56,733 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:22:59,744 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:23:16,129 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:35:09,086 rpa DEBUG: nt
+2023-05-05 10:35:09,087 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:35:09,087 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:35:09,088 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:35:09,088 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:35:09,089 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:35:09,089 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:35:15,996 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:35:16,063 rpa DEBUG: json写入到:result_json/score_province.json
+2023-05-05 10:35:16,065 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3278) http://127.0.0.1:2518/score_province
+2023-05-05 10:35:18,905 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:35:18,913 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3278) http://127.0.0.1:2518/score_province
+2023-05-05 10:35:21,954 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:35:21,956 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3278) http://127.0.0.1:2518/score_province
+2023-05-05 10:35:22,922 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:35:22,924 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3278) http://127.0.0.1:2518/score_province
+2023-05-05 10:35:55,624 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:35:55,691 rpa DEBUG: json写入到:result_json/score_province.json
+2023-05-05 10:35:55,693 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3277) http://127.0.0.1:2518/score_province
+2023-05-05 10:35:57,383 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:35:57,385 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3277) http://127.0.0.1:2518/score_province
+2023-05-05 10:36:10,473 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:36:10,475 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3294) http://127.0.0.1:2518/score_province
+2023-05-05 10:36:11,210 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:36:11,212 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3294) http://127.0.0.1:2518/score_province
+2023-05-05 10:36:39,556 rpa DEBUG: nt
+2023-05-05 10:36:39,571 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:36:39,571 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:36:39,571 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:36:39,571 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:36:39,571 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:36:39,571 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:36:42,394 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:37:21,406 rpa DEBUG: nt
+2023-05-05 10:37:21,406 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:37:21,407 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:37:21,408 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:37:21,409 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:37:21,409 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:37:21,410 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:37:24,535 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:40:04,988 rpa DEBUG: nt
+2023-05-05 10:40:04,989 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:40:04,990 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:40:04,991 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:40:04,991 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:40:04,992 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:40:04,992 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:40:09,380 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:41:58,847 rpa DEBUG: nt
+2023-05-05 10:41:58,848 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:41:58,848 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:41:58,849 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:41:58,850 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:41:58,850 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:41:58,851 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:42:02,097 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:43:24,294 rpa DEBUG: json写入到:result_json/score_province.json
+2023-05-05 10:43:24,296 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3400) http://127.0.0.1:2518/score_province
+2023-05-05 10:43:31,585 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:43:31,594 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3420) http://127.0.0.1:2518/score_province
+2023-05-05 10:46:01,071 rpa DEBUG: nt
+2023-05-05 10:46:01,072 rpa DEBUG: http://127.0.0.1:2518/
+2023-05-05 10:46:01,072 rpa DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 10:46:01,073 rpa DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 10:46:01,073 rpa DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 10:46:01,074 rpa DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 10:46:01,075 rpa DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 10:46:05,838 rpa DEBUG: SELECT province_id as province_id_count,COUNT(*) as times FROM score GROUP BY province_id  ORDER BY times DESC 
+2023-05-05 10:46:05,902 rpa DEBUG: json写入到:result_json/score_province.json
+2023-05-05 10:46:05,903 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3430) http://127.0.0.1:2518/score_province
+2023-05-05 10:46:09,017 rpa DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-05 10:46:09,024 rpa DEBUG: GET 200 Address(host='127.0.0.1', port=3430) http://127.0.0.1:2518/score_province
+2023-05-05 11:31:57,553 api DEBUG: 当前机器:nt
+2023-05-05 11:31:57,554 api DEBUG: http://127.0.0.1:2518/
+2023-05-05 11:31:57,554 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 11:31:57,555 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 11:31:57,555 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 11:31:57,556 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 11:31:57,557 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 11:32:07,278 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-05 11:32:07,572 api DEBUG: GET 404 Address(host='127.0.0.1', port=4378) http://127.0.0.1:2518/favicon.ico
+2023-05-05 11:32:09,377 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-05 11:33:18,868 api DEBUG: 当前机器:nt
+2023-05-05 11:33:18,868 api DEBUG: http://127.0.0.1:2518/
+2023-05-05 11:33:18,868 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 11:33:18,868 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 11:33:18,868 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 11:33:18,868 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 11:33:18,868 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 11:33:26,796 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-05 11:34:30,237 api DEBUG: 当前机器:nt
+2023-05-05 11:34:30,253 api DEBUG: http://127.0.0.1:2518/
+2023-05-05 11:34:30,253 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 11:34:30,253 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 11:34:30,253 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 11:34:30,253 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 11:34:30,253 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 11:34:37,566 api DEBUG: 当前机器:nt
+2023-05-05 11:34:37,567 api DEBUG: http://127.0.0.1:2518/
+2023-05-05 11:34:37,568 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 11:34:37,568 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 11:34:37,569 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 11:34:37,569 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 11:34:37,570 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 11:34:42,705 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-05 11:36:21,058 api DEBUG: 当前机器:nt
+2023-05-05 11:36:21,059 api DEBUG: http://127.0.0.1:2518/
+2023-05-05 11:36:21,060 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-05 11:36:21,060 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-05 11:36:21,061 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-05 11:36:21,061 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-05 11:36:21,062 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-05 11:36:27,959 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-05 11:36:29,258 api DEBUG: json写入到:result_json/province_count.json
+2023-05-05 11:36:35,632 api DEBUG: GET 200 Address(host='127.0.0.1', port=4431) http://127.0.0.1:2518/province_count
+2023-05-05 11:36:37,977 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-05 11:36:37,985 api DEBUG: GET 200 Address(host='127.0.0.1', port=4431) http://127.0.0.1:2518/province_count
+2023-05-06 11:18:27,413 api DEBUG: 当前机器:nt
+2023-05-06 11:18:27,415 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:18:27,416 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:18:27,416 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:18:27,417 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:18:27,418 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:18:27,419 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:18:35,683 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:18:35,699 api DEBUG: GET 200 Address(host='127.0.0.1', port=4802) http://127.0.0.1:2518/province_count
+2023-05-06 11:18:36,087 api DEBUG: GET 404 Address(host='127.0.0.1', port=4802) http://127.0.0.1:2518/favicon.ico
+2023-05-06 11:19:10,866 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:20:16,298 api DEBUG: 当前机器:nt
+2023-05-06 11:20:16,299 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:20:16,300 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:20:16,300 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:20:16,301 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:20:16,302 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:20:16,302 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:20:27,386 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:28:00,782 api DEBUG: 当前机器:nt
+2023-05-06 11:28:00,784 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:28:00,785 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:28:00,786 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:28:00,788 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:28:00,789 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:28:00,791 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:28:04,476 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:28:04,479 api DEBUG: GET 200 Address(host='127.0.0.1', port=4963) http://127.0.0.1:2518/province_count
+2023-05-06 11:28:07,337 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:28:07,339 api DEBUG: GET 200 Address(host='127.0.0.1', port=4963) http://127.0.0.1:2518/province_count
+2023-05-06 11:28:20,700 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:28:20,702 api DEBUG: GET 200 Address(host='127.0.0.1', port=4964) http://127.0.0.1:2518/province_count
+2023-05-06 11:28:23,941 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 11:28:32,939 api DEBUG: 当前机器:nt
+2023-05-06 11:28:32,940 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:28:32,941 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:28:32,942 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:28:32,942 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:28:32,943 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:28:32,944 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:28:38,811 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 11:29:16,430 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 11:30:37,972 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 11:31:06,158 api DEBUG: 当前机器:nt
+2023-05-06 11:31:06,159 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:31:06,160 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:31:06,160 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:31:06,161 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:31:06,162 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:31:06,162 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:31:13,177 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 11:37:44,675 api DEBUG: 当前机器:nt
+2023-05-06 11:37:44,676 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:37:44,676 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:37:44,676 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:37:44,677 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:37:44,677 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:37:44,678 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:37:48,513 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:37:48,515 api DEBUG: GET 200 Address(host='127.0.0.1', port=5065) http://127.0.0.1:2518/province_count
+2023-05-06 11:38:01,617 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 11:38:01,646 api DEBUG: json写入到:result_json/province_count.json
+2023-05-06 11:38:01,649 api DEBUG: GET 200 Address(host='127.0.0.1', port=5066) http://127.0.0.1:2518/province_count
+2023-05-06 11:47:58,079 api DEBUG: 当前机器:nt
+2023-05-06 11:47:58,080 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:47:58,081 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:47:58,082 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:47:58,082 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:47:58,083 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:47:58,084 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:48:51,082 api DEBUG: SELECT province_name, dual_class_name FROM info where dual_class_name = "双一流";
+2023-05-06 11:50:57,431 api DEBUG: 当前机器:nt
+2023-05-06 11:50:57,433 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:50:57,434 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:50:57,435 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:50:57,436 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:50:57,437 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:50:57,439 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:51:07,275 api DEBUG: SELECT province_name, dual_class_name FROM info where dual_class_name = "双一流";
+2023-05-06 11:52:33,648 api DEBUG: 当前机器:nt
+2023-05-06 11:52:33,649 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:52:33,650 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:52:33,651 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:52:33,652 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:52:33,652 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:52:33,653 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:52:44,802 api DEBUG: SELECT province_name, dual_class_name FROM info where dual_class_name = "双一流";
+2023-05-06 11:52:44,835 api DEBUG: json写入到:result_json/dual_class_count.json
+2023-05-06 11:52:44,837 api DEBUG: GET 200 Address(host='127.0.0.1', port=5309) http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:55:52,770 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:55:52,776 api DEBUG: GET 200 Address(host='127.0.0.1', port=5314) http://127.0.0.1:2518/province_count
+2023-05-06 11:56:44,238 api DEBUG: 当前机器:nt
+2023-05-06 11:56:44,238 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 11:56:44,239 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 11:56:44,240 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:56:44,240 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 11:56:44,241 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:56:44,241 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 11:56:48,151 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:56:48,154 api DEBUG: GET 200 Address(host='127.0.0.1', port=5337) http://127.0.0.1:2518/province_count
+2023-05-06 11:56:57,320 api DEBUG: 找到本地文件:result_json/dual_class_count.json
+2023-05-06 11:56:57,323 api DEBUG: GET 200 Address(host='127.0.0.1', port=5338) http://127.0.0.1:2518/dual_class_count
+2023-05-06 11:56:59,413 api DEBUG: SELECT type_name AS type_name,count(*) AS times FROM info GROUP BY type_name ORDER BY times DESC;
+2023-05-06 11:56:59,439 api DEBUG: json写入到:result_json/type_count.json
+2023-05-06 11:56:59,441 api DEBUG: GET 200 Address(host='127.0.0.1', port=5338) http://127.0.0.1:2518/type_count
+2023-05-06 11:57:02,223 api DEBUG: SELECT special_name AS special_name,COUNT(*) AS times FROM major GROUP BY special_name ORDER BY times DESC LIMIT 10; 
+2023-05-06 11:57:02,461 api DEBUG: json写入到:result_json/spacial_name_count.json
+2023-05-06 11:57:02,462 api DEBUG: GET 200 Address(host='127.0.0.1', port=5338) http://127.0.0.1:2518/spacial_name_count
+2023-05-06 11:57:04,888 api DEBUG: SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY times DESC
+2023-05-06 11:57:04,950 api DEBUG: json写入到:result_json/score_province.json
+2023-05-06 11:57:04,952 api DEBUG: GET 200 Address(host='127.0.0.1', port=5338) http://127.0.0.1:2518/score_province
+2023-05-06 11:58:17,453 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 11:58:17,455 api DEBUG: GET 200 Address(host='127.0.0.1', port=5344) http://127.0.0.1:2518/province_count
+2023-05-06 12:00:40,135 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 12:00:40,164 api DEBUG: json写入到:result_json/province_count.json
+2023-05-06 12:00:40,166 api DEBUG: GET 200 Address(host='127.0.0.1', port=5356) http://127.0.0.1:2518/province_count
+2023-05-06 12:01:19,183 api DEBUG: 当前机器:nt
+2023-05-06 12:01:19,184 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 12:01:19,184 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 12:01:19,185 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 12:01:19,185 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 12:01:19,186 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 12:01:19,186 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 12:01:23,253 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 12:01:23,277 api DEBUG: json写入到:result_json/province_count.json
+2023-05-06 12:01:23,280 api DEBUG: GET 200 Address(host='127.0.0.1', port=5369) http://127.0.0.1:2518/province_count
+2023-05-06 12:01:30,773 api DEBUG: SELECT province_name, dual_class_name FROM info where dual_class_name = "双一流";
+2023-05-06 12:01:30,798 api DEBUG: json写入到:result_json/dual_class_count.json
+2023-05-06 12:01:30,800 api DEBUG: GET 200 Address(host='127.0.0.1', port=5368) http://127.0.0.1:2518/dual_class_count
+2023-05-06 12:01:34,217 api DEBUG: SELECT type_name AS type_name,count(*) AS times FROM info GROUP BY type_name ORDER BY times DESC;
+2023-05-06 12:01:34,241 api DEBUG: json写入到:result_json/type_count.json
+2023-05-06 12:01:34,242 api DEBUG: GET 200 Address(host='127.0.0.1', port=5368) http://127.0.0.1:2518/type_count
+2023-05-06 12:01:38,249 api DEBUG: SELECT special_name AS special_name,COUNT(*) AS times FROM major GROUP BY special_name ORDER BY times DESC LIMIT 10; 
+2023-05-06 12:01:38,449 api DEBUG: json写入到:result_json/spacial_name_count.json
+2023-05-06 12:01:38,451 api DEBUG: GET 200 Address(host='127.0.0.1', port=5368) http://127.0.0.1:2518/spacial_name_count
+2023-05-06 12:01:40,864 api DEBUG: SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY times DESC
+2023-05-06 12:01:40,925 api DEBUG: json写入到:result_json/score_province.json
+2023-05-06 12:01:40,927 api DEBUG: GET 200 Address(host='127.0.0.1', port=5368) http://127.0.0.1:2518/score_province
+2023-05-06 12:03:09,040 api DEBUG: 当前机器:nt
+2023-05-06 12:03:09,040 api DEBUG: http://127.0.0.1:2518/
+2023-05-06 12:03:09,041 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-06 12:03:09,042 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-06 12:03:09,043 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-06 12:03:09,043 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-06 12:03:09,044 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-06 12:03:12,110 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 12:03:12,112 api DEBUG: GET 200 Address(host='127.0.0.1', port=5379) http://127.0.0.1:2518/province_count
+2023-05-06 12:03:23,746 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 12:03:23,770 api DEBUG: json写入到:result_json/province_count.json
+2023-05-06 12:03:23,772 api DEBUG: GET 200 Address(host='127.0.0.1', port=5380) http://127.0.0.1:2518/province_count
+2023-05-06 12:03:28,275 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 12:03:28,277 api DEBUG: GET 200 Address(host='127.0.0.1', port=5380) http://127.0.0.1:2518/province_count
+2023-05-06 12:03:30,695 api DEBUG: SELECT province_name, dual_class_name FROM info where dual_class_name = "双一流";
+2023-05-06 12:03:30,720 api DEBUG: json写入到:result_json/dual_class_count.json
+2023-05-06 12:03:30,722 api DEBUG: GET 200 Address(host='127.0.0.1', port=5380) http://127.0.0.1:2518/dual_class_count
+2023-05-06 12:03:32,802 api DEBUG: SELECT type_name AS type_name,count(*) AS times FROM info GROUP BY type_name ORDER BY times DESC;
+2023-05-06 12:03:32,829 api DEBUG: json写入到:result_json/type_count.json
+2023-05-06 12:03:32,830 api DEBUG: GET 200 Address(host='127.0.0.1', port=5380) http://127.0.0.1:2518/type_count
+2023-05-06 12:04:27,939 api DEBUG: SELECT PROVINCE_NAME AS province,count(*) as times FROM info GROUP BY province ORDER BY times DESC;
+2023-05-06 12:04:27,966 api DEBUG: json写入到:result_json/province_count.json
+2023-05-06 12:04:27,968 api DEBUG: GET 200 Address(host='127.0.0.1', port=5387) http://127.0.0.1:2518/province_count
+2023-05-06 12:04:30,330 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-06 12:04:30,334 api DEBUG: GET 200 Address(host='127.0.0.1', port=5387) http://127.0.0.1:2518/province_count
+2023-05-06 12:04:31,841 api DEBUG: SELECT province_name, dual_class_name FROM info where dual_class_name = "双一流";
+2023-05-06 12:04:31,869 api DEBUG: json写入到:result_json/dual_class_count.json
+2023-05-06 12:04:31,871 api DEBUG: GET 200 Address(host='127.0.0.1', port=5387) http://127.0.0.1:2518/dual_class_count
+2023-05-06 12:04:34,112 api DEBUG: SELECT type_name AS type_name,count(*) AS times FROM info GROUP BY type_name ORDER BY times DESC;
+2023-05-06 12:04:34,139 api DEBUG: json写入到:result_json/type_count.json
+2023-05-06 12:04:34,141 api DEBUG: GET 200 Address(host='127.0.0.1', port=5387) http://127.0.0.1:2518/type_count
+2023-05-06 12:04:36,366 api DEBUG: SELECT special_name AS special_name,COUNT(*) AS times FROM major GROUP BY special_name ORDER BY times DESC LIMIT 10; 
+2023-05-06 12:04:36,564 api DEBUG: json写入到:result_json/spacial_name_count.json
+2023-05-06 12:04:36,567 api DEBUG: GET 200 Address(host='127.0.0.1', port=5387) http://127.0.0.1:2518/spacial_name_count
+2023-05-06 12:04:39,069 api DEBUG: SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY times DESC
+2023-05-06 12:04:39,132 api DEBUG: json写入到:result_json/score_province.json
+2023-05-06 12:04:39,134 api DEBUG: GET 200 Address(host='127.0.0.1', port=5387) http://127.0.0.1:2518/score_province
+2023-05-08 01:13:52,230 api DEBUG: 当前机器:nt
+2023-05-08 01:13:52,231 api DEBUG: http://127.0.0.1:2518/
+2023-05-08 01:13:52,231 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-08 01:13:52,232 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-08 01:13:52,233 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-08 01:13:52,233 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-08 01:13:52,233 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-08 01:14:01,974 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-08 01:14:01,984 api DEBUG: GET 200 Address(host='127.0.0.1', port=3569) http://127.0.0.1:2518/province_count
+2023-05-08 01:14:02,437 api DEBUG: GET 404 Address(host='127.0.0.1', port=3569) http://127.0.0.1:2518/favicon.ico
+2023-05-08 01:14:36,863 api DEBUG: 当前机器:nt
+2023-05-08 01:14:36,863 api DEBUG: http://127.0.0.1:2518/
+2023-05-08 01:14:36,864 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-08 01:14:36,864 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-08 01:14:36,865 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-08 01:14:36,866 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-08 01:14:36,866 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-08 01:15:19,689 api DEBUG: 当前机器:nt
+2023-05-08 01:15:19,690 api DEBUG: http://127.0.0.1:2518/
+2023-05-08 01:15:19,691 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-08 01:15:19,691 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-08 01:15:19,692 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-08 01:15:19,693 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-08 01:15:19,693 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-08 01:26:46,550 api DEBUG: 当前机器:nt
+2023-05-08 01:26:46,550 api DEBUG: http://127.0.0.1:2518/
+2023-05-08 01:26:46,551 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-08 01:26:46,551 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-08 01:26:46,552 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-08 01:26:46,552 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-08 01:26:46,553 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-08 01:26:54,623 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-05-08 01:26:54,625 api DEBUG: GET 200 Address(host='127.0.0.1', port=3880) http://127.0.0.1:2518/province_count
+2023-05-28 10:31:52,441 api DEBUG: 当前机器:nt
+2023-05-28 10:31:52,442 api DEBUG: http://127.0.0.1:2518/
+2023-05-28 10:31:52,443 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-28 10:31:52,444 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-28 10:31:52,445 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-28 10:31:52,446 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-28 10:31:52,447 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-28 10:31:52,447 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-05-28 10:31:57,919 api DEBUG: GET 404 Address(host='127.0.0.1', port=13894) http://127.0.0.1:2518/
+2023-05-28 10:31:59,246 api DEBUG: GET 404 Address(host='127.0.0.1', port=13894) http://127.0.0.1:2518/favicon.ico
+2023-05-28 10:33:17,963 api DEBUG: 当前机器:nt
+2023-05-28 10:33:17,964 api DEBUG: http://127.0.0.1:2518/
+2023-05-28 10:33:17,965 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-28 10:33:17,966 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-28 10:33:17,966 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-28 10:33:17,967 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-28 10:33:17,967 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-28 10:33:17,968 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-05-28 10:33:24,787 api DEBUG: SELECT special_name  FROM major WHERE special_name LIKE "%数据%"
+2023-05-28 10:33:24,901 api DEBUG: GET 200 Address(host='127.0.0.1', port=13971) http://127.0.0.1:2518/big_data_count
+2023-05-28 10:33:26,321 api DEBUG: GET 404 Address(host='127.0.0.1', port=13971) http://127.0.0.1:2518/favicon.ico
+2023-05-28 16:45:39,116 api DEBUG: 当前机器:nt
+2023-05-28 16:45:39,117 api DEBUG: http://127.0.0.1:2518/
+2023-05-28 16:45:39,117 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-28 16:45:39,118 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-28 16:45:39,118 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-28 16:45:39,119 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-28 16:45:39,119 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-28 16:45:39,119 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-05-28 16:45:43,321 api DEBUG: SELECT special_name  FROM major WHERE special_name LIKE "%数据%"
+2023-05-28 16:45:43,457 api DEBUG: GET 200 Address(host='127.0.0.1', port=1462) http://127.0.0.1:2518/big_data_count
+2023-05-28 16:45:44,760 api DEBUG: GET 404 Address(host='127.0.0.1', port=1462) http://127.0.0.1:2518/favicon.ico
+2023-05-28 17:13:59,242 api DEBUG: 当前机器:nt
+2023-05-28 17:13:59,243 api DEBUG: http://127.0.0.1:2518/
+2023-05-28 17:13:59,244 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-28 17:13:59,244 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-28 17:13:59,245 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-28 17:13:59,246 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-28 17:13:59,246 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-28 17:13:59,247 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-05-28 17:13:59,247 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-05-28 17:14:05,990 api DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-28 17:14:06,015 api DEBUG: GET 200 Address(host='127.0.0.1', port=5271) http://127.0.0.1:2518/score_province
+2023-05-28 17:14:17,676 api DEBUG: GET 404 Address(host='127.0.0.1', port=5272) http://127.0.0.1:2518/big_data_province_count
+2023-05-28 17:14:21,587 api DEBUG: GET 404 Address(host='127.0.0.1', port=5272) http://127.0.0.1:2518/big_data_province_count
+2023-05-28 17:15:23,176 api DEBUG: 当前机器:nt
+2023-05-28 17:15:23,177 api DEBUG: http://127.0.0.1:2518/
+2023-05-28 17:15:23,177 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-28 17:15:23,178 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-28 17:15:23,178 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-28 17:15:23,179 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-28 17:15:23,179 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-28 17:15:23,180 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-05-28 17:15:23,180 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-05-28 17:15:27,026 api DEBUG: 找到本地文件:result_json/score_province.json
+2023-05-28 17:15:27,029 api DEBUG: GET 200 Address(host='127.0.0.1', port=5711) http://127.0.0.1:2518/score_province
+2023-05-28 17:15:48,255 api DEBUG: SELECT info.province_id as province, count(*) AS times FROM info,major WHERE major.special_name like "%数据%" and info.school_id = major.school_id GROUP BY province ORDER BY times DESC; 
+2023-05-28 17:15:48,358 api DEBUG: json写入到:result_json/big_data_province_count.json
+2023-05-28 17:15:48,360 api DEBUG: GET 200 Address(host='127.0.0.1', port=5712) http://127.0.0.1:2518/big_data_province_count
+2023-05-29 00:22:26,878 api DEBUG: SELECT info.province_id as province, count(*) AS times FROM info,major WHERE major.special_name like "%数据%" and info.school_id = major.school_id GROUP BY province ORDER BY times DESC; 
+2023-05-29 00:22:27,842 api DEBUG: GET 404 Address(host='127.0.0.1', port=7633) http://127.0.0.1:2518/favicon.ico
+2023-05-29 09:00:18,521 api DEBUG: 当前机器:nt
+2023-05-29 09:00:18,523 api DEBUG: http://127.0.0.1:2518/
+2023-05-29 09:00:18,523 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-29 09:00:18,524 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-29 09:00:18,524 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-29 09:00:18,525 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-29 09:00:18,526 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-29 09:00:18,526 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-05-29 09:00:18,527 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-05-29 09:00:18,527 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-05-29 09:00:23,037 api DEBUG: SELECT major.type_name as type_name, count(*) AS times FROM major WHERE major.special_name like "%数据%" GROUP BY type_name ORDER BY times DESC; 
+2023-05-29 09:00:24,285 api DEBUG: GET 404 Address(host='127.0.0.1', port=13494) http://127.0.0.1:2518/favicon.ico
+2023-05-29 09:01:31,528 api DEBUG: SELECT major.type_name as type_name, count(*) AS times FROM major WHERE major.special_name like "%数据%" GROUP BY type_name ORDER BY times DESC; 
+2023-05-29 09:01:31,617 api DEBUG: json写入到:result_json/big_data_type_count.json
+2023-05-29 09:01:31,618 api DEBUG: GET 200 Address(host='127.0.0.1', port=13614) http://127.0.0.1:2518/big_data_type_count
+2023-05-30 10:20:13,710 api DEBUG: 当前机器:nt
+2023-05-30 10:20:13,711 api DEBUG: http://127.0.0.1:2518/
+2023-05-30 10:20:13,712 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-30 10:20:13,712 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-30 10:20:13,713 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-30 10:20:13,713 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-30 10:20:13,714 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-30 10:20:13,714 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-05-30 10:20:13,715 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-05-30 10:20:13,715 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-05-30 10:20:20,002 api DEBUG: 找到本地文件:result_json/big_data_province_count.json
+2023-05-30 10:20:20,022 api DEBUG: GET 200 Address(host='127.0.0.1', port=3297) http://127.0.0.1:2518/big_data_province_count
+2023-05-30 10:20:21,313 api DEBUG: GET 404 Address(host='127.0.0.1', port=3297) http://127.0.0.1:2518/favicon.ico
+2023-05-30 10:30:53,794 api DEBUG: 找到本地文件:result_json/big_data_type_count.json
+2023-05-30 10:30:53,806 api DEBUG: GET 200 Address(host='127.0.0.1', port=3651) http://127.0.0.1:2518/big_data_type_count
+2023-05-30 10:31:21,259 api DEBUG: SELECT special_name  FROM major WHERE special_name LIKE "%数据%"
+2023-05-30 10:31:21,368 api DEBUG: json写入到:result_json/big_data_count.json
+2023-05-30 10:31:21,374 api DEBUG: GET 200 Address(host='127.0.0.1', port=3673) http://127.0.0.1:2518/big_data_count
+2023-05-30 10:35:27,595 api DEBUG: SELECT type_name FROM major WHERE special_name LIKE "%数据%";
+2023-05-30 10:35:27,700 api DEBUG: json写入到:result_json/big_data_count.json
+2023-05-30 10:35:27,701 api DEBUG: GET 200 Address(host='127.0.0.1', port=3706) http://127.0.0.1:2518/big_data_type_count
+2023-05-30 10:35:34,776 api DEBUG: SELECT info.province_id as province, count(*) AS times FROM info,major WHERE major.special_name like "%数据%" and info.school_id = major.school_id GROUP BY province ORDER BY times DESC; 
+2023-05-30 10:35:34,881 api DEBUG: json写入到:result_json/big_data_province_count.json
+2023-05-30 10:35:34,884 api DEBUG: GET 200 Address(host='127.0.0.1', port=3713) http://127.0.0.1:2518/big_data_province_count
+2023-05-30 10:35:36,060 api DEBUG: GET 404 Address(host='127.0.0.1', port=3713) http://127.0.0.1:2518/favicon.ico
+2023-05-30 10:35:45,181 api DEBUG: 找到本地文件:result_json/big_data_count.json
+2023-05-30 10:35:45,184 api DEBUG: GET 200 Address(host='127.0.0.1', port=3791) http://127.0.0.1:2518/big_data_count
+2023-05-30 10:35:46,311 api DEBUG: GET 404 Address(host='127.0.0.1', port=3791) http://127.0.0.1:2518/favicon.ico
+2023-05-30 10:37:15,250 api DEBUG: 当前机器:nt
+2023-05-30 10:37:15,251 api DEBUG: http://127.0.0.1:2518/
+2023-05-30 10:37:15,251 api DEBUG: http://127.0.0.1:2518/province_count
+2023-05-30 10:37:15,252 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-05-30 10:37:15,253 api DEBUG: http://127.0.0.1:2518/type_count
+2023-05-30 10:37:15,253 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-05-30 10:37:15,254 api DEBUG: http://127.0.0.1:2518/score_province
+2023-05-30 10:37:15,254 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-05-30 10:37:15,255 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-05-30 10:37:15,255 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-05-30 10:37:19,186 api DEBUG: SELECT type_name as type_name, count(*) as times FROM major WHERE special_name like "%数据%"  GROUP BY type_name ORDER BY times DESC; 
+2023-05-30 10:37:19,283 api DEBUG: json写入到:result_json/big_data_type_count.json
+2023-05-30 10:37:19,286 api DEBUG: GET 200 Address(host='127.0.0.1', port=3871) http://127.0.0.1:2518/big_data_type_count
+2023-05-30 10:37:21,982 api DEBUG: SELECT info.province_id as province, count(*) AS times FROM info,major WHERE major.special_name like "%数据%" and info.school_id = major.school_id GROUP BY province ORDER BY times DESC; 
+2023-05-30 10:37:22,083 api DEBUG: json写入到:result_json/big_data_province_count.json
+2023-05-30 10:37:22,085 api DEBUG: GET 200 Address(host='127.0.0.1', port=3871) http://127.0.0.1:2518/big_data_province_count
+2023-05-30 10:37:24,431 api DEBUG: SELECT special_name  FROM major WHERE special_name LIKE "%数据%"
+2023-05-30 10:37:24,536 api DEBUG: json写入到:result_json/big_data_count.json
+2023-05-30 10:37:24,541 api DEBUG: GET 200 Address(host='127.0.0.1', port=3871) http://127.0.0.1:2518/big_data_count
+2023-05-30 10:37:28,458 api DEBUG: SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY times DESC
+2023-05-30 10:37:28,529 api DEBUG: json写入到:result_json/score_province.json
+2023-05-30 10:37:28,531 api DEBUG: GET 200 Address(host='127.0.0.1', port=3871) http://127.0.0.1:2518/score_province
