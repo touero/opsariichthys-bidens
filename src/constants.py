@@ -14,6 +14,10 @@ class API(Enum):
     BIG_DATA_TYPE_COUNT = '/big_data_type_count'  # 大数据本科专科统计
     BIG_DATA_LEVEL2_COUNT = '/big_data_level2_count'  # 大数据二级类目统计
     BIG_DATA_LEVEL3_COUNT = '/big_data_level3_count'  # 大数据一级类目统计
+    BIG_DATA_IN_DUAL = '/big_data_in_dual'  # 大数据在双一流占比
+    BIG_DATA_IN_NULL = '/big_data_in_null'  # 大数据在普通院校占比
+    ARTIFICIAL_INTELLIGENCE_IN_DUAL = '/artificial_intelligence_in_dual'  # 人工智能在双一流占比
+    ARTIFICIAL_INTELLIGENCE_IN_NULL = '/artificial_intelligence_in_null'  # 人工智能在普通院校占比
 
 
 class MyJson(Enum):
@@ -27,6 +31,11 @@ class MyJson(Enum):
     BIG_DATA_TYPE_COUNT = 'result_json/big_data_type_count.json'  # 大数据本科专科统计
     BIG_DATA_LEVEL2_COUNT = 'result_json/big_data_level2_count.json'  # 大数据二级类目统计
     BIG_DATA_LEVEL3_COUNT = 'result_json/big_data_level3_count.json'  # 大数据一级类目统计
+    BIG_DATA_IN_DUAL = 'result_json/big_data_in_dual.json'  # 大数据在双一流占比
+    BIG_DATA_IN_NULL = 'result_json/big_data_in_null.json'  # 大数据在普通院校占比
+    ARTIFICIAL_INTELLIGENCE_IN_DUAL = 'result_json/artificial_intelligence_in_dual.json'  # 人工智能在双一流占比
+    ARTIFICIAL_INTELLIGENCE_IN_NULL = 'result_json/artificial_intelligence_in_null.json'  # 人工智能在普通院校占比
+
 
 @unique
 class Province(Enum):
