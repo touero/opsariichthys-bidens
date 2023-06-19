@@ -166,7 +166,7 @@ class GetData:
         for temp in big_data_count_temp:
             if temp in school_dual:
                 count_dual += 1
-        other = len(school_dual)
+        other = len(school_dual)-count_dual
         result = [{'name': '拥有', 'count': count_dual},
                   {'name': '未拥有', 'count': other}
                   ]
@@ -186,7 +186,7 @@ class GetData:
         for temp in big_data_count_temp:
             if temp in school_dual:
                 count_dual += 1
-        other = len(school_dual)
+        other = len(school_dual)-count_dual
         result = [{'name': '拥有', 'count': count_dual},
                   {'name': '未拥有', 'count': other}
                   ]
@@ -206,7 +206,7 @@ class GetData:
         for temp in big_data_count_temp:
             if temp in school_dual:
                 count_dual += 1
-        other = len(school_dual)
+        other = len(school_dual)-count_dual
         result = [{'name': '拥有', 'count': count_dual},
                   {'name': '未拥有', 'count': other}
                   ]
@@ -226,7 +226,7 @@ class GetData:
         for temp in big_data_count_temp:
             if temp in school_dual:
                 count_dual += 1
-        other = len(school_dual)
+        other = len(school_dual)-count_dual
         result = [{'name': '拥有', 'count': count_dual},
                   {'name': '未拥有', 'count': other}
                   ]
