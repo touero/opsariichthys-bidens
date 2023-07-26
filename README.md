@@ -56,6 +56,7 @@ $ python3 ./local_runner.py
 
 ## 相关链接
 
+- [fastapi](https://fastapi.tiangolo.com/)
 - [飞致云](https://www.fit2cloud.com/)
 
 
