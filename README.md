@@ -9,6 +9,7 @@
 &emsp;&emsp;本仓库数据来源于我的另一个仓库ScrapySchoolAll, 利用FastAPI构建自定义的API以供任何人在任何地使用, 我个人利用在由飞致云开源的DataEase作图分析.
 
 ![img.png](img.png)
+![img_1.png](img_1.png)
 
 本仓库包含以下API：
 
