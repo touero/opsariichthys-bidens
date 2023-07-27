@@ -8,9 +8,6 @@
 
 &emsp;&emsp;本仓库数据来源于我的另一个仓库ScrapySchoolAll, 利用FastAPI构建自定义的API以供任何人在任何地使用, 我个人利用在由飞致云开源的DataEase作图分析.
 
-![img.png](img.png)
-![img_1.png](img_1.png)
-
 本仓库包含以下API：
 
 1. province_count: 各个省份包含大学
@@ -27,6 +24,9 @@
 12. big_data_in_null: 大数据在普通院校占比
 13. artificial_intelligence_in_dual: 人工智能在双一流占比
 14. artificial_intelligence_in_null: 人工智能在普通院校占比
+
+![img.png](img.png)
+![img_1.png](img_1.png)
 
 
 ## 安装
