@@ -6,7 +6,7 @@
 
 ## 仓库介绍
 
-  本仓库数据来源于我的另一个仓库ScrapySchoolAll, 利用FastAPI构建自定义的API以供任何人在任何地使用, 我个人利用在由飞致云开源的DataEase作图分析.
+&emsp;&emsp;本仓库数据来源于我的另一个仓库ScrapySchoolAll, 利用FastAPI构建自定义的API以供任何人在任何地使用, 我个人利用在由飞致云开源的DataEase作图分析.
 
 ![img.png](img.png)
 
