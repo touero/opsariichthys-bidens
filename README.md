@@ -1,8 +1,10 @@
-# 中国大学的数据信息API搭建
+<h1 align="center">中国大学的数据信息API搭建</h1>
 
+<p align="center">
 <img src="https://img.shields.io/badge/python_-%3E%3D3.8-green" alt=""> <img src="https://img.shields.io/badge/license_-MIT-green" alt=""> <img src="https://img.shields.io/badge/pymysql-blue" alt=""> <img src="https://img.shields.io/badge/dataease-blue" alt="">  <img src="https://img.shields.io/badge/fastapi-blue" alt=""> 
+</p>
 
-仓库介绍
+## 仓库介绍
 
   本仓库数据来源于我的另一个仓库ScrapySchoolAll, 利用FastAPI构建自定义的API以供任何人在任何地使用, 我个人利用在由飞致云开源的DataEase作图分析.
 
