@@ -6,7 +6,7 @@
 
 ## Repository Introduction
 
-The data in this repository comes from my other repository, ScrapySchoolAll, which uses the Fast API to build custom APIs for anyone to use anywhere. I personally use Data Ease, which is open source by Feizhi Cloud, for graphical analysis
+The data in this repository comes from my other repository, ScrapySchoolAll, which uses the Fast API to build custom APIs for anyone to use anywhere. I personally use Data Ease, which is open source by Feizhi Cloud, for graphical analysis.
 
 This repository contains：
 
