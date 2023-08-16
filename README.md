@@ -1,4 +1,4 @@
-<h1 align="center">Building a Data Information API for Chinese Universities</h1>
+<h1 align="center">opsariichthys-bidens</h1>
 
 <p align="center">
 <img src="https://img.shields.io/badge/python_-%3E%3D3.8-green" alt=""> <img src="https://img.shields.io/badge/license_-MIT-green" alt=""> <img src="https://img.shields.io/badge/pymysql-blue" alt=""> <img src="https://img.shields.io/badge/dataease-blue" alt="">  <img src="https://img.shields.io/badge/fastapi-blue" alt=""> 
