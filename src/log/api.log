@@ -1482,3 +1482,682 @@
 2023-08-19 17:01:26,499 api DEBUG: select school_id from major where special_name="人工智能";
 2023-08-19 17:01:26,572 api DEBUG: json写入到:result_json/artificial_intelligence_in_dual.json
 2023-08-19 17:01:26,574 api DEBUG: GET 200 Address(host='127.0.0.1', port=9805) http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:15:25,190 api DEBUG: 当前机器:nt
+2023-08-19 17:15:25,191 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:15:25,191 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:15:25,192 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:15:25,193 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:15:25,193 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:15:25,193 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:15:25,194 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:15:25,194 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:15:25,195 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:15:25,195 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:15:25,196 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:15:25,196 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:15:25,197 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:15:25,197 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:15:25,197 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:15:28,853 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-08-19 17:15:28,855 api DEBUG: GET 200 Address(host='127.0.0.1', port=11185) http://127.0.0.1:2518/province_count
+2023-08-19 17:29:35,396 api DEBUG: 当前机器:nt
+2023-08-19 17:29:35,397 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:29:35,398 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:29:35,398 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:29:35,399 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:29:35,399 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:29:35,400 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:29:35,401 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:29:35,401 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:29:35,401 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:29:35,402 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:29:35,402 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:29:35,403 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:29:35,403 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:29:35,404 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:29:35,404 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:29:42,686 api DEBUG: GET 404 Address(host='127.0.0.1', port=12016) http://127.0.0.1:2518/province_count
+2023-08-19 17:30:00,571 api DEBUG: 当前机器:nt
+2023-08-19 17:30:00,573 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:30:00,574 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:30:00,574 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:30:00,575 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:30:00,575 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:30:00,576 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:30:00,577 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:30:00,577 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:30:00,578 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:30:00,578 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:30:00,579 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:30:00,579 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:30:00,580 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:30:00,580 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:30:00,581 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:30:05,803 api DEBUG: GET 404 Address(host='127.0.0.1', port=12042) http://127.0.0.1:2518/province_count
+2023-08-19 17:30:23,415 api DEBUG: 当前机器:nt
+2023-08-19 17:30:23,450 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:30:23,451 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:30:23,451 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:30:23,453 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:30:23,454 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:30:23,454 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:30:23,455 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:30:23,455 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:30:23,456 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:30:23,456 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:30:23,457 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:30:23,457 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:30:23,458 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:30:23,459 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:30:23,460 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:30:37,137 api DEBUG: GET 200 Address(host='127.0.0.1', port=12379) http://127.0.0.1:2518/province_count
+2023-08-19 17:30:51,058 api DEBUG: 当前机器:nt
+2023-08-19 17:30:51,059 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:30:51,060 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:30:51,061 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:30:51,062 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:30:51,062 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:30:51,063 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:30:51,063 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:30:51,064 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:30:51,064 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:30:51,065 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:30:51,065 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:30:51,066 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:30:51,066 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:30:51,067 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:30:51,068 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:31:00,283 api DEBUG: GET 404 Address(host='127.0.0.1', port=12393) http://127.0.0.1:2518/province_count
+2023-08-19 17:32:53,686 api DEBUG: 当前机器:nt
+2023-08-19 17:32:53,718 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:32:53,719 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:32:53,720 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:32:53,721 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:32:53,721 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:32:53,722 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:32:53,723 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:32:53,724 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:32:53,724 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:32:53,725 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:32:53,726 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:32:53,727 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:32:53,728 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:32:53,728 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:32:53,729 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:33:17,916 api DEBUG: 当前机器:nt
+2023-08-19 17:33:17,975 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:33:17,975 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:33:17,976 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:33:17,977 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:33:17,978 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:33:17,979 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:33:17,979 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:33:17,980 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:33:17,981 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:33:17,981 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:33:17,982 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:33:17,983 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:33:17,984 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:33:17,984 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:33:17,985 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:33:32,906 api DEBUG: 当前机器:nt
+2023-08-19 17:33:32,938 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:33:32,939 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:33:32,940 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:33:32,940 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:33:32,941 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:33:32,942 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:33:32,942 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:33:32,943 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:33:32,943 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:33:32,944 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:33:32,945 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:33:32,945 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:33:32,946 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:33:32,946 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:33:32,947 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:33:39,276 api DEBUG: GET 404 Address(host='127.0.0.1', port=12468) http://127.0.0.1:2518/province_count
+2023-08-19 17:36:02,025 api DEBUG: GET 404 Address(host='127.0.0.1', port=12782) http://127.0.0.1:2518/province_count
+2023-08-19 17:36:17,947 api DEBUG: GET 404 Address(host='127.0.0.1', port=12783) http://127.0.0.1:2518/province_count
+2023-08-19 17:37:19,289 api DEBUG: 当前机器:nt
+2023-08-19 17:37:19,322 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:37:19,322 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:37:19,323 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:37:19,324 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:37:19,324 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:37:19,325 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:37:19,325 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:37:19,326 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:37:19,326 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:37:19,327 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:37:19,327 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:37:19,329 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:37:19,329 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:37:19,330 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:37:19,331 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:37:28,016 api DEBUG: GET 404 Address(host='127.0.0.1', port=12802) http://127.0.0.1:2518/province_count
+2023-08-19 17:37:36,578 api DEBUG: GET 404 Address(host='127.0.0.1', port=12803) http://127.0.0.1:2518/school/province_count
+2023-08-19 17:39:16,187 api DEBUG: 当前机器:nt
+2023-08-19 17:39:16,187 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:39:16,188 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:39:16,189 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:39:16,190 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:39:16,191 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:39:16,191 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:39:16,192 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:39:16,193 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:39:16,193 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:39:16,194 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:39:16,194 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:39:16,195 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:39:16,196 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:39:16,196 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:39:16,197 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:39:23,651 api DEBUG: GET 404 Address(host='127.0.0.1', port=12842) http://127.0.0.1:2518/province_count
+2023-08-19 17:39:47,866 api DEBUG: 当前机器:nt
+2023-08-19 17:39:47,867 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:39:47,867 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:39:47,868 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:39:47,869 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:39:47,869 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:39:47,870 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:39:47,871 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:39:47,872 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:39:47,872 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:39:47,873 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:39:47,873 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:39:47,873 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:39:47,874 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:39:47,874 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:39:47,875 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:39:51,303 api DEBUG: GET 404 Address(host='127.0.0.1', port=12849) http://127.0.0.1:2518/province_count
+2023-08-19 17:41:26,756 api DEBUG: 当前机器:nt
+2023-08-19 17:41:26,791 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:41:26,792 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:41:26,793 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:41:26,794 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:41:26,795 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:41:26,795 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:41:26,796 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:41:26,797 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:41:26,798 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:41:26,799 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:41:26,799 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:41:26,800 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:41:26,800 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:41:26,801 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:41:26,801 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:41:29,980 api DEBUG: GET 404 Address(host='127.0.0.1', port=12888) http://127.0.0.1:2518/province_count
+2023-08-19 17:42:02,011 api DEBUG: 当前机器:nt
+2023-08-19 17:42:02,012 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:42:02,013 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:42:02,014 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:42:02,014 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:42:02,015 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:42:02,015 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:42:02,016 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:42:02,017 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:42:02,018 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:42:02,018 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:42:02,019 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:42:02,019 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:42:02,020 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:42:02,021 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:42:02,021 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:42:17,525 api DEBUG: 当前机器:nt
+2023-08-19 17:42:17,526 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:42:17,527 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:42:17,528 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:42:17,529 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:42:17,529 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:42:17,530 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:42:17,530 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:42:17,531 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:42:17,531 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:42:17,532 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:42:17,533 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:42:17,533 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:42:17,534 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:42:17,534 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:42:17,535 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:43:53,856 api DEBUG: 当前机器:nt
+2023-08-19 17:43:53,891 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:43:53,891 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:43:53,892 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:43:53,893 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:43:53,893 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:43:53,894 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:43:53,895 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:43:53,896 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:43:53,897 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:43:53,897 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:43:53,898 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:43:53,899 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:43:53,899 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:43:53,900 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:43:53,901 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:44:01,441 api DEBUG: GET 404 Address(host='127.0.0.1', port=12973) http://127.0.0.1:2518/province_count
+2023-08-19 17:44:56,730 api DEBUG: 当前机器:nt
+2023-08-19 17:44:56,731 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:44:56,732 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:44:56,732 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:44:56,733 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:44:56,734 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:44:56,734 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:44:56,735 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:44:56,736 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:44:56,737 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:44:56,738 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:44:56,738 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:44:56,739 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:44:56,739 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:44:56,740 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:44:56,741 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:46:57,349 api DEBUG: 当前机器:nt
+2023-08-19 17:46:57,350 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:46:57,350 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:46:57,351 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:46:57,352 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:46:57,352 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:46:57,353 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:46:57,353 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:46:57,354 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:46:57,355 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:46:57,355 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:46:57,356 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:46:57,356 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:46:57,357 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:46:57,357 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:46:57,358 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:47:00,729 api DEBUG: GET 404 Address(host='127.0.0.1', port=13316) http://127.0.0.1:2518/province_count
+2023-08-19 17:48:18,723 api DEBUG: 当前机器:nt
+2023-08-19 17:48:18,724 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:48:18,725 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 17:48:18,726 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:48:18,727 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:48:18,727 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:48:18,728 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:48:18,729 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:48:18,729 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:48:18,730 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:48:18,730 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:48:18,731 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:48:18,731 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:48:18,732 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:48:18,733 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:48:18,733 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:48:59,973 api DEBUG: GET 404 Address(host='127.0.0.1', port=13354) http://127.0.0.1:2518/province_count
+2023-08-19 17:49:03,078 api DEBUG: GET 404 Address(host='127.0.0.1', port=13355) http://127.0.0.1:2518/province_count
+2023-08-19 17:49:39,439 api DEBUG: 当前机器:nt
+2023-08-19 17:49:39,469 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 17:49:39,469 api DEBUG: http://127.0.0.1:2518province_count
+2023-08-19 17:49:39,469 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 17:49:39,469 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 17:49:39,469 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 17:49:39,469 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 17:49:39,479 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 17:50:03,730 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-08-19 17:50:03,735 api DEBUG: GET 200 Address(host='127.0.0.1', port=13379) http://127.0.0.1:2518/province_count
+2023-08-19 17:50:11,152 api DEBUG: GET 200 Address(host='127.0.0.1', port=13380) http://127.0.0.1:2518/ppp
+2023-08-19 18:02:50,740 api DEBUG: 当前机器:nt
+2023-08-19 18:02:50,741 api DEBUG: http://127.0.0.1:2518/
+2023-08-19 18:02:50,742 api DEBUG: http://127.0.0.1:2518province_count
+2023-08-19 18:02:50,743 api DEBUG: http://127.0.0.1:2518dual_class_count
+2023-08-19 18:02:50,744 api DEBUG: http://127.0.0.1:2518type_count
+2023-08-19 18:02:50,745 api DEBUG: http://127.0.0.1:2518spacial_name_count
+2023-08-19 18:02:50,745 api DEBUG: http://127.0.0.1:2518score_province
+2023-08-19 18:02:50,746 api DEBUG: http://127.0.0.1:2518big_data_count
+2023-08-19 18:02:50,746 api DEBUG: http://127.0.0.1:2518big_data_province_count
+2023-08-19 18:02:50,747 api DEBUG: http://127.0.0.1:2518big_data_type_count
+2023-08-19 18:02:50,748 api DEBUG: http://127.0.0.1:2518big_data_level2_count
+2023-08-19 18:02:50,748 api DEBUG: http://127.0.0.1:2518big_data_level3_count
+2023-08-19 18:02:50,749 api DEBUG: http://127.0.0.1:2518big_data_in_dual
+2023-08-19 18:02:50,749 api DEBUG: http://127.0.0.1:2518big_data_in_null
+2023-08-19 18:02:50,750 api DEBUG: http://127.0.0.1:2518artificial_intelligence_in_dual
+2023-08-19 18:02:50,750 api DEBUG: http://127.0.0.1:2518artificial_intelligence_in_null
+2023-08-19 18:03:47,490 api DEBUG: 当前机器:nt
+2023-08-19 18:03:47,491 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:03:47,492 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:03:47,492 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:03:47,493 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:03:47,494 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:03:47,495 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:03:47,495 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:03:47,496 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:03:47,497 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:03:47,497 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:03:47,498 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:03:47,499 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:03:47,500 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:03:47,500 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:03:47,501 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:03:50,953 api DEBUG: 找到本地文件:result_json/artificial_intelligence_in_null.json
+2023-08-19 18:03:50,956 api DEBUG: GET 200 Address(host='127.0.0.1', port=13870) http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:03:58,613 api DEBUG: 找到本地文件:result_json/big_data_in_null.json
+2023-08-19 18:03:58,624 api DEBUG: GET 200 Address(host='127.0.0.1', port=13869) http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:04:31,107 api DEBUG: select school_id from info where dual_class_name="双一流";
+2023-08-19 18:04:31,124 api DEBUG: select school_id from major where special_name="数据科学与大数据技术";
+2023-08-19 18:04:31,209 api DEBUG: json写入到:result_json/big_data_in_dual.json
+2023-08-19 18:04:31,211 api DEBUG: GET 200 Address(host='127.0.0.1', port=13894) http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:05:23,949 api DEBUG: 找到本地文件:result_json/big_data_in_dual.json
+2023-08-19 18:05:23,953 api DEBUG: GET 200 Address(host='127.0.0.1', port=13895) http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:05:29,090 api DEBUG: SELECT level3_name as level3_name, count(*) as times FROM major WHERE major.special_name like "%数据%" GROUP BY level3_name ORDER BY times DESC limit 10;
+2023-08-19 18:05:29,234 api DEBUG: json写入到:result_json/big_data_level3_count.json
+2023-08-19 18:05:29,236 api DEBUG: GET 200 Address(host='127.0.0.1', port=14242) http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:05:31,777 api DEBUG: SELECT level2_name as level2_name, count(*) as times FROM major WHERE major.special_name like "%数据%" GROUP BY level2_name ORDER BY times DESC limit 5;
+2023-08-19 18:05:31,853 api DEBUG: json写入到:result_json/big_data_level2_count.json
+2023-08-19 18:05:31,854 api DEBUG: GET 200 Address(host='127.0.0.1', port=14242) http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:05:34,434 api DEBUG: SELECT type_name as type_name, count(*) as times FROM major WHERE special_name like "%数据%"  GROUP BY type_name ORDER BY times DESC;
+2023-08-19 18:05:34,508 api DEBUG: json写入到:result_json/big_data_type_count.json
+2023-08-19 18:05:34,510 api DEBUG: GET 200 Address(host='127.0.0.1', port=14242) http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:05:37,497 api DEBUG: SELECT info.province_id as province, count(*) AS times FROM info,major WHERE major.special_name like "%数据%" and info.school_id = major.school_id GROUP BY province ORDER BY times DESC;
+2023-08-19 18:05:37,620 api DEBUG: json写入到:result_json/big_data_province_count.json
+2023-08-19 18:05:37,621 api DEBUG: GET 200 Address(host='127.0.0.1', port=14242) http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:05:40,395 api DEBUG: 找到本地文件:result_json/big_data_province_count.json
+2023-08-19 18:05:40,397 api DEBUG: GET 200 Address(host='127.0.0.1', port=14242) http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:05:44,737 api DEBUG: SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY times DESC;
+2023-08-19 18:05:44,795 api DEBUG: json写入到:result_json/score_province.json
+2023-08-19 18:05:44,797 api DEBUG: GET 200 Address(host='127.0.0.1', port=14242) http://127.0.0.1:2518/score_province
+2023-08-19 18:05:47,296 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-08-19 18:05:47,298 api DEBUG: GET 200 Address(host='127.0.0.1', port=14242) http://127.0.0.1:2518/province_count
+2023-08-19 18:05:54,503 api DEBUG: 找到本地文件:result_json/big_data_in_null.json
+2023-08-19 18:05:54,506 api DEBUG: GET 200 Address(host='127.0.0.1', port=14245) http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:05:57,690 api DEBUG: 找到本地文件:result_json/big_data_type_count.json
+2023-08-19 18:05:57,693 api DEBUG: GET 200 Address(host='127.0.0.1', port=14245) http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:05:59,670 api DEBUG: 找到本地文件:result_json/big_data_province_count.json
+2023-08-19 18:05:59,672 api DEBUG: GET 200 Address(host='127.0.0.1', port=14245) http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:06:02,904 api DEBUG: SELECT special_name AS special_name,COUNT(*) AS times FROM major GROUP BY special_name ORDER BY times DESC LIMIT 10;
+2023-08-19 18:06:03,100 api DEBUG: json写入到:result_json/spacial_name_count.json
+2023-08-19 18:06:03,102 api DEBUG: GET 200 Address(host='127.0.0.1', port=14245) http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:06:05,541 api DEBUG: SELECT type_name AS type_name,count(*) AS times FROM info GROUP BY type_name ORDER BY times DESC;
+2023-08-19 18:06:05,556 api DEBUG: json写入到:result_json/type_count.json
+2023-08-19 18:06:05,558 api DEBUG: GET 200 Address(host='127.0.0.1', port=14245) http://127.0.0.1:2518/type_count
+2023-08-19 18:06:08,630 api DEBUG: 找到本地文件:result_json/dual_class_count.json
+2023-08-19 18:06:08,633 api DEBUG: GET 200 Address(host='127.0.0.1', port=14245) http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:06:11,234 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-08-19 18:06:11,236 api DEBUG: GET 200 Address(host='127.0.0.1', port=14245) http://127.0.0.1:2518/province_count
+2023-08-19 18:06:13,595 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-08-19 18:06:13,598 api DEBUG: GET 200 Address(host='127.0.0.1', port=14245) http://127.0.0.1:2518/province_count
+2023-08-19 18:19:10,531 api DEBUG: 当前机器:nt
+2023-08-19 18:19:10,532 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:19:10,533 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:19:10,534 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:19:10,534 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:19:10,536 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:19:10,536 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:19:10,537 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:19:10,537 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:19:10,538 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:19:10,538 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:19:10,539 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:19:10,539 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:19:10,540 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:19:10,540 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:19:10,541 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:19:10,578 api DEBUG: module 'util.log' has no attribute 'endswith'
+2023-08-19 18:19:10,616 api DEBUG: None
+2023-08-19 18:25:04,659 api DEBUG: 当前机器:nt
+2023-08-19 18:25:04,694 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:25:04,695 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:25:04,696 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:25:04,697 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:25:04,698 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:25:04,698 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:25:04,699 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:25:04,700 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:25:04,701 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:25:04,702 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:25:04,702 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:25:04,703 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:25:04,704 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:25:04,705 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:25:04,706 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:25:04,707 api DEBUG: 
+2023-08-19 18:25:04,708 uvicorn.error INFO: Will watch for changes in these directories: ['D:\\pythonProject\\allSchoolAPI\\src']
+2023-08-19 18:25:04,711 uvicorn.error INFO: Uvicorn running on http://127.0.0.1:2518 (Press CTRL+C to quit)
+2023-08-19 18:25:04,711 uvicorn.error INFO: Started reloader process [1388] using StatReload
+2023-08-19 18:25:09,938 uvicorn.error INFO: Started server process [8644]
+2023-08-19 18:25:09,939 uvicorn.error INFO: Waiting for application startup.
+2023-08-19 18:25:09,940 uvicorn.error INFO: Application startup complete.
+2023-08-19 18:25:32,991 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-08-19 18:25:33,001 api DEBUG: GET 200 Address(host='127.0.0.1', port=1602) http://127.0.0.1:2518/province_count
+2023-08-19 18:25:33,003 uvicorn.access INFO: 127.0.0.1:1602 - "GET /province_count HTTP/1.1" 200
+2023-08-19 18:25:41,586 uvicorn.error INFO: Stopping reloader process [1388]
+2023-08-19 18:25:57,860 api DEBUG: 当前机器:nt
+2023-08-19 18:25:57,861 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:25:57,861 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:25:57,862 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:25:57,863 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:25:57,863 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:25:57,864 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:25:57,864 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:25:57,865 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:25:57,865 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:25:57,865 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:25:57,866 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:25:57,867 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:25:57,867 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:25:57,868 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:25:57,869 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:25:57,869 api DEBUG: <module 'util.log' from 'D:\\pythonProject\\allSchoolAPI\\src\\util\\log.py'>
+2023-08-19 18:25:57,903 uvicorn.error INFO: Will watch for changes in these directories: ['D:\\pythonProject\\allSchoolAPI\\src']
+2023-08-19 18:25:57,903 uvicorn.error INFO: Uvicorn running on http://127.0.0.1:2518 (Press CTRL+C to quit)
+2023-08-19 18:25:57,904 uvicorn.error INFO: Started reloader process [7332] using StatReload
+2023-08-19 18:26:00,867 uvicorn.error INFO: Started server process [7300]
+2023-08-19 18:26:00,867 uvicorn.error INFO: Waiting for application startup.
+2023-08-19 18:26:00,868 uvicorn.error INFO: Application startup complete.
+2023-08-19 18:26:20,062 uvicorn.error INFO: Shutting down
+2023-08-19 18:26:20,169 uvicorn.error INFO: Waiting for application shutdown.
+2023-08-19 18:26:20,170 uvicorn.error INFO: Application shutdown complete.
+2023-08-19 18:26:20,170 uvicorn.error INFO: Finished server process [7300]
+2023-08-19 18:26:20,199 uvicorn.error INFO: Stopping reloader process [7332]
+2023-08-19 18:26:23,370 api DEBUG: 当前机器:nt
+2023-08-19 18:26:23,371 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:26:23,371 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:26:23,372 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:26:23,373 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:26:23,373 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:26:23,374 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:26:23,375 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:26:23,375 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:26:23,376 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:26:23,377 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:26:23,377 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:26:23,378 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:26:23,379 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:26:23,379 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:26:23,380 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:26:23,380 api DEBUG: <module 'uvicorn' from 'D:\\Anaconda3\\lib\\site-packages\\uvicorn\\__init__.py'>
+2023-08-19 18:26:23,413 uvicorn.error INFO: Will watch for changes in these directories: ['D:\\pythonProject\\allSchoolAPI\\src']
+2023-08-19 18:26:23,414 uvicorn.error INFO: Uvicorn running on http://127.0.0.1:2518 (Press CTRL+C to quit)
+2023-08-19 18:26:23,414 uvicorn.error INFO: Started reloader process [19172] using StatReload
+2023-08-19 18:26:26,401 uvicorn.error INFO: Started server process [11952]
+2023-08-19 18:26:26,401 uvicorn.error INFO: Waiting for application startup.
+2023-08-19 18:26:26,402 uvicorn.error INFO: Application startup complete.
+2023-08-19 18:26:27,273 uvicorn.error INFO: Shutting down
+2023-08-19 18:26:27,382 uvicorn.error INFO: Stopping reloader process [19172]
+2023-08-19 18:28:07,563 api DEBUG: 当前机器:nt
+2023-08-19 18:28:07,564 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:28:07,565 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:28:07,566 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:28:07,566 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:28:07,567 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:28:07,567 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:28:07,568 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:28:07,568 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:28:07,569 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:28:07,569 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:28:07,570 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:28:07,570 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:28:07,571 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:28:07,572 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:28:07,573 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:28:07,573 api DEBUG: <module 'uvicorn' from 'D:\\Anaconda3\\lib\\site-packages\\uvicorn\\__init__.py'>
+2023-08-19 18:28:07,606 uvicorn.error INFO: Will watch for changes in these directories: ['D:\\pythonProject\\allSchoolAPI\\src']
+2023-08-19 18:28:07,606 uvicorn.error INFO: Uvicorn running on http://127.0.0.1:2518 (Press CTRL+C to quit)
+2023-08-19 18:28:07,606 uvicorn.error INFO: Started reloader process [13964] using StatReload
+2023-08-19 18:28:10,501 uvicorn.error INFO: Started server process [18832]
+2023-08-19 18:28:10,502 uvicorn.error INFO: Waiting for application startup.
+2023-08-19 18:28:10,502 uvicorn.error INFO: Application startup complete.
+2023-08-19 18:28:10,649 api DEBUG: GET 200 Address(host='127.0.0.1', port=1662) http://127.0.0.1:2518/666
+2023-08-19 18:28:10,649 uvicorn.access INFO: 127.0.0.1:1662 - "GET /666 HTTP/1.1" 200
+2023-08-19 18:28:16,666 uvicorn.error INFO: Shutting down
+2023-08-19 18:28:16,786 uvicorn.error INFO: Waiting for application shutdown.
+2023-08-19 18:28:16,786 uvicorn.error INFO: Application shutdown complete.
+2023-08-19 18:28:16,786 uvicorn.error INFO: Finished server process [18832]
+2023-08-19 18:28:16,795 uvicorn.error INFO: Stopping reloader process [13964]
+2023-08-19 18:31:46,550 api DEBUG: 当前机器:nt
+2023-08-19 18:31:46,551 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:31:46,552 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:31:46,552 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:31:46,553 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:31:46,554 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:31:46,554 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:31:46,555 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:31:46,555 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:31:46,556 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:31:46,556 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:31:46,557 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:31:46,558 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:31:46,559 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:31:46,559 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:31:46,560 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:31:46,561 api DEBUG: 
+2023-08-19 18:32:23,450 api DEBUG: 
+2023-08-19 18:32:24,087 api DEBUG: 
+2023-08-19 18:33:56,787 api DEBUG: 当前机器:nt
+2023-08-19 18:33:56,821 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:33:56,822 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:33:56,822 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:33:56,823 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:33:56,824 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:33:56,824 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:33:56,824 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:33:56,825 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:33:56,825 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:33:56,826 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:33:56,827 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:33:56,827 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:33:56,828 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:33:56,828 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:33:56,829 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:33:56,831 api DEBUG: 
+2023-08-19 18:37:43,140 - uvicorn.error - INFO - Will watch for changes in these directories: ['D:\\pythonProject\\allSchoolAPI\\src']
+2023-08-19 18:37:43,141 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:2518 (Press CTRL+C to quit)
+2023-08-19 18:37:43,141 - uvicorn.error - INFO - Started reloader process [17452] using StatReload
+2023-08-19 18:37:51,552 - uvicorn.error - INFO - Stopping reloader process [17452]
+2023-08-19 18:37:54,292 - uvicorn.error - INFO - Will watch for changes in these directories: ['D:\\pythonProject\\allSchoolAPI\\src']
+2023-08-19 18:37:54,292 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:2518 (Press CTRL+C to quit)
+2023-08-19 18:37:54,292 - uvicorn.error - INFO - Started reloader process [2844] using StatReload
+2023-08-19 18:38:06,077 - uvicorn.error - INFO - Stopping reloader process [2844]
+2023-08-19 18:42:04,557 api DEBUG: 当前机器:nt
+2023-08-19 18:42:04,558 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:42:04,558 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:42:04,559 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:42:04,559 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:42:04,560 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:42:04,561 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:42:04,562 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:42:04,562 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:42:04,563 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:42:04,564 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:42:04,564 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:42:04,565 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:42:04,565 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:42:04,566 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:42:04,566 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:42:28,424 api DEBUG: 当前机器:nt
+2023-08-19 18:42:28,425 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:42:28,425 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:42:28,426 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:42:28,427 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:42:28,427 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:42:28,428 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:42:28,428 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:42:28,429 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:42:28,429 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:42:28,429 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:42:28,430 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:42:28,430 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:42:28,431 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:42:28,431 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:42:28,431 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:42:28,431 api DEBUG: 
+2023-08-19 18:42:41,002 api DEBUG: 当前机器:nt
+2023-08-19 18:42:41,002 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:42:41,003 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:42:41,004 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:42:41,004 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:42:41,005 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:42:41,005 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:42:41,006 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:42:41,006 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:42:41,006 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:42:41,007 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:42:41,007 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:42:41,008 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:42:41,008 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:42:41,009 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:42:41,009 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:43:04,015 api DEBUG: 当前机器:nt
+2023-08-19 18:43:04,016 api DEBUG: http://127.0.0.1:2518//
+2023-08-19 18:43:04,017 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:43:04,017 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:43:04,018 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:43:04,019 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:43:04,020 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:43:04,020 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:43:04,021 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:43:04,022 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:43:04,022 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:43:04,023 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:43:04,023 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:43:04,024 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:43:04,024 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:43:04,024 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:43:04,025 api DEBUG: 
+2023-08-19 18:44:10,212 api DEBUG: 当前机器:nt
+2023-08-19 18:45:01,592 api DEBUG: 当前机器:nt
+2023-08-19 18:45:25,037 api DEBUG: 当前机器:nt
+2023-08-19 18:45:27,008 api DEBUG: http://127.0.0.1:2518/province_count
+2023-08-19 18:45:29,763 api DEBUG: http://127.0.0.1:2518/dual_class_count
+2023-08-19 18:45:30,208 api DEBUG: http://127.0.0.1:2518/type_count
+2023-08-19 18:45:30,575 api DEBUG: http://127.0.0.1:2518/spacial_name_count
+2023-08-19 18:45:32,139 api DEBUG: http://127.0.0.1:2518/score_province
+2023-08-19 18:45:32,140 api DEBUG: http://127.0.0.1:2518/big_data_count
+2023-08-19 18:45:32,141 api DEBUG: http://127.0.0.1:2518/big_data_province_count
+2023-08-19 18:45:32,142 api DEBUG: http://127.0.0.1:2518/big_data_type_count
+2023-08-19 18:45:32,143 api DEBUG: http://127.0.0.1:2518/big_data_level2_count
+2023-08-19 18:45:32,144 api DEBUG: http://127.0.0.1:2518/big_data_level3_count
+2023-08-19 18:45:32,144 api DEBUG: http://127.0.0.1:2518/big_data_in_dual
+2023-08-19 18:45:32,145 api DEBUG: http://127.0.0.1:2518/big_data_in_null
+2023-08-19 18:45:32,146 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_dual
+2023-08-19 18:45:32,146 api DEBUG: http://127.0.0.1:2518/artificial_intelligence_in_null
+2023-08-19 18:50:00,209 api DEBUG: 当前机器:nt
+2023-08-19 18:50:00,245 api DEBUG: all_api =
+ {
+    "1": "http://127.0.0.1:2518/province_count",
+    "2": "http://127.0.0.1:2518/dual_class_count",
+    "3": "http://127.0.0.1:2518/type_count",
+    "4": "http://127.0.0.1:2518/spacial_name_count",
+    "5": "http://127.0.0.1:2518/score_province",
+    "6": "http://127.0.0.1:2518/big_data_count",
+    "7": "http://127.0.0.1:2518/big_data_province_count",
+    "8": "http://127.0.0.1:2518/big_data_type_count",
+    "9": "http://127.0.0.1:2518/big_data_level2_count",
+    "10": "http://127.0.0.1:2518/big_data_level3_count",
+    "11": "http://127.0.0.1:2518/big_data_in_dual",
+    "12": "http://127.0.0.1:2518/big_data_in_null",
+    "13": "http://127.0.0.1:2518/artificial_intelligence_in_dual",
+    "14": "http://127.0.0.1:2518/artificial_intelligence_in_null"
+}
+2023-08-19 18:50:20,496 api DEBUG: 找到本地文件:result_json/province_count.json
+2023-08-19 18:50:20,498 api DEBUG: GET 200 Address(host='127.0.0.1', port=3242) http://127.0.0.1:2518/province_count
