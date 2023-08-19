@@ -1,0 +1,1 @@
+SELECT info.province_id as province, count(*) AS times FROM info,major WHERE major.special_name like "%数据%" and info.school_id = major.school_id GROUP BY province ORDER BY times DESC;

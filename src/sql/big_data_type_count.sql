@@ -1,0 +1,1 @@
+SELECT type_name as type_name, count(*) as times FROM major WHERE special_name like "%数据%"  GROUP BY type_name ORDER BY times DESC;

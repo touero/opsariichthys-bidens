@@ -2,8 +2,6 @@ import logging
 import os
 import json
 
-from src.constants import MyJson
-
 
 def log_t(msg):
     logger = logging.getLogger('api')

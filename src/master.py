@@ -1,6 +1,7 @@
 import traceback
 
 from constants import *
+from src.util.tools import log_t
 from api import start_task
 
 
@@ -14,5 +15,6 @@ class Master:
         try:
             if self.task_type == TaskType.API.value:
                 start_task(self.task)
-        except Exception:
-            traceback.print_exc()
+        except Exception as e:
+            log_t(e)
+            log_t(traceback.print_exc())

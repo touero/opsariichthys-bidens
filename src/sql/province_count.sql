@@ -1,0 +1,1 @@
+SELECT PROVINCE_NAME AS province, count(*) as times FROM info GROUP BY province ORDER BY times DESC;

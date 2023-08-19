@@ -1,0 +1,1 @@
+select school_id from major where special_name="人工智能";

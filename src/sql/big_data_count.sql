@@ -1,0 +1,1 @@
+SELECT special_name  FROM major WHERE special_name LIKE "%数据%";

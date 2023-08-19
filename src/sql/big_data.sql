@@ -1,0 +1,1 @@
+select school_id from major where special_name="数据科学与大数据技术";

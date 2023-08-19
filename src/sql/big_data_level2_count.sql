@@ -1,0 +1,1 @@
+SELECT level2_name as level2_name, count(*) as times FROM major WHERE major.special_name like "%数据%" GROUP BY level2_name ORDER BY times DESC limit 5;

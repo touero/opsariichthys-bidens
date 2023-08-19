@@ -1,0 +1,1 @@
+SELECT type_name AS type_name,count(*) AS times FROM info GROUP BY type_name ORDER BY times DESC;

@@ -1,0 +1,1 @@
+SELECT province_id AS province_id_count,COUNT(*) AS times FROM score GROUP BY province_id  ORDER BY times DESC;

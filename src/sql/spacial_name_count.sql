@@ -1,0 +1,1 @@
+SELECT special_name AS special_name,COUNT(*) AS times FROM major GROUP BY special_name ORDER BY times DESC LIMIT 10;

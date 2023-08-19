@@ -36,12 +36,18 @@ class SqlMaster:
                 result = result + ' ' + 'or' + ' ' + temp
         return result
 
-    def get_something_count(self, sql: str) -> list:
+    def get_something_count(self, sql_path: str) -> list:
         result = []
-        schools = self.submit_sql_with_return(sql)
+        schools = self.execute_sql(sql_path)
         for school in schools:
             result.append(school[0])
         return result
+
+    def execute_sql(self, sql_path: str):
+        if sql_path:
+            with open(sql_path, 'r') as file:
+                sql_script = file.readline()
+            return self.submit_sql_with_return(str(sql_script))
 
     def __del__(self):
         self.cursor.close()
