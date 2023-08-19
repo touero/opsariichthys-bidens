@@ -3,7 +3,6 @@ from enum import Enum, unique, IntEnum
 
 @unique
 class API(Enum):
-    ERROR = '/'  # 未知
     PROVINCE_COUNT = 'province_count'  # 各个省份包含大学
     DUAL_COUNT = 'dual_class_count'  # 各省份包含双一流数量
     TYPE_COUNT = 'type_count'  # 学校类别统计

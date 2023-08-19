@@ -1,9 +1,11 @@
 import logging
 import os
 import json
+from logging.handlers import RotatingFileHandler
 
 
-def log_t(msg):
+def log_t(*args):
+    msg = ','.join(args)
     logger = logging.getLogger('api')
     logger.setLevel(logging.DEBUG)
     console_handler = logging.StreamHandler()
@@ -53,5 +55,7 @@ def exist_json(json_path):
                 return listResult
             else:
                 return func(*args, **kwargs)
+
         return wrapper
+
     return decorator

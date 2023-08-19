@@ -59,6 +59,7 @@ async def start_api(item: str):
 
 
 def start_task(default_config):
+    all_api = {}
     host = ''
     port = default_config['port']
     log_t(f'当前机器:{os.name}')
@@ -66,6 +67,7 @@ def start_task(default_config):
         host = Host.LOCAL.value
     elif os.name == Server.LINUX.value:
         host = Host.Server.value
-    for item in API:
-        log_t(f'http://{host}:{port}/{item.value}')
+    for index, item in enumerate(API):
+        all_api[index+1] = f'http://{host}:{port}/{item.value}'
+    log_t(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")
     uvicorn.run(app="api:app", host=host, port=port, reload=True)
