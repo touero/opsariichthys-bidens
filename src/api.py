@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
+from starlette.responses import JSONResponse
 
 from constants import *
 from src.getdata import GetData
@@ -18,94 +19,43 @@ async def log_requests(requests, call_next):
     return response
 
 
-@app.get(API.PROVINCE_COUNT.value)
-async def province():
-    provinceJson = data.get_province
-    return provinceJson
+def api_select(item: str) -> json:
+    result = json.dumps({})
+    if item == API.PROVINCE_COUNT.value:
+        result = data.get_province
+    elif item == API.DUAL_COUNT.value:
+        result = data.get_dual_class_name
+    elif item == API.TYPE_COUNT.value:
+        result = data.get_type_name
+    elif item == API.SPECIAL_COUNT.value:
+        result = data.get_special_count
+    elif item == API.SCORE_PROVINCE.value:
+        result = data.get_score_count
+    elif item == API.BIG_DATA_COUNT.value:
+        result = data.get_big_data_count
+    elif item == API.BIG_DATA_PROVINCE_COUNT.value:
+        result = data.get_big_data_province_count
+    elif item == API.BIG_DATA_TYPE_COUNT.value:
+        result = data.get_big_data_type_count
+    elif item == API.BIG_DATA_LEVEL2_COUNT.value:
+        result = data.get_big_data_level2_count
+    elif item == API.BIG_DATA_LEVEL3_COUNT.value:
+        result = data.get_big_data_level3_count
+    elif item == API.BIG_DATA_IN_DUAL.value:
+        result = data.get_big_data_in_dual
+    elif item == API.BIG_DATA_IN_NULL.value:
+        result = data.get_big_data_in_null
+    elif item == API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value:
+        result = data.get_artificial_intelligence_in_dual
+    elif item == API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value:
+        result = data.get_artificial_intelligence_in_null
+    return result
 
 
-@app.get(API.DUAL_COUNT.value)
-async def dual_class_count():
-    dual_provinceJson = data.get_dual_class_name
-    return dual_provinceJson
-
-
-@app.get(API.TYPE_COUNT.value)
-async def type_count():
-    type_nameJson = data.get_type_name
-    return type_nameJson
-
-
-@app.get(API.SPECIAL_COUNT.value)
-async def special_count():
-    special_nameJson = data.get_special_count
-    return special_nameJson
-
-
-@app.get(API.SCORE_PROVINCE.value)
-async def score_province_count():
-    score_provinceJson = data.get_score_count
-    return score_provinceJson
-
-
-@app.get(API.BIG_DATA_COUNT.value)
-async def big_data_count():
-    big_dataJson = data.get_big_data_count
-    return big_dataJson
-
-
-@app.get(API.BIG_DATA_PROVINCE_COUNT.value)
-async def big_data_province_count():
-    big_data_provinceJson = data.get_big_data_province_count
-    return big_data_provinceJson
-
-
-@app.get(API.BIG_DATA_TYPE_COUNT.value)
-async def big_data_province_count():
-    big_data_typeJson = data.get_big_data_type_count
-    return big_data_typeJson
-
-
-@app.get(API.BIG_DATA_LEVEL2_COUNT.value)
-async def big_data_level2_count():
-    big_data_level2Json = data.get_big_data_level2_count
-    return big_data_level2Json
-
-
-@app.get(API.BIG_DATA_LEVEL3_COUNT.value)
-async def big_data_level3_count():
-    big_data_level3Json = data.get_big_data_level3_count
-    return big_data_level3Json
-
-
-@app.get(API.BIG_DATA_IN_DUAL.value)
-async def get_big_data_in_dual():
-    big_data_in_dualJson = data.get_big_data_in_dual
-    return big_data_in_dualJson
-
-
-@app.get(API.BIG_DATA_IN_NULL.value)
-async def get_big_data_in_null():
-    big_data_in_nullJson = data.get_big_data_in_null
-    return big_data_in_nullJson
-
-
-@app.get(API.BIG_DATA_IN_NULL.value)
-async def get_big_data_in_null():
-    big_data_in_nullJson = data.get_big_data_in_null
-    return big_data_in_nullJson
-
-
-@app.get(API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value)
-async def get_artificial_intelligence_in_dual():
-    artificial_intelligence_in_dualJson = data.get_artificial_intelligence_in_dual
-    return artificial_intelligence_in_dualJson
-
-
-@app.get(API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value)
-async def get_artificial_intelligence_in_dual():
-    artificial_intelligence_in_nullJson = data.get_artificial_intelligence_in_null
-    return artificial_intelligence_in_nullJson
+@app.get('/{item}')
+async def start_api(item: str):
+    result = api_select(item)
+    return JSONResponse(result)
 
 
 def start_task(default_config):
@@ -117,5 +67,5 @@ def start_task(default_config):
     elif os.name == Server.LINUX.value:
         host = Host.Server.value
     for item in API:
-        log_t('http://' + host + ':' + str(port) + item.value)
+        log_t(f'http://{host}:{port}/{item.value}')
     uvicorn.run(app="api:app", host=host, port=port, reload=True)

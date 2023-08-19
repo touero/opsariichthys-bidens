@@ -45,7 +45,7 @@ class SqlMaster:
 
     def execute_sql(self, sql_path: str):
         if sql_path:
-            with open(sql_path, 'r') as file:
+            with open(sql_path, 'r', encoding='utf-8') as file:
                 sql_script = file.readline()
             return self.submit_sql_with_return(str(sql_script))
 
