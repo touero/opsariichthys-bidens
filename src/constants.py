@@ -157,7 +157,7 @@ class Name(Enum):
 
 
 @unique
-class Path(Enum):
+class OutPath(Enum):
     READFILE = "part-r-00000"
 
 

@@ -2,6 +2,8 @@ import logging
 import os
 import json
 
+from src.constants import MyJson
+
 
 def log_t(msg):
     logger = logging.getLogger('api')
@@ -43,3 +45,15 @@ def turn_to_dict_of_list(dict_args) -> json:
         item = {'province': itemDict[0], 'detail': itemDict[1]}
         result.append(item)
     return result
+
+
+def exist_json(json_path):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            listResult = get_json(str(json_path))
+            if listResult:
+                return listResult
+            else:
+                return func(*args, **kwargs)
+        return wrapper
+    return decorator
