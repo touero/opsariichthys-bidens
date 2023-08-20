@@ -25,8 +25,17 @@ This repository contains：
 13. artificial_intelligence_in_dual: The proportion of artificial intelligence in 211/985.
 14. artificial_intelligence_in_null: The proportion of artificial intelligence in ordinary universities.
 
-![img.png](img.png)
-![img_1.png](img_1.png)
+
+<table>
+    <tr>
+        <td><img src=img/province.PNG border=0></td>
+        <td><img src=img/major.PNG border=0></td>
+    </tr>
+    <tr>
+        <img src=img/img_1.png border=1>
+    </tr>
+</table>
+
 
 
 ## Install
