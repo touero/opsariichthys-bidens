@@ -1,7 +1,7 @@
 import json
 
 from sql_master import SqlMaster
-from src.constants import MyJson
+from src.constants import MyJson, API
 
 from src.util.tools import turn_to_dict_of_list, save_json, exist_json, province_mapping
 
@@ -177,4 +177,36 @@ class GetData(SqlMaster):
                   {'name': '未拥有', 'count': other}
                   ]
         save_json(str(MyJson.ARTIFICIAL_INTELLIGENCE_IN_NULL.value), result)
+        return result
+
+    def api_select(self, item: str) -> json:
+        result = {}
+        if item == API.PROVINCE_COUNT.value:
+            result = self.get_province
+        elif item == API.DUAL_COUNT.value:
+            result = self.get_dual_class_name
+        elif item == API.TYPE_COUNT.value:
+            result = self.get_type_name
+        elif item == API.SPECIAL_COUNT.value:
+            result = self.get_special_count
+        elif item == API.SCORE_PROVINCE.value:
+            result = self.get_score_count
+        elif item == API.BIG_DATA_COUNT.value:
+            result = self.get_big_data_count
+        elif item == API.BIG_DATA_PROVINCE_COUNT.value:
+            result = self.get_big_data_province_count
+        elif item == API.BIG_DATA_TYPE_COUNT.value:
+            result = self.get_big_data_type_count
+        elif item == API.BIG_DATA_LEVEL2_COUNT.value:
+            result = self.get_big_data_level2_count
+        elif item == API.BIG_DATA_LEVEL3_COUNT.value:
+            result = self.get_big_data_level3_count
+        elif item == API.BIG_DATA_IN_DUAL.value:
+            result = self.get_big_data_in_dual
+        elif item == API.BIG_DATA_IN_NULL.value:
+            result = self.get_big_data_in_null
+        elif item == API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value:
+            result = self.get_artificial_intelligence_in_dual
+        elif item == API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value:
+            result = self.get_artificial_intelligence_in_null
         return result
