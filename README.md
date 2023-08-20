@@ -28,11 +28,14 @@ This repository contains：
 
 <table>
     <tr>
-        <td><img src=img/province.PNG border=0 alt=""></td>
-        <td><img src=img/major.PNG border=0 alt=""></td>
+        <img src=img/log.png alt="">
     </tr>
     <tr>
-        <img src=img/img_1.png border=1 alt="">
+        <img src=img/img_1.png alt="">
+    </tr>
+    <tr>
+        <td><img src=img/province.PNG alt=""></td>
+        <td><img src=img/major.PNG alt=""></td>
     </tr>
 </table>
 
