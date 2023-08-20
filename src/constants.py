@@ -1,4 +1,5 @@
 from enum import Enum, unique, IntEnum
+from dataclasses import dataclass
 
 
 @unique
@@ -170,3 +171,12 @@ class Host(Enum):
 class IsUpload(IntEnum):
     Local = 0
     Update = 1
+
+
+@dataclass
+class DataBaseInfo:
+    host: str = "localhost"
+    user: str = 'username'
+    password: str = 'password'
+    database: str = 'AllSchoolAPI'
+    port: int = 3306
