@@ -3,6 +3,8 @@ import os
 import json
 from logging.handlers import RotatingFileHandler
 
+from src.constants import Server, Host
+
 
 def log_t(*args):
     msg = ','.join(args)
@@ -47,7 +49,7 @@ def turn_to_dict_of_list(dict_args) -> json:
     return result
 
 
-def exist_json(json_path):
+def exist_json(json_path: str):
     def decorator(func):
         def wrapper(*args, **kwargs):
             listResult = get_json(str(json_path))
@@ -59,3 +61,12 @@ def exist_json(json_path):
         return wrapper
 
     return decorator
+
+
+def get_machine_type() -> str:
+    temp = Server(os.name)
+    log_t(f'machine_type: {temp}')
+    if temp is Server.Windows:
+        return Host.Local.value
+    elif temp is Server.Linux:
+        return Host.Server.value

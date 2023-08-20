@@ -49,7 +49,7 @@ def api_select(item: str) -> json:
         result = data.get_artificial_intelligence_in_dual
     elif item == API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value:
         result = data.get_artificial_intelligence_in_null
-    return json.dumps(result)
+    return result
 
 
 @app.get('/{item}')
@@ -60,13 +60,8 @@ async def start_api(item: str):
 
 def start_task(default_config):
     all_api = {}
-    host = ''
     port = default_config['port']
-    log_t(f'当前机器:{os.name}')
-    if os.name == Server.WINDOWS.value:
-        host = Host.local.value
-    elif os.name == Server.LINUX.value:
-        host = Host.Server.value
+    host = get_machine_type()
     for index, item in enumerate(API):
         all_api[index+1] = f'http://{host}:{port}/{item.value}'
     log_t(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")
