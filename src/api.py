@@ -20,7 +20,7 @@ async def log_requests(requests, call_next):
 
 
 def api_select(item: str) -> json:
-    result = json.dumps({})
+    result = {}
     if item == API.PROVINCE_COUNT.value:
         result = data.get_province
     elif item == API.DUAL_COUNT.value:
@@ -49,7 +49,7 @@ def api_select(item: str) -> json:
         result = data.get_artificial_intelligence_in_dual
     elif item == API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value:
         result = data.get_artificial_intelligence_in_null
-    return result
+    return json.dumps(result)
 
 
 @app.get('/{item}')
@@ -64,7 +64,7 @@ def start_task(default_config):
     port = default_config['port']
     log_t(f'当前机器:{os.name}')
     if os.name == Server.WINDOWS.value:
-        host = Host.LOCAL.value
+        host = Host.local.value
     elif os.name == Server.LINUX.value:
         host = Host.Server.value
     for index, item in enumerate(API):

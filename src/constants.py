@@ -145,7 +145,7 @@ class OutPath(Enum):
 
 @unique
 class Host(Enum):
-    LOCAL = "127.0.0.1"
+    Local = "127.0.0.1"
     Server = "0.0.0.0"
 
 
