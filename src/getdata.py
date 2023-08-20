@@ -1,10 +1,9 @@
 import json
 
-from province_map import province_mapping
 from sql_master import SqlMaster
 from src.constants import MyJson
 
-from src.util.tools import turn_to_dict_of_list, save_json, exist_json
+from src.util.tools import turn_to_dict_of_list, save_json, exist_json, province_mapping
 
 
 class GetData(SqlMaster):
