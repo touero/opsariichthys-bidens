@@ -7,11 +7,8 @@ from src.util.tools import turn_to_dict_of_list, save_json, exist_json, province
 
 
 class GetData(SqlMaster):
-
     def __init__(self):
         super().__init__()
-        # fixme is_upload是控制是否更新数据的参数，请尝试集成到default_config中
-        self.is_upload = 0
 
     @property
     @exist_json(MyJson.PROVINCE_COUNT.value)

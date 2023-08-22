@@ -1,6 +1,7 @@
 import logging
 import os
 import json
+import random
 
 from src.constants import Server, Host, ProvinceID, Province
 
@@ -24,7 +25,7 @@ def log_t(*args):
 
 def get_json(name: str) -> json:
     if os.path.exists(name):
-        log_t(f'找到本地文件:{name}')
+        log_t(f'find it: {name}')
         with open(name, 'r', encoding='utf-8') as json_f:
             jsonResult = json.load(json_f)
         return jsonResult
@@ -36,7 +37,7 @@ def save_json(name: str, _list: []):
     if not os.path.exists(name):
         with open(name, 'w', encoding='utf-8') as json_f:
             json_f.write(json.dumps(_list))
-            log_t(f'json写入到:{name}')
+            log_t(f'writing json to: {name}')
 
 
 def turn_to_dict_of_list(dict_args) -> json:
@@ -52,9 +53,11 @@ def exist_json(json_path: object):
     def decorator(func):
         def wrapper(*args, **kwargs):
             listResult = get_json(str(json_path))
-            if listResult:
+            if listResult and random.choice([0, 1]):
+                log_t(f'is update: 1')
                 return listResult
             else:
+                log_t(f'is update: 0')
                 return func(*args, **kwargs)
 
         return wrapper

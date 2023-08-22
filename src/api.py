@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from starlette.responses import JSONResponse
 from src.getdata import GetData
-from util.tools import *
+from util.tools import log_t
 
 app = FastAPI()
 
