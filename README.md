@@ -28,7 +28,7 @@ This repository contains：
 
 <table>
     <tr>
-        <img src=img/log.png alt="">
+        <img src=img/terminal.gif alt="">
     </tr>
     <tr>
         <img src=img/img_1.png alt="">
