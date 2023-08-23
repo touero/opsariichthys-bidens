@@ -14,7 +14,7 @@ async def log_requests(requests, call_next):
     return response
 
 
-@app.get('/{item}')
+@app.get('/api/{item}')
 async def start_api(item: str):
     data = GetData()
     result = data.api_select(item)

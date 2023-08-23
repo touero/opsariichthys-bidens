@@ -20,7 +20,7 @@ class Master:
                 port = self.task['port']
                 host = get_machine_type()
                 for index, item in enumerate(API):
-                    all_api[index + 1] = f'http://{host}:{port}/{item.value}'
+                    all_api[index + 1] = f'http://{host}:{port}/api/{item.value}'
                 log_t(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")
                 uvicorn.run(app="api:app", host=host, port=port, reload=True)
 
