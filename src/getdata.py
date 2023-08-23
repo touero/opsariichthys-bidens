@@ -7,8 +7,19 @@ from src.util.tools import turn_to_dict_of_list, save_json, exist_json, province
 
 
 class GetData(SqlMaster):
+    instance = None
+    init_flag = False  # 初始化标记
+
+    def __new__(cls, *args, **kwargs):
+        if cls.instance is None:
+            cls.instance = super().__new__(cls)
+        return cls.instance
+
     def __init__(self):
         super().__init__()
+        if GetData.init_flag:
+            return
+        GetData.init_flag = True
 
     @property
     @exist_json(MyJson.PROVINCE_COUNT.value)

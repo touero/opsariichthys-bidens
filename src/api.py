@@ -4,6 +4,7 @@ from src.getdata import GetData
 from util.tools import log_t
 
 app = FastAPI()
+data = GetData()
 
 
 @app.middleware('http')
@@ -16,7 +17,6 @@ async def log_requests(requests, call_next):
 
 @app.get('/api/{item}')
 async def start_api(item: str):
-    data = GetData()
     result = data.api_select(item)
     return JSONResponse(result)
 
