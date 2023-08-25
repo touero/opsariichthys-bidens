@@ -43,7 +43,7 @@ class SqlMaster(ABC):
             result.append(school[0])
         return result
 
-    def execute_sql(self, sql_path: str):
+    def execute_sql(self, sql_path: str) -> tuple:
         if sql_path:
             with open(sql_path, 'r', encoding='utf-8') as file:
                 sql_script = file.readline()

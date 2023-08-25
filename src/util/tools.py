@@ -54,10 +54,10 @@ def exist_json(json_path: object):
         def wrapper(*args, **kwargs):
             listResult = get_json(str(json_path))
             if listResult and random.choice([0, 1]):
-                log_t(f'is update: 1')
+                log_t(f'is update: 0')
                 return listResult
             else:
-                log_t(f'is update: 0')
+                log_t(f'is update: 1')
                 return func(*args, **kwargs)
 
         return wrapper
@@ -148,3 +148,25 @@ def province_mapping(dictObject: dict, args=0) -> dict:
         elif item in province.AOMEN.value:
             dictObject[Province.AOMEN.value] = dictObject.pop(item)
     return dictObject
+
+
+def both_count(execute_sql_result: tuple) -> dict:
+    result = {}
+    for item in execute_sql_result:
+        special_name = item[0]
+        if special_name in result:
+            result[item[0]] += 1
+        elif special_name not in result:
+            result[item[0]] = 1
+    return result
+
+
+def hava_count(hava: list, not_have: list) -> list:
+    count_dual = 0
+    for temp in not_have:
+        if temp in hava:
+            count_dual += 1
+    other = len(hava) - count_dual
+    result = [{'name': '拥有', 'count': count_dual},
+              {'name': '未拥有', 'count': other}]
+    return result
