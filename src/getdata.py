@@ -1,28 +1,19 @@
 import json
-
-from sql_master import SqlMaster
+from typing import Optional
 from src.constants import MyJson, API
+from src.sql_master import SqlMaster
 
 from src.util.tools import turn_to_dict_of_list, save_json, exist_json, province_mapping, both_count, hava_count
 
 
 class GetData:
-    instance = None
-    init_flag = False
-
-    def __new__(cls, *args, **kwargs):
-        if cls.instance is None:
-            cls.instance = super().__new__(cls)
-        return cls.instance
-
     def __init__(self):
-        super().__init__()
-        if GetData.init_flag:
-            return
-        self.sql = SqlMaster()
-        GetData.init_flag = True
+        self.sql: Optional[SqlMaster] = None
 
-    def api_select(self, item: str) -> json:
+    def sql_init(self, sql: Optional[SqlMaster]) -> None:
+        self.sql = sql
+
+    def api_select(self, item: str) -> dict:
         result = {}
         if item == API.PROVINCE_COUNT.value:
             result = self.get_province

@@ -4,7 +4,7 @@ from util.tools import *
 from abc import ABC
 
 
-class SqlMaster(ABC):
+class SqlMaster:
     def __init__(self):
         db_info = DataBaseInfo()
         self.conn = pymysql.connect(host=db_info.host, user=db_info.user, password=db_info.password,

@@ -1,15 +1,15 @@
 from fastapi import FastAPI, Depends
-from starlette.responses import JSONResponse
 from src.getdata import GetData
+from src.sql_master import SqlMaster
 from util.tools import log_t
 
 app = FastAPI()
 
 
 @app.get('/api/{item}')
-async def start_api(get_data = Depends(GetData)):
-    result = get_data.api_select(item)
-    return JSONResponse(result)
+async def start_api(item, sql=Depends(SqlMaster), get_data=Depends(GetData)):
+    get_data.sql_init(sql=sql)
+    return get_data.api_select(item)
 
 
 @app.middleware('http')

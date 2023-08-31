@@ -1,5 +1,5 @@
-from master import Master
-import os
+from fish_pond import FishPond
+from sql_master import SqlMaster
 
 """
 in_docker: 是否在docker运行
@@ -13,11 +13,7 @@ default_config = {
     "from_local": 1,
     "host": "127.0.0.1",
     "port": 2518,
-    "mysql_info": {
-        "host": "",
-        "port": 3306
-    }
 }
 
 if __name__ == '__main__':
-    Master(default_config).start()
+    FishPond(default_config).start()

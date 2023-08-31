@@ -7,7 +7,8 @@ from constants import *
 from src.util.tools import log_t, get_machine_type
 
 
-class Master:
+class FishPond:
+
     def __init__(self, default_config):
         self.task = default_config
         self.task_type = self.task['task_type']
