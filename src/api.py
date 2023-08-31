@@ -7,7 +7,7 @@ app = FastAPI()
 
 
 @app.get('/api/{item}')
-async def start_api(get_data: GetData = Depends(GetData)):
+async def start_api(get_data = Depends(GetData)):
     result = get_data.api_select(item)
     return JSONResponse(result)
 
