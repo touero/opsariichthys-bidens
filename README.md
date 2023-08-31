@@ -53,6 +53,8 @@ $ git clone https://github.com/weiensong/allSchoolAPI.git
 
 ## Usage
 ```sh
+$ python3 -m venv venv
+$ source ./venv/bin/activate
 $ pip install -r requriements.txt
 
 # default_config is used to configure tasks in local_runner.py
