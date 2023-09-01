@@ -14,9 +14,7 @@ def exist_json(json_path: object):
             else:
                 log_t(f'is update: 1')
                 return func(*args, **kwargs)
-
         return wrapper
-
     return decorator
 
 
