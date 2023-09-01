@@ -4,7 +4,7 @@ import traceback
 import uvicorn
 
 from constants import *
-from src.util.tools import log_t, get_machine_type
+from util.tools import log_t, get_machine_type
 
 
 class FishPond:
