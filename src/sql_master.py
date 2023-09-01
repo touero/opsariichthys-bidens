@@ -1,5 +1,5 @@
 import pymysql
-from constants import *
+from constants import DataBaseInfo
 from util.tools import *
 
 

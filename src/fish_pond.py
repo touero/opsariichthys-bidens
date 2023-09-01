@@ -1,10 +1,9 @@
 import json
 import traceback
-
 import uvicorn
 
-from constants import *
-from util.tools import log_t, get_machine_type
+from constants import TaskType, API, Server
+from util.tools import log_t
 
 
 class FishPond:
@@ -19,7 +18,7 @@ class FishPond:
             if self.task_type == TaskType.API.value:
                 all_api = {}
                 port = self.task['port']
-                host = get_machine_type()
+                host = Server.get_machine_type()
                 for index, item in enumerate(API):
                     all_api[index + 1] = f'http://{host}:{port}/api/{item.value}'
                 log_t(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")

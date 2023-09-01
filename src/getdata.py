@@ -1,9 +1,9 @@
 import json
 from typing import Optional
-from constants import MyJson, API
+from constants import MyJson, API, Province
 from sql_master import SqlMaster
 
-from util.tools import turn_to_dict_of_list, save_json, exist_json, province_mapping, both_count, hava_count
+from util.tools import turn_to_dict_of_list, save_json, exist_json, both_count, hava_count
 
 
 class GetData:
@@ -49,7 +49,7 @@ class GetData:
     @exist_json(MyJson.PROVINCE_COUNT.value)
     def get_province(self) -> json:
         province_data = self.sql.execute_sql('sql/province_count.sql')
-        province_data_count = province_mapping(dict(province_data), 1)
+        province_data_count = Province.province_mapping(dict(province_data), 1)
         listResult = turn_to_dict_of_list(province_data_count)
         save_json(str(MyJson.PROVINCE_COUNT.value), listResult)
         return listResult
@@ -85,7 +85,7 @@ class GetData:
     @exist_json(MyJson.SCORE_PROVINCE.value)
     def get_score_count(self) -> json:
         score_province = self.sql.execute_sql('sql/score_province.sql')
-        score_provinceDict = province_mapping(dict(score_province))
+        score_provinceDict = Province.province_mapping(dict(score_province))
         listResult = turn_to_dict_of_list(score_provinceDict)
         save_json(str(MyJson.SCORE_PROVINCE.value), listResult)
         return listResult
@@ -103,7 +103,7 @@ class GetData:
     @exist_json(MyJson.BIG_DATA_PROVINCE_COUNT.value)
     def get_big_data_province_count(self) -> json:
         big_data_province_count = self.sql.execute_sql('sql/big_data_province_count.sql')
-        big_data_provinceDict = province_mapping(dict(big_data_province_count))
+        big_data_provinceDict = Province.province_mapping(dict(big_data_province_count))
         listResult = turn_to_dict_of_list(big_data_provinceDict)
         save_json(str(MyJson.BIG_DATA_PROVINCE_COUNT.value), listResult)
         return listResult
