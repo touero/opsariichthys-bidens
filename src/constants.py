@@ -2,7 +2,7 @@ import os
 
 from enum import Enum, unique, IntEnum
 from dataclasses import dataclass
-from util.tools import log_t
+from tools import log_t
 
 
 @unique

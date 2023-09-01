@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends
 from getdata import GetData
 from sql_master import SqlMaster
-from util.tools import log_t
+from tools import log_t
 
 app = FastAPI()
 

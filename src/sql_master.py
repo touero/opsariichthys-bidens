@@ -1,6 +1,6 @@
 import pymysql
 from constants import DataBaseInfo
-from util.tools import *
+from tools import *
 
 
 class SqlMaster:

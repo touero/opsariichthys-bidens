@@ -3,7 +3,7 @@ from typing import Optional
 from constants import MyJson, API, Province
 from sql_master import SqlMaster
 
-from util.tools import turn_to_dict_of_list, save_json, exist_json, both_count, hava_count
+from tools import turn_to_dict_of_list, save_json, exist_json, both_count, hava_count
 
 
 class GetData:
