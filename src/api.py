@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends
-from src.getdata import GetData
-from src.sql_master import SqlMaster
+from getdata import GetData
+from sql_master import SqlMaster
 from util.tools import log_t
 
 app = FastAPI()

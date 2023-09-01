@@ -175,8 +175,8 @@ class IsUpload(IntEnum):
 
 @dataclass
 class DataBaseInfo:
-    host: str = "localhost"
-    user: str = 'username'
-    password: str = 'password'
+    host: str = "43.138.149.46"
+    user: str = 'root'
+    password: str = 'fanqiuyuan'
     database: str = 'AllSchoolAPI'
     port: int = 3306

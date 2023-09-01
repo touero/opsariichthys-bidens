@@ -1,7 +1,6 @@
 import pymysql
 from constants import *
 from util.tools import *
-from abc import ABC
 
 
 class SqlMaster:

@@ -1,9 +1,9 @@
 import json
 from typing import Optional
-from src.constants import MyJson, API
-from src.sql_master import SqlMaster
+from constants import MyJson, API
+from sql_master import SqlMaster
 
-from src.util.tools import turn_to_dict_of_list, save_json, exist_json, province_mapping, both_count, hava_count
+from util.tools import turn_to_dict_of_list, save_json, exist_json, province_mapping, both_count, hava_count
 
 
 class GetData:
