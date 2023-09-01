@@ -25,5 +25,5 @@ class FishPond:
                 uvicorn.run(app="api:app", host=host, port=port, reload=True)
 
         except Exception as e:
-            log_t(e)
+            log_t(str(e))
             log_t(traceback.print_exc())
