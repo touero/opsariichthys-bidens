@@ -5,7 +5,7 @@ import random
 
 
 def exist_json(json_path: object):
-    def decorator(func):
+    def decorator(func: callable):
         def wrapper(*args, **kwargs):
             listResult = Tools.get_json(str(json_path))
             if listResult and random.choice([0, 1]):
