@@ -46,7 +46,7 @@ This repository contains：
 This project uses [Python](https://www.python.org/) [Git](https://git-scm.com/). Go check them out if you don't have them locally installed.
 
 ```shell
-$ git clone https://github.com/weiensong/allSchoolAPI.git
+$ git clone https://github.com/weiensong/opsariichthys-bidens.git
 ```
 
 
