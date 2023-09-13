@@ -1,11 +1,11 @@
 <h1 align="center">opsariichthys-bidens</h1>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/python_-%3E%3D3.8-green" alt=""> 
-    <img src="https://img.shields.io/badge/license_-MIT-green" alt=""> 
-    <img src="https://img.shields.io/badge/pymysql-blue" alt=""> 
-    <img src="https://img.shields.io/badge/dataease-blue" alt="">  
-    <img src="https://img.shields.io/badge/fastapi-blue" alt=""> 
+    <img src="https://img.shields.io/badge/python_-%3E%3D3.8-blue" alt=""> 
+    <img src="https://img.shields.io/badge/license_-MIT-blue" alt=""> 
+    <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/-mysql-grey?style=plastic&logo=mysql" alt=""/></a>
+    <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/fastapi-grey?style=plastic&logo=fastapi" alt=""></a>
+    <a href="https://dataease.io/"><img src="https://img.shields.io/badge/dataease-grey" alt=""></a>
 </p>
 
 <p align="center">
@@ -94,7 +94,7 @@ $ python3 ./local_runner.py
 ## Contributing
 
 
-Feel free to dive in! [Open an issue](https://github.com/weiensong/allSchoolAPI/issues) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/weiensong/opsariichthys-bidens/issues) or submit PRs.
 
 Standard Python follows the [Python PEP-8](https://peps.python.org/pep-0008/) Code of Conduct.
 
@@ -107,5 +107,5 @@ This project exists thanks to all the people who contribute.
 
 ## License
 
-[MIT](https://github.com/weiensong/opsariichthys-bidens/blob/master/LICENSE) © weiensong
+[GNU General Public License v3.0](https://github.com/weiensong/opsariichthys-bidens/blob/master/LICENSE) © weiensong
 
