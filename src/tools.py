@@ -14,7 +14,9 @@ def exist_json(json_path: object):
             else:
                 log_t(f'is update: 1')
                 return func(*args, **kwargs)
+
         return wrapper
+
     return decorator
 
 
@@ -41,8 +43,8 @@ class Tools:
         if os.path.exists(name):
             log_t(f'find it: {name}')
             with open(name, 'r', encoding='utf-8') as json_f:
-                jsonResult = json.load(json_f)
-            return jsonResult
+                json_result = json.load(json_f)
+            return json_result
         else:
             return []
 
@@ -57,8 +59,8 @@ class Tools:
     def turn_to_dict_of_list(dict_args) -> json:
         result = []
         for i in range(0, len(dict_args)):
-            itemDict = dict_args.popitem()
-            item = {'province': itemDict[0], 'detail': itemDict[1]}
+            item_dict = dict_args.popitem()
+            item = {'province': item_dict[0], 'detail': item_dict[1]}
             result.append(item)
         return result
 

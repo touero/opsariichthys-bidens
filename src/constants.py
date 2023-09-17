@@ -196,13 +196,20 @@ class Server(Enum):
     Linux = "posix"
 
     @staticmethod
-    def get_machine_type() -> str:
+    def get_machine_host() -> str:
         temp = Server(os.name)
         log_t(f'machine_type: {temp}')
         if temp is Server.Windows:
             return Host.Local.value
         elif temp is Server.Linux:
             return Host.Server.value
+
+    @staticmethod
+    def execute_command(cmd: str = None):
+        if cmd is None:
+            return
+        os.system('chcp 65001')
+        os.system(f'powershell -Command "{cmd}"')
 
 
 @unique

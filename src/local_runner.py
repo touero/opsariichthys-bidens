@@ -1,5 +1,4 @@
 from fish_pond import FishPond
-from sql_master import SqlMaster
 
 """
 in_docker: 是否在docker运行
@@ -17,3 +16,4 @@ default_config = {
 
 if __name__ == '__main__':
     FishPond(default_config).start()
+
