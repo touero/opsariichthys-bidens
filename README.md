@@ -51,7 +51,7 @@ This repository contains：
 
 ## Install
 
-This project uses [Python](https://www.python.org/) [Git](https://git-scm.com/). Go check them out if you don't have them locally installed.
+This project uses [python](https://www.python.org/) [git](https://git-scm.com/) [ngrok](https://ngrok.com/). Go check them out if you don't have them locally installed.
 
 ```shell
 $ git clone https://github.com/weiensong/opsariichthys-bidens.git
@@ -60,16 +60,30 @@ $ git clone https://github.com/weiensong/opsariichthys-bidens.git
 
 
 ## Usage
-```sh
+Create virtual environment installation dependencies
+
+```shell
 $ python3 -m venv venv
 $ source ./venv/bin/activate
 $ pip install -r requriements.txt
-
+```
+Run it
+```shell
 # default_config is used to configure tasks in local_runner.py
 $ python3 ./local_runner.py
 ```
 
+Even if internal network penetration does not need to be enabled, the service can be started, providing penetration examples.  
+Please install ngrok before doing so.  
+Connect your ngrok account
+```shell
+$ ngrok config add-authtoken your_key
+```
+Setting static IP in https://dashboard.ngrok.com/cloud-edge/domains and run it later.
 
+```shell
+$ ngroks/ngrok http --domain=exciting-physically-escargot.ngrok-free.app 2518
+```
 ## Related Repository
 
 - [python](https://github.com/TheAlgorithms/Python) — All Algorithms implemented in Python
@@ -82,6 +96,7 @@ $ python3 ./local_runner.py
 
 - [fastapi](https://fastapi.tiangolo.com/)
 - [飞致云](https://www.fit2cloud.com/)
+- [ngrok](https://ngrok.com/) 
 
 
 
