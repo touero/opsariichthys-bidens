@@ -5,6 +5,7 @@
     <img src="https://img.shields.io/badge/license_-MIT-blue" alt=""> 
     <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/-mysql-grey?style=plastic&logo=mysql" alt=""/></a>
     <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/fastapi-grey?style=plastic&logo=fastapi" alt=""></a>
+    <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/docker-grey?style=plastic&logo=docker" alt=""></a>
     <a href="https://dataease.io/"><img src="https://img.shields.io/badge/dataease-grey" alt=""></a>
 </p>
 
@@ -36,14 +37,18 @@ This repository contains：
 
 <table>
     <tr>
-        <img src=img/terminal.gif alt="">
+        <td><img src=img/terminal.gif alt=""></td>
+        <td><img src=img/img_1.png alt=""></td>
     </tr>
     <tr>
-        <img src=img/img_1.png alt="">
+        <td><img src=img/docker.png  alt=""></td>
+        <td><img src=img/docker_log.png  alt=""></td>
     </tr>
+</table>
+<table>
     <tr>
-        <td><img src=img/province.PNG alt=""></td>
-        <td><img src=img/major.PNG alt=""></td>
+        <td><img src=img/province.PNG width="50%" alt=""></td>
+        <td><img src=img/major.PNG width="50%" alt=""></td>
     </tr>
 </table>
 
@@ -83,6 +88,11 @@ Setting static IP in https://dashboard.ngrok.com/cloud-edge/domains and run it l
 
 ```shell
 $ ngroks/ngrok http --domain=exciting-physically-escargot.ngrok-free.app 2518
+```
+
+if you want to run it in docker
+```shell
+$ python run_in_docker.py
 ```
 ## Related Repository
 

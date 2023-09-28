@@ -7,10 +7,10 @@ import random
 def exist_json(json_path: object):
     def decorator(func: callable):
         def wrapper(*args, **kwargs):
-            listResult = Tools.get_json(str(json_path))
-            if listResult and random.choice([0, 1]):
+            list_result = Tools.get_json(str(json_path))
+            if list_result and random.choice([0, 1]):
                 log_t(f'is update: 0')
-                return listResult
+                return list_result
             else:
                 log_t(f'is update: 1')
                 return func(*args, **kwargs)
@@ -21,7 +21,7 @@ def exist_json(json_path: object):
 
 
 def log_t(*args):
-    msg = ','.join(args)
+    msg = ', '.join(args)
     logger = logging.getLogger('api')
     logger.setLevel(logging.DEBUG)
     console_handler = logging.StreamHandler()
