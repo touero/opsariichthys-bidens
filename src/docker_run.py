@@ -12,7 +12,7 @@ class DockerRun:
         self.yaml_dir = yaml_dir
         self.client = docker.from_env()
         self.image_name = 'python:3.9'
-        self.container_name = 'opsariichthys_bidens'
+        self.container_name = 'opsariichthys-bidens'
 
     def get_image(self):
         try:
@@ -45,7 +45,9 @@ class DockerRun:
         }
         container = self.client.containers.run(
             self.image_name,
-            command=["sh", "-c", f'./docker.sh && '
+            command=["sh", "-c", f'cd {container_script} &&'
+                                 './docker.sh &&'
+                                 'cd src &&'
                                  f'python config_run.py -y {self.yaml_dir}'],
             detach=True,
             volumes=volumes,
