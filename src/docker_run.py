@@ -1,15 +1,18 @@
 import docker
-from docker.errors import ImageNotFound
 import os
+
+from docker.errors import ImageNotFound
+from argparse import ArgumentParser
 
 from src.tools import log_t
 
 
-class FishPond:
-    def __init__(self):
+class DockerRun:
+    def __init__(self, yaml_dir: str):
+        self.yaml_dir = yaml_dir
         self.client = docker.from_env()
         self.image_name = 'python:3.9'
-        self.container_name = 'opsariichthys_bidens'
+        self.container_name = 'opsariichthys-bidens'
 
     def get_image(self):
         try:
@@ -42,8 +45,10 @@ class FishPond:
         }
         container = self.client.containers.run(
             self.image_name,
-            command=["sh", "-c", f'cd {container_script} && '
-                                 f'./docker.sh'],
+            command=["sh", "-c", f'cd {container_script} &&'
+                                 './docker.sh &&'
+                                 'cd src &&'
+                                 f'python config_run.py -y {self.yaml_dir}'],
             detach=True,
             volumes=volumes,
             name=self.container_name,
@@ -60,6 +65,10 @@ class FishPond:
             self.run_container()
 
 
+parser = ArgumentParser()
+parser.add_argument('--config', '-y', default='config/task_config.yaml', help='task config')
 if __name__ == '__main__':
-    fish_pond = FishPond()
-    fish_pond.start()
+    task_config = parser.parse_args()
+    config_dir = task_config.config
+    docker_run = DockerRun(config_dir)
+    docker_run.start()
