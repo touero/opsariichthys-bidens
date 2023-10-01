@@ -90,9 +90,9 @@ Setting static IP in https://dashboard.ngrok.com/cloud-edge/domains and run it l
 $ ngroks/ngrok http --domain=exciting-physically-escargot.ngrok-free.app 2518
 ```
 
-if you want to run it in docker
+If you want to run it in docker
 ```shell
-$ python run_in_docker.py
+$ python docker_run.py -y your_config.yaml
 ```
 ## Related Repository
 
