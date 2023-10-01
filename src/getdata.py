@@ -13,127 +13,116 @@ class GetData:
     def sql_init(self, sql: Optional[SqlMaster]) -> None:
         self.sql = sql
 
+    @property
+    def func_names(self) -> dict:
+        return {API.PROVINCE_COUNT.value: 'get_province',
+                API.DUAL_COUNT.value: 'get_dual_class_name',
+                API.TYPE_COUNT.value: 'get_type_name',
+                API.SPECIAL_COUNT.value: 'get_special_count',
+                API.SCORE_PROVINCE.value: 'get_score_count',
+                API.BIG_DATA_COUNT.value: 'get_big_data_count',
+                API.BIG_DATA_PROVINCE_COUNT.value: 'get_big_data_province_count',
+                API.BIG_DATA_TYPE_COUNT.value: 'get_big_data_type_count',
+                API.BIG_DATA_LEVEL2_COUNT.value: 'get_big_data_level2_count',
+                API.BIG_DATA_LEVEL3_COUNT.value: 'get_big_data_level3_count',
+                API.BIG_DATA_IN_DUAL.value: 'get_big_data_in_dual',
+                API.BIG_DATA_IN_NULL.value: 'get_big_data_in_null',
+                API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value: 'get_artificial_intelligence_in_dual',
+                API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value: 'get_artificial_intelligence_in_null'}
+
     def api_select(self, item: str) -> dict:
-        result = {}
-        if item == API.PROVINCE_COUNT.value:
-            result = self.get_province
-        elif item == API.DUAL_COUNT.value:
-            result = self.get_dual_class_name
-        elif item == API.TYPE_COUNT.value:
-            result = self.get_type_name
-        elif item == API.SPECIAL_COUNT.value:
-            result = self.get_special_count
-        elif item == API.SCORE_PROVINCE.value:
-            result = self.get_score_count
-        elif item == API.BIG_DATA_COUNT.value:
-            result = self.get_big_data_count
-        elif item == API.BIG_DATA_PROVINCE_COUNT.value:
-            result = self.get_big_data_province_count
-        elif item == API.BIG_DATA_TYPE_COUNT.value:
-            result = self.get_big_data_type_count
-        elif item == API.BIG_DATA_LEVEL2_COUNT.value:
-            result = self.get_big_data_level2_count
-        elif item == API.BIG_DATA_LEVEL3_COUNT.value:
-            result = self.get_big_data_level3_count
-        elif item == API.BIG_DATA_IN_DUAL.value:
-            result = self.get_big_data_in_dual
-        elif item == API.BIG_DATA_IN_NULL.value:
-            result = self.get_big_data_in_null
-        elif item == API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value:
-            result = self.get_artificial_intelligence_in_dual
-        elif item == API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value:
-            result = self.get_artificial_intelligence_in_null
-        return result
+        func_name = self.func_names.get(item)
+        return getattr(self, func_name, {})
 
     @property
     @exist_json(MyJson.PROVINCE_COUNT.value)
     def get_province(self) -> json:
         province_data = self.sql.execute_sql('sql/province_count.sql')
         province_data_count = Province.province_mapping(dict(province_data), 1)
-        listResult = Tools.turn_to_dict_of_list(province_data_count)
-        Tools.save_json(str(MyJson.PROVINCE_COUNT.value), listResult)
-        return listResult
+        list_result = Tools.turn_to_dict_of_list(province_data_count)
+        Tools.save_json(str(MyJson.PROVINCE_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.DUAL_COUNT.value)
     def get_dual_class_name(self) -> json:
         dual_data = self.sql.execute_sql('sql/dual_class_count.sql')
-        provinceDict = Tools.both_count(dual_data)
-        listResult = Tools.turn_to_dict_of_list(provinceDict)
-        Tools.save_json(str(MyJson.DUAL_COUNT.value), listResult)
-        return listResult
+        province_dict = Tools.both_count(dual_data)
+        list_result = Tools.turn_to_dict_of_list(province_dict)
+        Tools.save_json(str(MyJson.DUAL_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.TYPE_COUNT.value)
     def get_type_name(self) -> json:
         type_name_data = self.sql.execute_sql('sql/type_count.sql')
-        type_nameDict = dict(type_name_data)
-        listResult = Tools.turn_to_dict_of_list(type_nameDict)
-        Tools.save_json(str(MyJson.TYPE_COUNT.value), listResult)
-        return listResult
+        type_name_dict = dict(type_name_data)
+        list_result = Tools.turn_to_dict_of_list(type_name_dict)
+        Tools.save_json(str(MyJson.TYPE_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.SPECIAL_COUNT.value)
     def get_special_count(self) -> json:
         special_names = self.sql.execute_sql('sql/spacial_name_count.sql')
-        special_nameDict = dict(special_names)
-        listResult = Tools.turn_to_dict_of_list(special_nameDict)
-        Tools.save_json(str(MyJson.SPECIAL_COUNT.value), listResult)
-        return listResult
+        special_name_dict = dict(special_names)
+        list_result = Tools.turn_to_dict_of_list(special_name_dict)
+        Tools.save_json(str(MyJson.SPECIAL_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.SCORE_PROVINCE.value)
     def get_score_count(self) -> json:
         score_province = self.sql.execute_sql('sql/score_province.sql')
-        score_provinceDict = Province.province_mapping(dict(score_province))
-        listResult = Tools.turn_to_dict_of_list(score_provinceDict)
-        Tools.save_json(str(MyJson.SCORE_PROVINCE.value), listResult)
-        return listResult
+        score_province_dict = Province.province_mapping(dict(score_province))
+        list_result = Tools.turn_to_dict_of_list(score_province_dict)
+        Tools.save_json(str(MyJson.SCORE_PROVINCE.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.BIG_DATA_COUNT.value)
     def get_big_data_count(self) -> json:
         big_data = self.sql.execute_sql('sql/big_data_count.sql')
-        specialDict = Tools.both_count(big_data)
-        listResult = Tools.turn_to_dict_of_list(specialDict)
-        Tools.save_json(str(MyJson.BIG_DATA_COUNT.value), listResult)
-        return listResult
+        special_dict = Tools.both_count(big_data)
+        list_result = Tools.turn_to_dict_of_list(special_dict)
+        Tools.save_json(str(MyJson.BIG_DATA_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.BIG_DATA_PROVINCE_COUNT.value)
     def get_big_data_province_count(self) -> json:
         big_data_province_count = self.sql.execute_sql('sql/big_data_province_count.sql')
-        big_data_provinceDict = Province.province_mapping(dict(big_data_province_count))
-        listResult = Tools.turn_to_dict_of_list(big_data_provinceDict)
-        Tools.save_json(str(MyJson.BIG_DATA_PROVINCE_COUNT.value), listResult)
-        return listResult
+        big_data_province_dict = Province.province_mapping(dict(big_data_province_count))
+        list_result = Tools.turn_to_dict_of_list(big_data_province_dict)
+        Tools.save_json(str(MyJson.BIG_DATA_PROVINCE_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.BIG_DATA_TYPE_COUNT.value)
     def get_big_data_type_count(self) -> json:
         big_data_type_count = self.sql.execute_sql('sql/big_data_type_count.sql')
-        big_data_typeDict = dict(big_data_type_count)
-        listResult = Tools.turn_to_dict_of_list(big_data_typeDict)
-        Tools.save_json(str(MyJson.BIG_DATA_TYPE_COUNT.value), listResult)
-        return listResult
+        big_data_type_dict = dict(big_data_type_count)
+        list_result = Tools.turn_to_dict_of_list(big_data_type_dict)
+        Tools.save_json(str(MyJson.BIG_DATA_TYPE_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.BIG_DATA_LEVEL2_COUNT.value)
     def get_big_data_level2_count(self) -> json:
         big_data_level2_count = self.sql.execute_sql('sql/big_data_level2_count.sql')
-        big_data_typeDict = dict(big_data_level2_count)
-        listResult = Tools.turn_to_dict_of_list(big_data_typeDict)
-        Tools.save_json(str(MyJson.BIG_DATA_LEVEL2_COUNT.value), listResult)
-        return listResult
+        big_data_type_dict = dict(big_data_level2_count)
+        list_result = Tools.turn_to_dict_of_list(big_data_type_dict)
+        Tools.save_json(str(MyJson.BIG_DATA_LEVEL2_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.BIG_DATA_LEVEL3_COUNT.value)
     def get_big_data_level3_count(self) -> json:
         big_data_level3_count = self.sql.execute_sql('sql/big_data_level3_count.sql')
-        big_data_typeDict = dict(big_data_level3_count)
-        listResult = Tools.turn_to_dict_of_list(big_data_typeDict)
-        Tools.save_json(str(MyJson.BIG_DATA_LEVEL3_COUNT.value), listResult)
-        return listResult
+        big_data_type_dict = dict(big_data_level3_count)
+        list_result = Tools.turn_to_dict_of_list(big_data_type_dict)
+        Tools.save_json(str(MyJson.BIG_DATA_LEVEL3_COUNT.value), list_result)
+        return list_result
 
     @property
     @exist_json(MyJson.BIG_DATA_IN_DUAL.value)
