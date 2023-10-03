@@ -45,13 +45,14 @@ class DockerRun:
         }
         container = self.client.containers.run(
             self.image_name,
-            command=["sh", "-c", f'cd {container_script} &&'
-                                 './docker.sh &&'
-                                 'cd src &&'
-                                 f'python config_run.py -y {self.yaml_dir}'],
             detach=True,
             volumes=volumes,
             name=self.container_name,
+            command=["sh", "-c", f'cd {container_script} &&'
+                                 'pip install --root-user-action=ignore requests &&'
+                                 'pip install -r requirements.txt &&'
+                                 'cd src &&'
+                                 f'python config_run.py -y {self.yaml_dir}'],
             ports={'2518/tcp': 2518}
         )
         log_t(f'container id: {container.id} is running')

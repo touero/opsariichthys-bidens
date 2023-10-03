@@ -202,6 +202,8 @@ class Server(Enum):
         if temp is Server.Windows:
             return Host.Local.value
         elif temp is Server.Linux:
+            if os.path.exists('/.dockerenv'):
+                return Host.Local.value
             return Host.Server.value
 
     @staticmethod
@@ -270,8 +272,8 @@ class IsUpload(IntEnum):
 
 @dataclass
 class DataBaseInfo:
-    host: str = "43.138.149.46"
+    host: str = "127.0.0.1"
     user: str = 'root'
-    password: str = 'fanqiuyuan'
+    password: str = '223366'
     database: str = 'AllSchoolAPI'
     port: int = 3306
