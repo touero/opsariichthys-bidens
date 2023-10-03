@@ -68,19 +68,29 @@ $ git clone https://github.com/weiensong/opsariichthys-bidens.git
 Create virtual environment installation dependencies
 
 ```shell
-$ python3 -m venv venv
+$ python -m venv venv
 $ source ./venv/bin/activate
 $ pip install -r requriements.txt
+$ cd src
 ```
-Run it
+Data preparing: a mysql image of version 5.7 build a container in docker and executing file of .withDb/AllSchoolAPI.sql.  
+Please waiting info score and major table insert finish. 
+```shell
+$ python build_db_docker.py
+```
+Debugging running
 ```shell
 # default_config is used to configure tasks in local_runner.py
-$ python3 ./local_runner.py
+$ python local_runner.py
 ```
-
+If you want to run it in docker
+```shell
+$ python docker_run.py -y your_config.yaml
+```
 Even if internal network penetration does not need to be enabled, the service can be started, providing penetration examples.  
 Please install ngrok before doing so.  
 Connect your ngrok account
+
 ```shell
 $ ngrok config add-authtoken your_key
 ```
@@ -90,10 +100,6 @@ Setting static IP in https://dashboard.ngrok.com/cloud-edge/domains and run it l
 $ ngroks/ngrok http --domain=exciting-physically-escargot.ngrok-free.app 2518
 ```
 
-If you want to run it in docker
-```shell
-$ python docker_run.py -y your_config.yaml
-```
 ## Related Repository
 
 - [python](https://github.com/TheAlgorithms/Python) — All Algorithms implemented in Python

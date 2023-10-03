@@ -1,8 +1,10 @@
 import docker
 import os
 
+from typing import Union
 from docker.errors import ImageNotFound
 from argparse import ArgumentParser
+from docker.models.containers import Container
 
 from src.tools import log_t
 
@@ -25,7 +27,7 @@ class DockerRun:
         except Exception as e:
             log_t(str(e))
 
-    def get_container(self):
+    def get_container(self) -> Union[Container, None]:
         containers = self.client.containers.list(all=True)
         for container in containers:
             if self.container_name == container.name:
