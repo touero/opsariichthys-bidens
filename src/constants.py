@@ -2,6 +2,8 @@ import os
 
 from enum import Enum, unique, IntEnum
 from dataclasses import dataclass
+from typing import List
+
 from tools import log_t
 
 
@@ -226,7 +228,12 @@ class SqlInfo(Enum):
 @unique
 class TaskType(IntEnum):
     CLEAR_DATA = 0  # 清洗数据，已弃用
-    API = 1
+    API_GET = 1
+    API_POST = 2
+
+    @staticmethod
+    def api_task() -> List[int]:
+        return [TaskType.API_GET.value, TaskType.API_POST.value]
 
 
 @unique
