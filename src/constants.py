@@ -2,6 +2,8 @@ import os
 
 from enum import Enum, unique, IntEnum
 from dataclasses import dataclass
+from typing import List
+
 from tools import log_t
 
 
@@ -230,7 +232,7 @@ class TaskType(IntEnum):
     API_POST = 2
 
     @staticmethod
-    def api_task() -> list[int]:
+    def api_task() -> List[int]:
         return [TaskType.API_GET.value, TaskType.API_POST.value]
 
 

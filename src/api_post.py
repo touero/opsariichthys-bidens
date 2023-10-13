@@ -18,7 +18,6 @@ try:
         get_data.sql_init(sql=sql)
         return get_data.api_select(item.item)
 
-
     @app.middleware('http')
     async def log_requests(request: Request, call_next):
         response = await call_next(request)

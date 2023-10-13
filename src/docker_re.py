@@ -1,3 +1,4 @@
+import json
 import docker
 
 from typing import Union
@@ -15,14 +16,19 @@ class DockerRe(ABC):
         self.container_name: str = ''
 
     def get_image(self):
-        log_t(f'find {self.image_name} docker image in local')
+        log_t(f'Finding {self.image_name} docker image in local')
         try:
             self.client.images.get(self.image_name)
         except ImageNotFound as e:
             log_t(f'ImageNotFound: {str(e)}')
-            log_t(f'waiting docker pull {self.image_name}')
-            self.client.images.pull(self.image_name)
-            log_t(f'docker pull {self.image_name} finish')
+            log_t(f'Waiting docker pull {self.image_name}')
+            for event in self.client.api.pull(self.image_name, stream=True):
+                event_info = json.loads(event.decode('utf-8'))
+                if 'status' in event_info:
+                    status = event_info['status']
+                    progress = event_info.get('progress', '')
+                    log_t(f'Status: {status}, Progress: {progress}')
+            log_t(f'Docker pull {self.image_name} finish')
         except Exception as e:
             log_t(str(e))
 
