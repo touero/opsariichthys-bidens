@@ -7,7 +7,7 @@ class BuildDb(DockerRe):
     def __init__(self):
         super().__init__()
         self.image_name = 'mysql:5.7'
-        self.container_name = 'mysql'
+        self.container_name = 'mysql_5.7'
 
     def config(self):
         host_script = os.path.dirname(os.getcwd())
