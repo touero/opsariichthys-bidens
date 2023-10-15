@@ -45,9 +45,6 @@ class DockerRe(ABC):
     def run_container(self):
         try:
             container = self.client.containers.run(**self.config())
-            container_logs = container.logs(stdout=True, stderr=True, stream=True)
-            for container_log in container_logs:
-                log_t(container_log.decode('utf-8').strip())
             log_t(f'container id: {container.id} is running')
         except docker.errors.APIError as e:
             log_t(f'Error starting container: {e}')
