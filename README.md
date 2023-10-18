@@ -99,6 +99,10 @@ Setting static IP in https://dashboard.ngrok.com/cloud-edge/domains and run it l
 ```shell
 $ ngroks/ngrok http --domain=exciting-physically-escargot.ngrok-free.app 2518
 ```
+If you want to use curl to access:
+```shell
+$ curl -X POST -H "Content-Type: application/json" -d '{"item": "item"}' http://127.0.0.1:2518/api
+```
 
 ## Related Repository
 
