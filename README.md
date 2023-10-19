@@ -15,7 +15,9 @@
 
 ## Repository Introduction
 
-The data in this repository comes from my other repository--[ctenopharyngodon-idella](https://github.com/weiensong/ctenopharyngodon-idella), which uses the Fast API to build custom APIs for anyone to use anywhere. Support for GET and POST requests. I personally use Data Ease, which is open source by Feizhi Cloud, for graphical analysis.
+
+The data in this repository comes from my other repository--[ctenopharyngodon-idella](https://github.com/weiensong/ctenopharyngodon-idella), which uses the Fast API to build custom APIs for anyone to use anywhere. Support for _GET_ and _POST_ requests. I personally use Data Ease, which is open source by Feizhi Cloud, for graphical analysis.  
+💕 If it's helpful to you or cloning it, please star it. This is maximum encouragement for open-source contributors💕
 
 This repository contains：
 
