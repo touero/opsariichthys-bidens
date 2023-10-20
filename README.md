@@ -20,22 +20,22 @@ The data in this repository comes from my other repository--[ctenopharyngodon-id
 💕 If it's helpful to you or cloning it, please star it. This is maximum encouragement for open-source contributors💕
 
 This repository contains：
-
-1. province_count: Each province contains a university.
-2. dual_class_count: Each province contains the number of double first-class.
-3. type_count: School category statistics.
-4. spacial_name_count: All majors statistics.
-5. score_province: Admissions Statistics.
-6. big_data_count: Statistics of different big data majors.
-7. big_data_province_count: Statistics of provincial universities including Big data majors.
-8. big_data_type_count: Statistics of universities in provinces with big data majors.
-9. big_data_level2_count: Big data secondary category statistics.
-10. big_data_level3_count: Big data primary category statistics.
-11. big_data_in_dual: Proportion of Big Data in 211/985.
-12. big_data_in_null: The proportion of big data in ordinary colleges and universities.
-13. artificial_intelligence_in_dual: The proportion of artificial intelligence in 211/985.
-14. artificial_intelligence_in_null: The proportion of artificial intelligence in ordinary universities.
-
+| **number** | **item name** | **details** |
+| :---- | :---- | :---- | 
+| **1** | **province_count** | **Each province contains a university** | 
+| **2** | **dual_class_count** | **Each province contains the number of double first-class** | 
+| **3** | **type_count** | **School category statistics** | 
+| **4** | **spacial_name_count** | **All majors statistics** | 
+| **5** | **score_province** | **Admissions Statistics** | 
+| **6** | **big_data_count** | **Statistics of different big data majors** | 
+| **7** | **big_data_province_count** | **Statistics of provincial universities including Big data majors** | 
+| **8** | **big_data_type_count** | **Statistics of universities in provinces with big data majors** | 
+| **9** | **big_data_level2_count** | **Big data secondary category statistics** | 
+| **10** | **big_data_level3_count** | **Big data primary category statistics** | 
+| **11** | **big_data_in_dual** | **Proportion of Big Data in 211/985** | 
+| **12** | **big_data_in_null** | **The proportion of big data in ordinary colleges and universities** | 
+| **13** | **artificial_intelligence_in_dual** | **The proportion of artificial intelligence in 211/985** | 
+| **14** | **artificial_intelligence_in_null** | **The proportion of artificial intelligence in ordinary universities** | 
 
 <table>
     <tr>
