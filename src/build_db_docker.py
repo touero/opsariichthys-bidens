@@ -4,10 +4,8 @@ from src.docker_re import DockerRe
 
 
 class BuildDb(DockerRe):
-    def __init__(self):
-        super().__init__()
-        self.image_name = 'mysql:5.7'
-        self.container_name = 'mysql_5.7'
+    def __init__(self, image_name: str, container_name: str):
+        super().__init__(image_name, container_name)
 
     def config(self):
         host_script = os.path.dirname(os.getcwd())
@@ -29,5 +27,5 @@ class BuildDb(DockerRe):
 
 
 if __name__ == '__main__':
-    build_db = BuildDb()
+    build_db = BuildDb(image_name='mysql:5.7', container_name='mysql_5.7')
     build_db.start()

@@ -1,7 +1,7 @@
 
 in_server: 0
 
-task_type: 1
+request_type: 1
 
 from_local: 1
 
