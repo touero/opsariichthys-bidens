@@ -226,14 +226,14 @@ class SqlInfo(Enum):
 
 
 @unique
-class TaskType(IntEnum):
+class RequestType(IntEnum):
     CLEAR_DATA = 0  # 清洗数据，已弃用
     API_GET = 1
     API_POST = 2
 
     @staticmethod
     def api_task() -> List[int]:
-        return [TaskType.API_GET.value, TaskType.API_POST.value]
+        return [RequestType.API_GET.value, RequestType.API_POST.value]
 
 
 @unique
