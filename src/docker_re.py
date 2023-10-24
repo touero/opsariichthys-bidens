@@ -10,10 +10,10 @@ from src.tools import log_t
 
 
 class DockerRe(ABC):
-    def __init__(self):
+    def __init__(self, image_name: str, container_name: str):
         self.client = docker.from_env()
-        self.image_name: str = ''
-        self.container_name: str = ''
+        self.image_name = image_name
+        self.container_name = container_name
 
     def get_image(self):
         log_t(f'Finding {self.image_name} docker image in local')

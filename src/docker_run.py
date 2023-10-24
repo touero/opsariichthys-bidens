@@ -4,11 +4,9 @@ from src.docker_re import DockerRe
 
 
 class DockerRun(DockerRe):
-    def __init__(self, yaml_dir: str):
-        super().__init__()
-        self.yaml_dir = yaml_dir
-        self.image_name = 'python:3.9'
-        self.container_name = 'opsariichthys-bidens'
+    def __init__(self, image_name: str, container_name: str, config_dir: str):
+        super().__init__(image_name, container_name)
+        self.config_dir = config_dir
 
     def config(self):
         host_script = os.path.dirname(os.getcwd())
@@ -25,7 +23,7 @@ class DockerRun(DockerRe):
                                     'pip install --root-user-action=ignore requests &&'
                                     'pip install -r requirements.txt &&'
                                     'cd src &&'
-                                    f'python config_run.py -y {self.yaml_dir}']
+                                    f'python config_run.py -y {self.config_dir}']
         }
 
 
@@ -33,6 +31,6 @@ parser = ArgumentParser()
 parser.add_argument('--config', '-y', default='config/task_config.yaml', help='task config')
 if __name__ == '__main__':
     task_config = parser.parse_args()
-    config_dir = task_config.config
-    docker_run = DockerRun(config_dir)
+    yaml_dir = task_config.config
+    docker_run = DockerRun(image_name='python:3.9', container_name='opsariichthys-bidens', config_dir=yaml_dir)
     docker_run.start()
