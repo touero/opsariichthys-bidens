@@ -1,5 +1,4 @@
 from fastapi import FastAPI, Depends, Request
-from pydantic import BaseModel
 
 from getdata import GetData
 from sql_master import SqlMaster

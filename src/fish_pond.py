@@ -1,6 +1,7 @@
 import json
 import traceback
 import uvicorn
+
 from constants import RequestType, API, Server
 from tools import log_t
 
@@ -18,12 +19,17 @@ class FishPond:
                 all_api: dict = {}
                 port = self.task['port']
                 host = Server.get_machine_host()
-                for index, item in enumerate(API):
-                    all_api[index + 1] = f'http://{host}:{port}/api/{item.value}'
-                log_t(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")
+                base_url = f'http://{host}:{port}/api'
                 if self.request_type == RequestType.API_GET.value:
+                    for index, item in enumerate(API):
+                        all_api[index + 1] = f'{base_url}/{item.value}'
+                    log_t(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")
                     uvicorn.run(app="api_get:app", host=host, port=port, reload=True)
                 elif self.request_type == RequestType.API_POST.value:
+                    for index, item in enumerate(API):
+                        base_cmd = '''curl -X POST -H "Content-Type: application/json" -d'''
+                        curl_cmd = base_cmd + '{"item": "'''f'{item.value}"}}\'{base_url}'
+                        log_t(curl_cmd)
                     uvicorn.run(app="api_post:app", host=host, port=port, reload=True)
 
         except Exception as e:
