@@ -1,10 +1,15 @@
+docker:
+  name: 'opsariichthys-bidens_get'
 
-in_server: 0
+config:
+  in_server: 0
 
-request_type: 1
+  # request_type: 请求类型
+  # [0]弃用 [1] GET [2] POST
+  request_type: 1
 
-from_local: 1
+  from_local: 1
 
-host: "127.0.0.1"
+  host: "127.0.0.1"
 
-port: 2518
+  port: 2518
