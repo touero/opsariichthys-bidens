@@ -26,7 +26,7 @@ class DockerRun(DockerRe):
                                     'pip install --root-user-action=ignore requests &&'
                                     'pip install -r requirements.txt &&'
                                     'cd src &&'
-                                    f'python config_run.py -y {self.config_dir}']
+                                    f'python configure_run.py -y {self.config_dir}']
         }
 
 
