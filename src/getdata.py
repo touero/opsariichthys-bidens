@@ -1,5 +1,5 @@
 import json
-from typing import Optional
+from typing import Optional, Union
 from constants import MyJson, API, Province
 from sql_master import SqlMaster
 
@@ -30,8 +30,10 @@ class GetData:
                 API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value: 'get_artificial_intelligence_in_dual',
                 API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value: 'get_artificial_intelligence_in_null'}
 
-    def api_select(self, item: str) -> dict:
-        func_name = self.func_names.get(item)
+    def api_select(self, item: str) -> Union[dict, None]:
+        func_name = self.func_names.get(item, None)
+        if func_name is None:
+            return None
         return getattr(self, func_name, {})
 
     @property

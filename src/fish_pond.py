@@ -13,7 +13,7 @@ class FishPond:
         self.request_type = self.task['request_type']
         self.in_server = self.task['in_server']
 
-    def start(self):
+    def run(self):
         try:
             if self.request_type in RequestType.api_task():
                 all_api: dict = {}
@@ -24,13 +24,12 @@ class FishPond:
                     for index, item in enumerate(API):
                         all_api[index + 1] = f'{base_url}/{item.value}'
                     log_t(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")
-                    uvicorn.run(app="api_get:app", host=host, port=port, reload=True)
                 elif self.request_type == RequestType.API_POST.value:
                     for index, item in enumerate(API):
-                        base_cmd = '''curl -X POST -H "Content-Type: application/json" -d'''
-                        curl_cmd = base_cmd + '{"item": "'''f'{item.value}"}}\'{base_url}'
+                        base_cmd = '''curl -X POST -H "Content-Type: application/json" -d '''
+                        curl_cmd = base_cmd + '\'{"item": "'''f'{item.value}"}}\' {base_url}'
                         log_t(curl_cmd)
-                    uvicorn.run(app="api_post:app", host=host, port=port, reload=True)
+                uvicorn.run(app="api:app", host=host, port=port, reload=True)
 
         except Exception as e:
             log_t(str(e))

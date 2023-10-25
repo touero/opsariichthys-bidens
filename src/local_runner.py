@@ -14,6 +14,7 @@ default_config = {
     "port": 2518,
 }
 
-if __name__ == '__main__':
-    FishPond(default_config).start()
 
+fish_pond = FishPond(default_config)
+if __name__ == '__main__':
+    fish_pond.run()
