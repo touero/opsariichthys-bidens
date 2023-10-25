@@ -35,6 +35,10 @@ parser.add_argument('--config', '-y', default='config/task_config.yaml', help='t
 if __name__ == '__main__':
     task_config = parser.parse_args()
     yaml_dir = task_config.config
-    default_config = yaml.load(open(task_config.config, encoding='utf8'), yaml.FullLoader)
-    docker_run = DockerRun(container_name=default_config['docker']['name'], config_dir=yaml_dir)
+    default_config: dict = yaml.load(open(task_config.config, encoding='utf8'), yaml.FullLoader)
+    if default_config.get('docker', None) is not None:
+        name = default_config['docker']['name']
+    else:
+        name = 'opsariichthys-bidens'
+    docker_run = DockerRun(container_name=name, config_dir=yaml_dir)
     docker_run.start()
