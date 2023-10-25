@@ -7,7 +7,7 @@ from starlette.responses import JSONResponse
 from local_runner import fish_pond
 
 from constants import RequestType
-from getdata import GetData
+from get_data import GetData
 from sql_master import SqlMaster
 from tools import log_t
 
