@@ -78,7 +78,7 @@ $ cd src
 Data preparing: a mysql image of version 5.7 build a container in docker and executing file of .withDb/AllSchoolAPI.sql.  
 Please waiting info score and major table insert finish. 
 ```shell
-$ python build_db_docker.py
+$ python db_in_docker.py
 ```
 Debugging running
 ```shell
@@ -87,7 +87,7 @@ $ python local_runner.py
 ```
 If you want to run it in docker
 ```shell
-$ python docker_run.py -y your_config.yaml
+$ python flexible_run.py -y your_config.yaml
 ```
 Even if internal network penetration does not need to be enabled, the service can be started, providing penetration examples.  
 Please install ngrok before doing so.  

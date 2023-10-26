@@ -15,7 +15,7 @@ class DockerRe(ABC):
         self.image_name = image_name
         self.container_name = container_name
 
-    def get_image(self):
+    def _get_image(self):
         log_t(f'Finding {self.image_name} docker image in local')
         try:
             self._client.images.get(self.image_name)
@@ -32,7 +32,7 @@ class DockerRe(ABC):
         except Exception as e:
             log_t(str(e))
 
-    def get_container(self) -> Union[Container, None]:
+    def _get_container(self) -> Union[Container, None]:
         log_t(f'find {self.container_name} docker container in local')
         containers = self._client.containers.list(all=True)
         for container in containers:
@@ -42,7 +42,7 @@ class DockerRe(ABC):
         log_t(f'ContainerNotFound: {self.container_name}')
         return None
 
-    def run_container(self):
+    def _run_container(self):
         try:
             container = self._client.containers.run(**self.config())
             log_t(f'container id: {container.id} is running')
@@ -56,9 +56,9 @@ class DockerRe(ABC):
         raise NotImplemented
 
     def start(self):
-        self.get_image()
-        container = self.get_container()
+        self._get_image()
+        container = self._get_container()
         if container:
             container.start()
         else:
-            self.run_container()
+            self._run_container()

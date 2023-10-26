@@ -12,7 +12,7 @@ from sql_master import SqlMaster
 from tools import log_t
 
 if not fish_pond:
-    from config_run import fish_pond
+    from configure_run import fish_pond
 
 
 app = FastAPI()
@@ -22,7 +22,7 @@ class ItemRequest(BaseModel):
     item: str
 
 
-if fish_pond.request_type in RequestType.api_task():
+if RequestType.is_api_task(fish_pond.request_type):
     try:
         if fish_pond.request_type == RequestType.API_POST:
             @app.post('/api')

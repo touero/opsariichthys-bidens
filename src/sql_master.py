@@ -1,4 +1,7 @@
 import pymysql
+
+from pymysql import MySQLError
+
 from constants import DataBaseInfo
 from tools import *
 
@@ -6,8 +9,12 @@ from tools import *
 class SqlMaster:
     def __init__(self):
         db_info = DataBaseInfo()
-        self.conn = pymysql.connect(host=db_info.host, user=db_info.user, password=db_info.password,
-                                    port=db_info.port, database=db_info.database)
+        try:
+            self.conn = pymysql.connect(host=db_info.host, user=db_info.user, password=db_info.password,
+                                        port=db_info.port, database=db_info.database)
+        except MySQLError as e:
+            log_t(str(e))
+            raise e
 
         self.cursor = self.conn.cursor()
 

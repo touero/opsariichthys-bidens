@@ -8,14 +8,14 @@ from tools import log_t
 
 class FishPond:
 
-    def __init__(self, default_config):
+    def __init__(self, default_config: dict):
         self.task = default_config
         self.request_type = self.task['request_type']
         self.in_server = self.task['in_server']
 
     def run(self):
         try:
-            if self.request_type in RequestType.api_task():
+            if RequestType.is_api_task(self.request_type):
                 all_api: dict = {}
                 port = self.task['port']
                 host = Server.get_machine_host()

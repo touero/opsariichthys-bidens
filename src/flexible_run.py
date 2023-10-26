@@ -1,10 +1,13 @@
 import os
+import yaml
+
 from argparse import ArgumentParser
+
 from src.docker_re import DockerRe
 
 
 class DockerRun(DockerRe):
-    def __init__(self, image_name: str, container_name: str, config_dir: str):
+    def __init__(self, container_name: str, config_dir: str, image_name: str = 'python:3.9'):
         super().__init__(image_name, container_name)
         self.config_dir = config_dir
 
@@ -23,7 +26,7 @@ class DockerRun(DockerRe):
                                     'pip install --root-user-action=ignore requests &&'
                                     'pip install -r requirements.txt &&'
                                     'cd src &&'
-                                    f'python config_run.py -y {self.config_dir}']
+                                    f'python configure_run.py -y {self.config_dir}']
         }
 
 
@@ -32,5 +35,10 @@ parser.add_argument('--config', '-y', default='config/task_config.yaml', help='t
 if __name__ == '__main__':
     task_config = parser.parse_args()
     yaml_dir = task_config.config
-    docker_run = DockerRun(image_name='python:3.9', container_name='opsariichthys-bidens', config_dir=yaml_dir)
+    default_config: dict = yaml.load(open(task_config.config, encoding='utf8'), yaml.FullLoader)
+    if default_config.get('docker', None) is not None:
+        name = default_config['docker']['name']
+    else:
+        name = 'opsariichthys-bidens'
+    docker_run = DockerRun(container_name=name, config_dir=yaml_dir)
     docker_run.start()

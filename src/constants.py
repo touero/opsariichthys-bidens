@@ -232,8 +232,8 @@ class RequestType(IntEnum):
     API_POST = 2
 
     @staticmethod
-    def api_task() -> List[int]:
-        return [RequestType.API_GET.value, RequestType.API_POST.value]
+    def is_api_task(request_type: int) -> bool:
+        return request_type in [RequestType.API_GET.value, RequestType.API_POST.value]
 
 
 @unique

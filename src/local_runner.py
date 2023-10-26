@@ -1,9 +1,8 @@
 from fish_pond import FishPond
 
 """
-in_docker: 是否在docker运行
 request_type: 请求类型
-[0]弃用 [1]API
+[0]弃用 [1] GET [2] POST
 """
 
 default_config = {
