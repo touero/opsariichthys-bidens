@@ -4,7 +4,7 @@ import json
 import random
 
 
-def exist_json(json_path: object):
+def exist_json(json_path: str):
     def decorator(func: callable):
         def wrapper(*args, **kwargs):
             list_result = Tools.get_json(str(json_path))
@@ -14,9 +14,7 @@ def exist_json(json_path: object):
             else:
                 log_t(f'is update: 1')
                 return func(*args, **kwargs)
-
         return wrapper
-
     return decorator
 
 

@@ -8,7 +8,6 @@ from local_runner import fish_pond
 
 from constants import RequestType
 from get_data import GetData
-from sql_master import SqlMaster
 from tools import log_t
 
 if not fish_pond:
@@ -26,16 +25,14 @@ if RequestType.is_api_task(fish_pond.request_type):
     try:
         if fish_pond.request_type == RequestType.API_POST:
             @app.post('/api')
-            async def start_api(item: ItemRequest, sql=Depends(SqlMaster), get_data=Depends(GetData)):
-                get_data.sql_init(sql=sql)
+            async def start_api(item: ItemRequest, get_data=Depends(GetData)):
                 result = get_data.api_select(item)
                 if result is None:
                     return JSONResponse(content={"detail": "Invalid item"}, status_code=400)
                 return result
         elif fish_pond.request_type == RequestType.API_GET:
             @app.get('/api/{item}')
-            async def start_api(item, sql=Depends(SqlMaster), get_data=Depends(GetData)):
-                get_data.sql_init(sql=sql)
+            async def start_api(item, get_data=Depends(GetData)):
                 result = get_data.api_select(item)
                 if result is None:
                     return JSONResponse(content={"detail": "Invalid item"}, status_code=400)

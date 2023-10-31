@@ -7,34 +7,30 @@ from tools import Tools, exist_json
 
 
 class GetData:
+    sql: SqlMaster
+
     def __init__(self):
-        self.sql: Optional[SqlMaster] = None
-
-    def sql_init(self, sql: Optional[SqlMaster]) -> None:
-        self.sql = sql
-
-    @property
-    def func_names(self) -> dict:
-        return {API.PROVINCE_COUNT.value: 'get_province',
-                API.DUAL_COUNT.value: 'get_dual_class_name',
-                API.TYPE_COUNT.value: 'get_type_name',
-                API.SPECIAL_COUNT.value: 'get_special_count',
-                API.SCORE_PROVINCE.value: 'get_score_count',
-                API.BIG_DATA_COUNT.value: 'get_big_data_count',
-                API.BIG_DATA_PROVINCE_COUNT.value: 'get_big_data_province_count',
-                API.BIG_DATA_TYPE_COUNT.value: 'get_big_data_type_count',
-                API.BIG_DATA_LEVEL2_COUNT.value: 'get_big_data_level2_count',
-                API.BIG_DATA_LEVEL3_COUNT.value: 'get_big_data_level3_count',
-                API.BIG_DATA_IN_DUAL.value: 'get_big_data_in_dual',
-                API.BIG_DATA_IN_NULL.value: 'get_big_data_in_null',
-                API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value: 'get_artificial_intelligence_in_dual',
-                API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value: 'get_artificial_intelligence_in_null'}
+        self.sql: Optional[SqlMaster] = SqlMaster()
+        self.func_names: dict = {API.PROVINCE_COUNT.value: 'get_province',
+                                 API.DUAL_COUNT.value: 'get_dual_class_name',
+                                 API.TYPE_COUNT.value: 'get_type_name',
+                                 API.SPECIAL_COUNT.value: 'get_special_count',
+                                 API.SCORE_PROVINCE.value: 'get_score_count',
+                                 API.BIG_DATA_COUNT.value: 'get_big_data_count',
+                                 API.BIG_DATA_PROVINCE_COUNT.value: 'get_big_data_province_count',
+                                 API.BIG_DATA_TYPE_COUNT.value: 'get_big_data_type_count',
+                                 API.BIG_DATA_LEVEL2_COUNT.value: 'get_big_data_level2_count',
+                                 API.BIG_DATA_LEVEL3_COUNT.value: 'get_big_data_level3_count',
+                                 API.BIG_DATA_IN_DUAL.value: 'get_big_data_in_dual',
+                                 API.BIG_DATA_IN_NULL.value: 'get_big_data_in_null',
+                                 API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value: 'get_artificial_intelligence_in_dual',
+                                 API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value: 'get_artificial_intelligence_in_null'}
 
     def api_select(self, item: str) -> Union[dict, None]:
         func_name = self.func_names.get(item, None)
         if func_name is None:
             return None
-        return getattr(self, func_name, {})
+        return getattr(self, func_name, None)
 
     @property
     @exist_json(MyJson.PROVINCE_COUNT.value)
