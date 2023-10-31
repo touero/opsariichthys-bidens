@@ -77,7 +77,8 @@ $ pip install -r requriements.txt
 $ cd src
 ```
 Data preparing: a mysql image of version 5.7 build a container in docker and executing file of .withDb/AllSchoolAPI.sql.  
-Please waiting info score and major table insert finish. 
+Please waiting info score and major table insert finish, and .withDb name of dir will be mounted to docker. **The process will take 10 minutes**.
+You will see _db.opt nfo.frm info.ibd major.frm major.ibd score.frm score.ibd_ names of file in _/.withDb/mysql/AllSchoolAPI_ 
 ```shell
 $ python db_in_docker.py
 ```
