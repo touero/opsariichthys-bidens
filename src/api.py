@@ -18,7 +18,7 @@ app = FastAPI()
 
 
 class ItemRequest(BaseModel):
-    item: str
+    key: str
 
 
 if RequestType.is_api_task(fish_pond.request_type):
@@ -26,7 +26,7 @@ if RequestType.is_api_task(fish_pond.request_type):
         if fish_pond.request_type == RequestType.API_POST:
             @app.post('/api')
             async def start_api(item: ItemRequest, get_data=Depends(GetData)):
-                result = get_data.api_select(item)
+                result = get_data.api_select(item.key)
                 if result is None:
                     return JSONResponse(content={"detail": "Invalid item"}, status_code=400)
                 return result
