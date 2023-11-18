@@ -2,19 +2,22 @@ import logging
 import os
 import json
 import random
+from constants import MyJson
 
 
-def exist_json(json_path: str):
+def exist_json(json_path: MyJson):
     def decorator(func: callable):
         def wrapper(*args, **kwargs):
-            list_result = Tools.get_json(str(json_path))
+            list_result = Tools.get_json(json_path.value)
             if list_result and random.choice([0, 1]):
                 log_t(f'is update: 0')
                 return list_result
             else:
                 log_t(f'is update: 1')
                 return func(*args, **kwargs)
+
         return wrapper
+
     return decorator
 
 
@@ -23,8 +26,7 @@ def log_t(*args):
     logger = logging.getLogger('api')
     logger.setLevel(logging.DEBUG)
     console_handler = logging.StreamHandler()
-    file_handler = logging.FileHandler(filename='log/api.log',
-                                       encoding='UTF-8')
+    file_handler = logging.FileHandler(filename='log/api.log', encoding='UTF-8')
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
     formatter = logging.Formatter('%(asctime)s %(name)s %(levelname)s: %(message)s')
@@ -47,9 +49,9 @@ class Tools:
             return []
 
     @staticmethod
-    def save_json(name: str, _list: []):
-        if not os.path.exists(name):
-            with open(name, 'w', encoding='utf-8') as json_f:
+    def save_json(name: MyJson, _list: []):
+        if not os.path.exists(name.value):
+            with open(name.value, 'w', encoding='utf-8') as json_f:
                 json_f.write(json.dumps(_list))
                 log_t(f'writing json to: {name}')
 

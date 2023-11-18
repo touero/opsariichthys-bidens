@@ -4,8 +4,6 @@ import platform
 from enum import Enum, unique, IntEnum
 from dataclasses import dataclass
 
-from tools import log_t
-
 
 @unique
 class API(Enum):
@@ -204,7 +202,7 @@ class Server(Enum):
     @staticmethod
     def get_machine_host() -> str:
         temp = Server(platform.system())
-        log_t(f'machine_type: {temp}')
+        print(f'machine_type: {temp}')
         if temp is Server.Windows or temp is Server.MacOS:
             return Host.Local.value
         elif temp is Server.Linux:
