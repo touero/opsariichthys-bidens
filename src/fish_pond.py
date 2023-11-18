@@ -33,4 +33,4 @@ class FishPond:
 
         except Exception as e:
             log_t(str(e))
-            log_t(traceback.print_exc())
+            log_t(traceback.format_exc())

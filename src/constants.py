@@ -202,15 +202,15 @@ class Server(Enum):
         return str(self.value)
 
     @staticmethod
-    def get_machine_host():
+    def get_machine_host() -> str:
         temp = Server(platform.system())
         log_t(f'machine_type: {temp}')
         if temp is Server.Windows or temp is Server.MacOS:
-            return Host.Local
+            return Host.Local.value
         elif temp is Server.Linux:
             if os.path.exists('/.dockerenv'):
-                return Host.Local
-            return Host.Server
+                return Host.Local.value
+            return Host.Server.value
 
     @staticmethod
     def execute_command(cmd: str = None):
