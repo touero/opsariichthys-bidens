@@ -1,10 +1,8 @@
 import os
+import platform
 
 from enum import Enum, unique, IntEnum
 from dataclasses import dataclass
-from typing import List
-
-from tools import log_t
 
 
 @unique
@@ -194,14 +192,18 @@ class ProvinceID(Enum):
 
 @unique
 class Server(Enum):
-    Windows = "nt"
-    Linux = "posix"
+    MacOS = "Darwin"
+    Windows = "Windows"
+    Linux = "Linux"
+
+    def __str__(self):
+        return str(self.value)
 
     @staticmethod
     def get_machine_host() -> str:
-        temp = Server(os.name)
-        log_t(f'machine_type: {temp}')
-        if temp is Server.Windows:
+        temp = Server(platform.system())
+        print(f'machine_type: {temp}')
+        if temp is Server.Windows or temp is Server.MacOS:
             return Host.Local.value
         elif temp is Server.Linux:
             if os.path.exists('/.dockerenv'):
@@ -269,6 +271,9 @@ class OutPath(Enum):
 class Host(Enum):
     Local = "127.0.0.1"
     Server = "0.0.0.0"
+
+    def __str__(self):
+        return str(self.value)
 
 
 @unique
