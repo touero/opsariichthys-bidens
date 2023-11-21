@@ -22,7 +22,7 @@ def exist_json(json_path: MyJson):
 
 
 def _log_re(log_level=logging.INFO):
-    logger = logging.getLogger('Carp')
+    logger = logging.getLogger('api')
     logger.setLevel(level=log_level)
 
     file_handler = logging.FileHandler(filename='log/carp.log', encoding='UTF-8')
@@ -67,7 +67,7 @@ class Tools:
     @staticmethod
     def get_json(name: str) -> json:
         if os.path.exists(name):
-            log_t(f'find it: {name}')
+            log(f'find it: {name}')
             with open(name, 'r', encoding='utf-8') as json_f:
                 json_result = json.load(json_f)
             return json_result
