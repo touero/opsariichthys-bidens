@@ -3,7 +3,7 @@ import pymysql
 from pymysql import MySQLError
 
 from constants import DataBaseInfo
-from tools import *
+from tools import log
 
 
 class SqlMaster:
@@ -13,18 +13,18 @@ class SqlMaster:
             self.conn = pymysql.connect(host=db_info.host, user=db_info.user, password=db_info.password,
                                         port=db_info.port, database=db_info.database)
         except MySQLError as e:
-            log_t(str(e))
+            log(str(e))
             raise e
 
         self.cursor = self.conn.cursor()
 
     def submit_sql_with_return(self, sql: str) -> tuple:
-        log_t(sql)
+        log(sql)
         self.cursor.execute(sql)
         return self.cursor.fetchall()
 
     def only_submit_sql(self, sql: str):
-        log_t(sql)
+        log(sql)
         self.cursor.execute(sql)
         self.conn.commit()
 
