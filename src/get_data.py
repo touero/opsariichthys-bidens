@@ -33,39 +33,39 @@ class GetData:
         return getattr(self, func_name, None)
 
     @property
-    @exist_json(MyJson.PROVINCE_COUNT)
+    @exist_json(MyJson.PROVINCE_COUNT.value)
     def get_province(self) -> json:
         province_data = self.sql.execute_sql('sql/province_count.sql')
         province_data_count = Province.province_mapping(dict(province_data), 1)
         list_result = Tools.turn_to_dict_of_list(province_data_count)
-        Tools.save_json(MyJson.PROVINCE_COUNT, list_result)
+        Tools.save_json(MyJson.PROVINCE_COUNT.value, list_result)
         return list_result
 
     @property
-    @exist_json(MyJson.DUAL_COUNT)
+    @exist_json(MyJson.DUAL_COUNT.value)
     def get_dual_class_name(self) -> json:
         dual_data = self.sql.execute_sql('sql/dual_class_count.sql')
         province_dict = Tools.both_count(dual_data)
         list_result = Tools.turn_to_dict_of_list(province_dict)
-        Tools.save_json(MyJson.DUAL_COUNT, list_result)
+        Tools.save_json(MyJson.DUAL_COUNT.value, list_result)
         return list_result
 
     @property
-    @exist_json(MyJson.TYPE_COUNT)
+    @exist_json(MyJson.TYPE_COUNT.value)
     def get_type_name(self) -> json:
         type_name_data = self.sql.execute_sql('sql/type_count.sql')
         type_name_dict = dict(type_name_data)
         list_result = Tools.turn_to_dict_of_list(type_name_dict)
-        Tools.save_json(MyJson.TYPE_COUNT, list_result)
+        Tools.save_json(MyJson.TYPE_COUNT.value, list_result)
         return list_result
 
     @property
-    @exist_json(MyJson.SPECIAL_COUNT)
+    @exist_json(MyJson.SPECIAL_COUNT.value)
     def get_special_count(self) -> json:
         special_names = self.sql.execute_sql('sql/spacial_name_count.sql')
         special_name_dict = dict(special_names)
         list_result = Tools.turn_to_dict_of_list(special_name_dict)
-        Tools.save_json(MyJson.SPECIAL_COUNT, list_result)
+        Tools.save_json(MyJson.SPECIAL_COUNT.value, list_result)
         return list_result
 
     @property
@@ -78,82 +78,82 @@ class GetData:
         return list_result
 
     @property
-    @exist_json(MyJson.BIG_DATA_COUNT)
+    @exist_json(MyJson.BIG_DATA_COUNT.value)
     def get_big_data_count(self) -> json:
         big_data = self.sql.execute_sql('sql/big_data_count.sql')
         special_dict = Tools.both_count(big_data)
         list_result = Tools.turn_to_dict_of_list(special_dict)
-        Tools.save_json(MyJson.BIG_DATA_COUNT, list_result)
+        Tools.save_json(MyJson.BIG_DATA_COUNT.value, list_result)
         return list_result
 
     @property
-    @exist_json(MyJson.BIG_DATA_PROVINCE_COUNT)
+    @exist_json(MyJson.BIG_DATA_PROVINCE_COUNT.value)
     def get_big_data_province_count(self) -> json:
         big_data_province_count = self.sql.execute_sql('sql/big_data_province_count.sql')
         big_data_province_dict = Province.province_mapping(dict(big_data_province_count))
         list_result = Tools.turn_to_dict_of_list(big_data_province_dict)
-        Tools.save_json(MyJson.BIG_DATA_PROVINCE_COUNT, list_result)
+        Tools.save_json(MyJson.BIG_DATA_PROVINCE_COUNT.value, list_result)
         return list_result
 
     @property
-    @exist_json(MyJson.BIG_DATA_TYPE_COUNT)
+    @exist_json(MyJson.BIG_DATA_TYPE_COUNT.value)
     def get_big_data_type_count(self) -> json:
         big_data_type_count = self.sql.execute_sql('sql/big_data_type_count.sql')
         big_data_type_dict = dict(big_data_type_count)
         list_result = Tools.turn_to_dict_of_list(big_data_type_dict)
-        Tools.save_json(MyJson.BIG_DATA_TYPE_COUNT, list_result)
+        Tools.save_json(MyJson.BIG_DATA_TYPE_COUNT.value, list_result)
         return list_result
 
     @property
-    @exist_json(MyJson.BIG_DATA_LEVEL2_COUNT)
+    @exist_json(MyJson.BIG_DATA_LEVEL2_COUNT.value)
     def get_big_data_level2_count(self) -> json:
         big_data_level2_count = self.sql.execute_sql('sql/big_data_level2_count.sql')
         big_data_type_dict = dict(big_data_level2_count)
         list_result = Tools.turn_to_dict_of_list(big_data_type_dict)
-        Tools.save_json(MyJson.BIG_DATA_LEVEL2_COUNT, list_result)
+        Tools.save_json(MyJson.BIG_DATA_LEVEL2_COUNT.value, list_result)
         return list_result
 
     @property
-    @exist_json(MyJson.BIG_DATA_LEVEL3_COUNT)
+    @exist_json(MyJson.BIG_DATA_LEVEL3_COUNT.value)
     def get_big_data_level3_count(self) -> json:
         big_data_level3_count = self.sql.execute_sql('sql/big_data_level3_count.sql')
         big_data_type_dict = dict(big_data_level3_count)
         list_result = Tools.turn_to_dict_of_list(big_data_type_dict)
-        Tools.save_json(MyJson.BIG_DATA_LEVEL3_COUNT, list_result)
+        Tools.save_json(MyJson.BIG_DATA_LEVEL3_COUNT.value, list_result)
         return list_result
 
     @property
-    @exist_json(MyJson.BIG_DATA_IN_DUAL)
+    @exist_json(MyJson.BIG_DATA_IN_DUAL.value)
     def get_big_data_in_dual(self) -> json:
         school_dual = self.sql.get_something_count('sql/dual.sql')
         big_data_count_temp = self.sql.get_something_count('sql/big_data.sql')
         result = Tools.hava_count(school_dual, big_data_count_temp)
-        Tools.save_json(MyJson.BIG_DATA_IN_DUAL, result)
+        Tools.save_json(MyJson.BIG_DATA_IN_DUAL.value, result)
         return result
 
     @property
-    @exist_json(MyJson.BIG_DATA_IN_NULL)
+    @exist_json(MyJson.BIG_DATA_IN_NULL.value)
     def get_big_data_in_null(self) -> json:
         school_dual = self.sql.get_something_count('sql/null.sql')
         big_data_count_temp = self.sql.get_something_count('sql/big_data.sql')
         result = Tools.hava_count(school_dual, big_data_count_temp)
-        Tools.save_json(MyJson.BIG_DATA_IN_NULL, result)
+        Tools.save_json(MyJson.BIG_DATA_IN_NULL.value, result)
         return result
 
     @property
-    @exist_json(MyJson.ARTIFICIAL_INTELLIGENCE_IN_DUAL)
+    @exist_json(MyJson.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value)
     def get_artificial_intelligence_in_dual(self) -> json:
         school_dual = self.sql.get_something_count('sql/dual.sql')
         count_temp = self.sql.get_something_count('sql/artificial_intelligence.sql')
         result = Tools.hava_count(school_dual, count_temp)
-        Tools.save_json(MyJson.ARTIFICIAL_INTELLIGENCE_IN_DUAL, result)
+        Tools.save_json(MyJson.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value, result)
         return result
 
     @property
-    @exist_json(MyJson.ARTIFICIAL_INTELLIGENCE_IN_NULL)
+    @exist_json(MyJson.ARTIFICIAL_INTELLIGENCE_IN_NULL.value)
     def get_artificial_intelligence_in_null(self) -> json:
         school_dual = self.sql.get_something_count('sql/null.sql')
         count_temp = self.sql.get_something_count('sql/artificial_intelligence.sql')
         result = Tools.hava_count(school_dual, count_temp)
-        Tools.save_json(MyJson.ARTIFICIAL_INTELLIGENCE_IN_NULL, result)
+        Tools.save_json(MyJson.ARTIFICIAL_INTELLIGENCE_IN_NULL.value, result)
         return result

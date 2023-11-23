@@ -2,13 +2,12 @@ import logging
 import os
 import json
 import random
-from constants import MyJson
 
 
-def exist_json(json_path: MyJson):
+def exist_json(json_path: str):
     def decorator(func: callable):
         def wrapper(*args, **kwargs):
-            list_result = Tools.get_json(json_path.value)
+            list_result = Tools.get_json(json_path)
             if list_result and random.choice([0, 1]):
                 log(f'is update: 0')
                 return list_result
@@ -75,9 +74,9 @@ class Tools:
             return []
 
     @staticmethod
-    def save_json(name: MyJson, _list: []):
-        if not os.path.exists(name.value):
-            with open(name.value, 'w', encoding='utf-8') as json_f:
+    def save_json(name: str, _list: []):
+        if not os.path.exists(name):
+            with open(name, 'w', encoding='utf-8') as json_f:
                 json_f.write(json.dumps(_list))
                 log(f'writing json to: {name}')
 
