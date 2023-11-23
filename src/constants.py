@@ -275,9 +275,6 @@ class Host(Enum):
     Local = "127.0.0.1"
     Server = "0.0.0.0"
 
-    def __str__(self):
-        return str(self.value)
-
 
 @unique
 class IsUpload(IntEnum):
