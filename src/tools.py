@@ -2,18 +2,17 @@ import logging
 import os
 import json
 import random
-from constants import MyJson
 
 
-def exist_json(json_path: MyJson):
+def exist_json(json_path: str):
     def decorator(func: callable):
         def wrapper(*args, **kwargs):
-            list_result = Tools.get_json(json_path.value)
+            list_result = Tools.get_json(str(json_path))
             if list_result and random.choice([0, 1]):
-                log_t(f'is update: 0')
+                log(f'is update: 0')
                 return list_result
             else:
-                log_t(f'is update: 1')
+                log(f'is update: 1')
                 return func(*args, **kwargs)
 
         return wrapper
@@ -21,27 +20,53 @@ def exist_json(json_path: MyJson):
     return decorator
 
 
-def log_t(*args):
-    msg = ', '.join(args)
+def _log_re(log_level=logging.INFO):
     logger = logging.getLogger('api')
-    logger.setLevel(logging.DEBUG)
-    console_handler = logging.StreamHandler()
-    file_handler = logging.FileHandler(filename='log/api.log', encoding='UTF-8')
-    logger.addHandler(console_handler)
-    logger.addHandler(file_handler)
-    formatter = logging.Formatter('%(asctime)s %(name)s %(levelname)s: %(message)s')
-    console_handler.setFormatter(formatter)
+    logger.setLevel(level=log_level)
+
+    file_handler = logging.FileHandler(filename='log/carp.log', encoding='UTF-8')
+    file_handler.setLevel(log_level)
+
+    formatter = logging.Formatter('%(name)s - %(levelname)s - %(asctime)s - %(message)s')
     file_handler.setFormatter(formatter)
-    logger.debug(f"{msg}")
-    logger.removeHandler(file_handler)
-    logger.removeHandler(console_handler)
+
+    stream_handler = logging.StreamHandler()
+    stream_handler.setLevel(log_level)
+    stream_handler.setFormatter(formatter)
+
+    if logger.handlers:
+        logger.handlers.clear()
+
+    logger.handlers = [file_handler, stream_handler]
+
+    g_log = logger
+    return g_log
+
+
+def log(*args, **kwargs):
+    msg = ', '.join(args)
+    log_temp = kwargs.get('log_level', None)
+    if log_temp is not None:
+        if log_temp == 'info':
+            log_level = logging.INFO
+        elif log_temp == 'debug':
+            log_level = logging.DEBUG
+        elif log_temp == 'warning':
+            log_level = logging.WARNING
+        elif log_temp == 'error':
+            log_level = logging.ERROR
+        else:
+            log_level = logging.INFO
+        _log_re(log_level=log_level).info(f'==> {msg}')
+    else:
+        _log_re().info(f'==> {msg}')
 
 
 class Tools:
     @staticmethod
     def get_json(name: str) -> json:
         if os.path.exists(name):
-            log_t(f'find it: {name}')
+            log(f'find it: {name}')
             with open(name, 'r', encoding='utf-8') as json_f:
                 json_result = json.load(json_f)
             return json_result
@@ -49,11 +74,11 @@ class Tools:
             return []
 
     @staticmethod
-    def save_json(name: MyJson, _list: []):
-        if not os.path.exists(name.value):
-            with open(name.value, 'w', encoding='utf-8') as json_f:
+    def save_json(name: str, _list: []):
+        if not os.path.exists(name):
+            with open(name, 'w', encoding='utf-8') as json_f:
                 json_f.write(json.dumps(_list))
-                log_t(f'writing json to: {name}')
+                log(f'writing json to: {name}')
 
     @staticmethod
     def turn_to_dict_of_list(dict_args) -> json:

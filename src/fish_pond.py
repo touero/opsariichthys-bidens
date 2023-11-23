@@ -3,7 +3,7 @@ import traceback
 import uvicorn
 
 from constants import RequestType, API, Server
-from tools import log_t
+from tools import log
 
 
 class FishPond:
@@ -23,14 +23,14 @@ class FishPond:
                 if self.request_type == RequestType.API_GET.value:
                     for index, item in enumerate(API):
                         all_api[index + 1] = f'{base_url}/{item.value}'
-                    log_t(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")
+                    log(f"all_api =\n {json.dumps(all_api, sort_keys=True, indent=4, separators=(',', ': '))}")
                 elif self.request_type == RequestType.API_POST.value:
                     for index, item in enumerate(API):
                         base_cmd = '''curl -X POST -H "Content-Type: application/json" -d '''
                         curl_cmd = base_cmd + '\'{"item": "'''f'{item.value}"}}\' {base_url}'
-                        log_t(curl_cmd)
+                        log(curl_cmd)
                 uvicorn.run(app="api:app", host=host, port=port, reload=True)
 
         except Exception as e:
-            log_t(str(e))
-            log_t(traceback.format_exc())
+            log(str(e))
+            log(traceback.format_exc())

@@ -8,7 +8,7 @@ from local_runner import fish_pond
 
 from constants import RequestType
 from get_data import GetData
-from tools import log_t
+from tools import log
 
 if not fish_pond:
     from configure_run import fish_pond
@@ -40,8 +40,8 @@ if RequestType.is_api_task(fish_pond.request_type):
         else:
             raise TypeError('request type error')
     except Exception as e:
-        log_t(str(e))
-        log_t(traceback.format_exc())
+        log(str(e))
+        log(traceback.format_exc())
 else:
     raise TypeError('request type error')
 
@@ -50,5 +50,5 @@ else:
 async def log_requests(request: Request, call_next):
     response = await call_next(request)
     str_result = f'{str(request.client)} [{request.method} {str(response.status_code)}] {str(request.url)}'
-    log_t(str_result)
+    log(str_result)
     return response

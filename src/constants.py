@@ -3,6 +3,9 @@ import platform
 
 from enum import Enum, unique, IntEnum
 from dataclasses import dataclass
+from typing import List
+
+from tools import log
 
 
 @unique
@@ -271,9 +274,6 @@ class OutPath(Enum):
 class Host(Enum):
     Local = "127.0.0.1"
     Server = "0.0.0.0"
-
-    def __str__(self):
-        return str(self.value)
 
 
 @unique
