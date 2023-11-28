@@ -210,8 +210,8 @@ class Server(Enum):
             return Host.Local.value
         elif temp is Server.Linux:
             if os.path.exists('/.dockerenv'):
-                return Host.Local.value
-            return Host.Server.value
+                return Host.Server.value
+            return Host.Local.value
 
     @staticmethod
     def execute_command(cmd: str = None):
