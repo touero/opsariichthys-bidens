@@ -1,2 +1,2 @@
 from .create_db import create_db
-from .database import SessionLocal
+from .database import async_session

@@ -7,4 +7,4 @@ build/
 database/conf.d
 database/mysql/*
 database/all_school.db
-*.log
+logs/*.log

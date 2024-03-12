@@ -1,5 +1,4 @@
 fastapi==0.95.1
-PyMySQL==1.0.2
 uvicorn~=0.21.1
 starlette~=0.26.1
 constants~=0.6.0
