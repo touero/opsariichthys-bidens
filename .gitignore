@@ -1,0 +1,10 @@
+.idea/
+venv/
+__pycache__/
+dist/
+build/
+*.egg-info/
+database/conf.d
+database/mysql/*
+database/all_school.db
+*.log
