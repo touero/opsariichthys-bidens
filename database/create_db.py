@@ -7,9 +7,10 @@ from logs import log
 def create_db():
     log('create sqlite')
     connection = sqlite3.connect('database/all_school.db')
-    with open('database/all_school_sqlite.sql', 'r') as f:
+    with open('database/all_school_sqlite.sql', 'r', encoding='utf-8') as f:
         sql_commands = f.read()
     try:
+        log('waiting database created ... ')
         cursor = connection.cursor()
         cursor.executescript(sql_commands)
     except Exception as e:
