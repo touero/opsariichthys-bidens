@@ -9,3 +9,4 @@ pydantic~=1.10.12
 pytest~=7.4.3
 easier-docker==2.2.2
 SQLAlchemy==2.0.28
+aiosalite==0.20.0
