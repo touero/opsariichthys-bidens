@@ -112,3 +112,130 @@ async def big_data_province():
         )
         result_dict_list = [{"province": row[0], "count": row[1]} for row in results.all()]
         return JSONResponse(content=result_dict_list)
+
+
+@app.get(API.BIG_DATA_TYPE.value)
+async def big_data_type():
+    async with async_session() as session:
+        results = await session.execute(
+            select(Major.type_name.label('type_name'), func.count())
+            .where(Major.special_name.like("%数据%"))
+            .group_by('type_name')
+            .order_by(func.count().desc())
+        )
+        result_dict_list = [{"school_class": row[0], "count": row[1]} for row in results.all()]
+        return JSONResponse(content=result_dict_list)
+
+
+@app.get(API.BIG_DATA_LEVEL2.value)
+async def big_data_level2():
+    async with async_session() as session:
+        results = await session.execute(
+            select(Major.level2_name.label('level2_name'), func.count())
+            .where(Major.special_name.like("%数据%"))
+            .group_by('level2_name')
+            .order_by(func.count().desc())
+            .limit(5)
+        )
+        result_dict_list = [{"level_class": row[0], "count": row[1]} for row in results.all()]
+        return JSONResponse(content=result_dict_list)
+
+
+@app.get(API.BIG_DATA_IN_DUAL.value)
+async def big_data_in_dual():
+    async with async_session() as session:
+        dual_school_ids = await session.execute(
+            select(Info.school_id, func.count())
+            .where(Info.dual_class_name == '双一流')
+            .group_by(Info.school_id)
+        )
+        big_data_school_ids = await session.execute(
+            select(Major.school_id, func.count())
+            .where(Major.special_name == '数据科学与大数据技术')
+            .group_by(Major.school_id)
+        )
+        school_id_info = [row[0] for row in dual_school_ids.fetchall()]
+        school_id_major = [row[0] for row in big_data_school_ids.fetchall()]
+        have_count = 0
+        not_count = 0
+        for school_id in school_id_info:
+            if school_id in school_id_major:
+                have_count += 1
+            else:
+                not_count += 1
+        return JSONResponse(content={"have_count": have_count, "not_count": not_count})
+
+
+@app.get(API.BIG_DATA_IN_NULL.value)
+async def big_data_in_null():
+    async with async_session() as session:
+        dual_school_ids = await session.execute(
+            select(Info.school_id, func.count())
+            .where(Info.dual_class_name == 'null')
+            .group_by(Info.school_id)
+        )
+        big_data_school_ids = await session.execute(
+            select(Major.school_id, func.count())
+            .where(Major.special_name == '数据科学与大数据技术')
+            .group_by(Major.school_id)
+        )
+        school_id_info = [row[0] for row in dual_school_ids.fetchall()]
+        school_id_major = [row[0] for row in big_data_school_ids.fetchall()]
+        have_count = 0
+        not_count = 0
+        for school_id in school_id_info:
+            if school_id in school_id_major:
+                have_count += 1
+            else:
+                not_count += 1
+        return JSONResponse(content={"have_count": have_count, "not_count": not_count})
+
+
+@app.get(API.ARTIFICIAL_INTELLIGENCE_IN_DUAL.value)
+async def artificial_intelligence_in_dual():
+    async with async_session() as session:
+        dual_school_ids = await session.execute(
+            select(Info.school_id, func.count())
+            .where(Info.dual_class_name == '双一流')
+            .group_by(Info.school_id)
+        )
+        big_data_school_ids = await session.execute(
+            select(Major.school_id, func.count())
+            .where(Major.special_name == '人工智能')
+            .group_by(Major.school_id)
+        )
+        school_id_info = [row[0] for row in dual_school_ids.fetchall()]
+        school_id_major = [row[0] for row in big_data_school_ids.fetchall()]
+        have_count = 0
+        not_count = 0
+        for school_id in school_id_info:
+            if school_id in school_id_major:
+                have_count += 1
+            else:
+                not_count += 1
+        return JSONResponse(content={"have_count": have_count, "not_count": not_count})
+
+
+@app.get(API.ARTIFICIAL_INTELLIGENCE_IN_NULL.value)
+async def artificial_intelligence_in_dual():
+    async with async_session() as session:
+        dual_school_ids = await session.execute(
+            select(Info.school_id, func.count())
+            .where(Info.dual_class_name == 'null')
+            .group_by(Info.school_id)
+        )
+        big_data_school_ids = await session.execute(
+            select(Major.school_id, func.count())
+            .where(Major.special_name == '人工智能')
+            .group_by(Major.school_id)
+        )
+        school_id_info = [row[0] for row in dual_school_ids.fetchall()]
+        school_id_major = [row[0] for row in big_data_school_ids.fetchall()]
+        have_count = 0
+        not_count = 0
+        for school_id in school_id_info:
+            if school_id in school_id_major:
+                have_count += 1
+            else:
+                not_count += 1
+        return JSONResponse(content={"have_count": have_count, "not_count": not_count})
