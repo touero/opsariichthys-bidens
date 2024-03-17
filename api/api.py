@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from sqlalchemy import func, select, and_
 from starlette.responses import JSONResponse
+from logs import async_uvicorn_logger
 
 from database.model import Info, Major, Score
 from database import async_session
@@ -239,3 +240,8 @@ async def artificial_intelligence_in_dual():
             else:
                 not_count += 1
         return JSONResponse(content={"have_count": have_count, "not_count": not_count})
+
+
+@app.on_event('startup')
+async def startup():
+    async_uvicorn_logger()

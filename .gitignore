@@ -8,4 +8,4 @@ database/conf.d
 database/mysql/*
 database/all_school.db
 logs/*.log
-src/log/*
+src/log/*.log

@@ -5,12 +5,12 @@ from logs import log
 
 
 def create_db():
-    log('create sqlite')
+    log('creating the sqlite database')
     connection = sqlite3.connect('database/all_school.db')
     with open('database/all_school_sqlite.sql', 'r', encoding='utf-8') as f:
         sql_commands = f.read()
     try:
-        log('waiting database created ... ')
+        log('waiting database to be created')
         cursor = connection.cursor()
         cursor.executescript(sql_commands)
     except Exception as e:
@@ -19,4 +19,4 @@ def create_db():
     finally:
         connection.commit()
         connection.close()
-        log('create sqlite finish')
+        log('creating the database finish')
