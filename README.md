@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-    <img src=img/opsariichthys-bidens.png height="200" width="200" alt="">
+    <img src=.public/opsariichthys-bidens.png height="200" width="200" alt="">
 </p>
 
 ## Repository Introduction
@@ -18,21 +18,20 @@
 
 The data in this repository comes from my other repository--[ctenopharyngodon-idella](https://github.com/weiensong/ctenopharyngodon-idella), which uses the Fast API to build custom APIs for anyone to use anywhere. Support for _GET_ and _POST_ requests. I personally use Data Ease, which is open source by Feizhi Cloud, for graphical analysis.  
   
-💕 If it's helpful to you or cloning it, please star it. This is maximum encouragement for open-source contributors💕
 
 This repository contains：
 | **number** | **item name** | **details** |
 | :---- | :---- | :---- | 
-| **1** | **province_count** | **Each province contains a university** | 
-| **2** | **dual_class_count** | **Each province contains the number of double first-class** | 
-| **3** | **type_count** | **School category statistics** | 
-| **4** | **spacial_name_count** | **All majors statistics** | 
+| **1** | **province** | **Each province contains a university** | 
+| **2** | **dual_class** | **Each province contains the number of double first-class** | 
+| **3** | **type** | **School category statistics** | 
+| **4** | **spacial_name** | **All majors statistics** | 
 | **5** | **score_province** | **Admissions Statistics** | 
-| **6** | **big_data_count** | **Statistics of different big data majors** | 
-| **7** | **big_data_province_count** | **Statistics of provincial universities including Big data majors** | 
-| **8** | **big_data_type_count** | **Statistics of universities in provinces with big data majors** | 
-| **9** | **big_data_level2_count** | **Big data secondary category statistics** | 
-| **10** | **big_data_level3_count** | **Big data primary category statistics** | 
+| **6** | **big_data** | **Statistics of different big data majors** | 
+| **7** | **big_data_province** | **Statistics of provincial universities including Big data majors** | 
+| **8** | **big_data_type** | **Statistics of universities in provinces with big data majors** | 
+| **9** | **big_data_level2** | **Big data secondary category statistics** | 
+| **10** | **big_data_level3** | **Big data primary category statistics** | 
 | **11** | **big_data_in_dual** | **Proportion of Big Data in 211/985** | 
 | **12** | **big_data_in_null** | **The proportion of big data in ordinary colleges and universities** | 
 | **13** | **artificial_intelligence_in_dual** | **The proportion of artificial intelligence in 211/985** | 
@@ -40,18 +39,18 @@ This repository contains：
 
 <table>
     <tr>
-        <td><img src=img/terminal.gif alt=""></td>
-        <td><img src=img/img_1.png alt=""></td>
+        <td><img src=.public/terminal.gif alt=""></td>
+        <td><img src=.public/img_1.png alt=""></td>
     </tr>
     <tr>
-        <td><img src=img/docker.png  alt=""></td>
-        <td><img src=img/docker_log.png  alt=""></td>
+        <td><img src=.public/docker.png  alt=""></td>
+        <td><img src=.public/docker_log.png  alt=""></td>
     </tr>
 </table>
 <table>
     <tr>
-        <td><img src=img/province.PNG width="50%" alt=""></td>
-        <td><img src=img/major.PNG width="50%" alt=""></td>
+        <td><img src=.public/province.PNG width="50%" alt=""></td>
+        <td><img src=.public/major.PNG width="50%" alt=""></td>
     </tr>
 </table>
 
