@@ -17,3 +17,8 @@ class API(Enum):
     BIG_DATA_IN_NULL = '/big_data_in_null'  # 大数据在普通院校占比
     ARTIFICIAL_INTELLIGENCE_IN_DUAL = '/artificial_intelligence_in_dual'  # 人工智能在双一流占比
     ARTIFICIAL_INTELLIGENCE_IN_NULL = '/artificial_intelligence_in_null'  # 人工智能在普通院校占比
+
+    @staticmethod
+    def get_api():
+        for api in API:
+            yield api.value

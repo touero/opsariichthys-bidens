@@ -8,4 +8,9 @@ class Driver:
             create_db()
         else:
             import uvicorn
-            uvicorn.run(app='api:app', host="0.0.0.0", port=8000, reload=True)
+            from env import HOST, PORT
+            from api import API
+            from logs import log
+            for api in API.get_api():
+                log(f"http://127.0.0.1:{PORT}{api}")
+            uvicorn.run(app='api:app', host=HOST, port=PORT, reload=True)

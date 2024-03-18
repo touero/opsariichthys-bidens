@@ -23,7 +23,8 @@ def _log_re():
     return logger
 
 
+_logger = _log_re()
+
+
 def log(*args):
-    logger = _log_re()
-    for item in args:
-        logger.info(item)
+    _logger.info(*args)

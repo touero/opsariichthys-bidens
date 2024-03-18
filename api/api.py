@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from sqlalchemy import func, select, and_
 from starlette.responses import JSONResponse
-from logs import async_uvicorn_logger
 
 from database.model import Info, Major, Score
 from database import async_session
 from .constants_api import API
+from logs import async_uvicorn_logger
 
 app = FastAPI()
 
