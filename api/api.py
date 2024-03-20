@@ -1,10 +1,10 @@
-from fastapi import FastAPI, APIRouter, Request
+from fastapi import FastAPI, APIRouter, Request, Depends
 from sqlalchemy import func, select, and_
 from starlette.responses import JSONResponse
 
 from database.model import Info, Major, Score
 from database import async_session
-from .api_core import province
+from .api_core import ApiCore
 from .constants_api import API
 from logs import async_uvicorn_logger
 
@@ -26,11 +26,15 @@ router = APIRouter()
 #         )
 #         result_dict_list = [{'province': row[0], 'count': row[1]} for row in results.all()]
 #         return JSONResponse(content=result_dict_list)
+@app.on_event('startup')
+async def startup():
+    async_uvicorn_logger()
+
 
 @app.get('/{api}')
-async def api(api: str):
+async def api(api: str, api_core=Depends(ApiCore)):
     async with async_session() as session:
-        results = await session.execute(province())
+        results = await session.execute(api_core.dual_class)
         result_dict_list = [{'province': row[0], 'count': row[1]} for row in results.all()]
         return JSONResponse(content=result_dict_list)
 
@@ -266,6 +270,3 @@ async def api(api: str):
 #         return JSONResponse(content={"have_count": have_count, "not_count": not_count})
 
 
-@app.on_event('startup')
-async def startup():
-    async_uvicorn_logger()
