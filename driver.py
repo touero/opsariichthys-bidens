@@ -12,5 +12,5 @@ class Driver:
             from api import API
             from logs import log
             for api in API.get_api():
-                log(f"http://127.0.0.1:{PORT}{api}")
+                log(f"http://127.0.0.1:{PORT}/{api}")
             uvicorn.run(app='api:app', host=HOST, port=PORT, reload=True)
