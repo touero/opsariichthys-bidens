@@ -1,5 +1,5 @@
-from fastapi import FastAPI, Depends
-from sqlalchemy import select
+from fastapi import FastAPI, APIRouter
+from starlette.requests import Request
 from starlette.responses import JSONResponse
 from sqlalchemy.engine.result import ChunkedIteratorResult
 
@@ -7,18 +7,19 @@ from database import async_session
 from .api_core import ApiCore
 from logs import async_uvicorn_logger
 
-app = FastAPI()
+router = APIRouter()
+api_core = ApiCore()
 
 
-@app.on_event('startup')
+@router.on_event('startup')
 async def startup():
     async_uvicorn_logger()
 
 
-@app.get('/{item}')
-async def api(item: str, api_core=Depends(ApiCore)):
+@router.route('/{item}', methods=['GET', 'POST'])
+async def api(item: Request):
     async with async_session() as session:
-        select_result: select = api_core.select_real(item)
+        select_result = api_core(item.path_params['item'])
         if isinstance(select_result, tuple):
             school_ids: ChunkedIteratorResult = await session.execute(select_result[0])
             goals: ChunkedIteratorResult = await session.execute(select_result[1])

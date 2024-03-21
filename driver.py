@@ -11,6 +11,12 @@ class Driver:
             from env import HOST, PORT
             from api import API
             from logs import log
+            import traceback
+
             for api in API.get_api():
                 log(f"http://127.0.0.1:{PORT}/{api}")
-            uvicorn.run(app='api:app', host=HOST, port=PORT, reload=True)
+            try:
+                uvicorn.run(app='api:router', host=HOST, port=PORT, reload=True)
+            except Exception as e:
+                log(str(e))
+                log(traceback.format_exc())

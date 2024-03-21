@@ -48,7 +48,7 @@ class ApiCore:
         return select(Major.school_id, func.count()).where(Major.special_name == f'{special_name}').group_by(
             Major.school_id)
 
-    def select_real(self, api: str) -> select:
+    def __call__(self, api: str):
         if api == API.PROVINCE.value:
             return self.province
         elif api == API.DUAL_CLASS.value:
