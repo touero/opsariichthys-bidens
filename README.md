@@ -58,52 +58,41 @@ This repository contains：
 
 ## Install
 
-This project uses [python](https://www.python.org/) [git](https://git-scm.com/) [ngrok](https://ngrok.com/). Go check them out if you don't have them locally installed.
-
+This project uses [python](https://www.python.org/) [git](https://git-scm.com/). Go check them out if you don't have them locally installed.
 ```shell
 git clone https://github.com/weiensong/opsariichthys-bidens.git
 ```
 
+Creating the virtual environment and activating it.
+```shell
+python -m venv venv && source ./venv/bin/activate
+```
 
+Installing dependencies.
+```shell
+pip install -r requriements.txt
+```
 
 ## Usage
-Create virtual environment installation dependencies
 
+if it is the first time to run, you should create a database in sqlite. In the end, it will be created in `/database`
 ```shell
-python -m venv venv
-source ./venv/bin/activate
-pip install -r requriements.txt
-cd src
+python run.py -c true
 ```
-Data preparing: a mysql image of version 5.7 build a container in docker and executing file of .withDb/AllSchoolAPI.sql.  
-Please waiting info score and major table insert finish, and .withDb name of dir will be mounted to docker. **The process will take 10 minutes**.
-You will see _db.opt nfo.frm info.ibd major.frm major.ibd score.frm score.ibd_ names of file in _/.withDb/mysql/AllSchoolAPI_ 
+
+And then you can run it locally
 ```shell
-python db_in_docker.py
+python run.py
 ```
-Debugging running, default_config is used to configure tasks in local_runner.py
-```shell
-python local_runner.py
-```
+
 If you want to run it in docker
 ```shell
-python flexible_run.py -y your_config.yaml
+python docker_run.py
 ```
-Even if internal network penetration does not need to be enabled, the service can be started, providing penetration examples.  
-Please install ngrok before doing so.  
-Connect your ngrok account
 
-```shell
-ngrok config add-authtoken your_key
-```
-Setting static IP in https://dashboard.ngrok.com/cloud-edge/domains and run it later.
-
-```shell
-ngroks/ngrok http --domain=exciting-physically-escargot.ngrok-free.app 2518
-```
 If you want to use curl to access:
 ```shell
-curl -X POST -H "Content-Type: application/json" -d '{"item": "item"}' http://127.0.0.1:2518/api
+curl -X POST -H "Content-Type: application/json" -d '{"key": "item"}' http://127.0.0.1:2518/api
 ```
 
 ## Related Repository

@@ -1,4 +1,4 @@
-class Driver:
+class LocalDriver:
     def __init__(self, option: bool = False):
         self.option = option
 
