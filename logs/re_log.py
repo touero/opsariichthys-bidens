@@ -9,6 +9,13 @@ def async_uvicorn_logger():
     logger.addHandler(handler)
 
 
+def async_sqlalchemy_logger():
+    logger = logging.getLogger('sqlalchemy.engine')
+    handler = RotatingFileHandler(filename='logs/api.log', mode='a', encoding='UTF-8')
+    handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s %(message)s'))
+    logger.addHandler(handler)
+
+
 def _log_re():
     logger = logging.getLogger('uvicorn.access')
     if not logger.handlers:

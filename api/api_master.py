@@ -6,7 +6,7 @@ from sqlalchemy.engine.result import ChunkedIteratorResult
 
 from database import async_session
 from .api_core import ApiCore
-from logs import async_uvicorn_logger
+from logs import async_uvicorn_logger, async_sqlalchemy_logger
 
 app = FastAPI()
 api_core = ApiCore()
@@ -19,6 +19,7 @@ class ItemRequest(BaseModel):
 @app.on_event('startup')
 async def startup():
     async_uvicorn_logger()
+    async_sqlalchemy_logger()
 
 
 @app.get('/api/{item}')
