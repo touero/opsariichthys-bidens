@@ -86,7 +86,8 @@ python run.py
 ```
 
 If you want to run it in docker
-> [!Important] You should make sure the database is created first.
+> [!Important] 
+> You should make sure the database is created first.
 
 ```shell
 python docker_run.py
