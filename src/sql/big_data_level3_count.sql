@@ -1,1 +1,0 @@
-SELECT level3_name as level3_name, count(*) as times FROM major WHERE major.special_name like "%数据%" GROUP BY level3_name ORDER BY times DESC limit 10;
