@@ -1,7 +1,5 @@
 fastapi==0.95.1
-PyMySQL==1.0.2
 uvicorn~=0.21.1
-
 starlette~=0.26.1
 constants~=0.6.0
 requests~=2.31.0
@@ -10,3 +8,6 @@ pyyaml~=6.0.1
 pydantic~=1.10.12
 pytest~=7.4.3
 easier-docker==2.2.2
+SQLAlchemy==2.0.28
+aiosqlite==0.20.0
+greenlet==3.0.3

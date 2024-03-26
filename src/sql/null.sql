@@ -1,1 +1,0 @@
-select school_id from info where dual_class_name="null";
