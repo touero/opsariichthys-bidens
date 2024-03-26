@@ -93,6 +93,17 @@ If you want to run it in docker
 python docker_run.py
 ```
 
+If you want to build image by yourself.
+```shell
+sudo docker build -t opsariichthys_bidens:lastest .
+```
+
+```shell
+docker run -d -v "$(pwd):/app" -p 2518:2518 --name opsariichthys_bidens opsariichthys_bidens:lastest
+```
+
+
+
 If you want to use curl to access:
 ```shell
 curl -X POST -H "Content-Type: application/json" -d '{"key": "item"}' http://127.0.0.1:2518/api
