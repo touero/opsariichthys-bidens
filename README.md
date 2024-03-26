@@ -75,17 +75,19 @@ pip install -r requriements.txt
 
 ## Usage
 
-if it is the first time to run, you should create a database in sqlite. In the end, it will be created in `/database`
+If it is the first time to run, you should create a database in sqlite. In the end, it will be created in `/database`.
 ```shell
 python run.py -c true
 ```
 
-And then you can run it locally
+And then you can run it locally.
 ```shell
 python run.py
 ```
 
 If you want to run it in docker
+> [!Important] You should make sure the database is created first.
+
 ```shell
 python docker_run.py
 ```
