@@ -1,1 +1,0 @@
-SELECT province_name, dual_class_name FROM info where dual_class_name = "双一流";
