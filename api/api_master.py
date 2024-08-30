@@ -1,15 +1,32 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from starlette.middleware.cors import CORSMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 from sqlalchemy.engine.result import ChunkedIteratorResult
 
 from database import async_session
 from .api_core import ApiCore
+from .constants_api import API
+from env import PORT
 from logs import async_uvicorn_logger, async_sqlalchemy_logger
 
 app = FastAPI()
 api_core = ApiCore()
+
+
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class ItemRequest(BaseModel):
@@ -20,6 +37,21 @@ class ItemRequest(BaseModel):
 async def startup():
     async_uvicorn_logger()
     async_sqlalchemy_logger()
+
+
+@app.get('/all_api')
+async def all_api():
+    full_items: list = []
+    for api_value, api_desc in API.get_api():
+        full_item: dict = {
+            "name": api_value,
+            "url": f"http://127.0.0.1:{PORT}/api/{api_value}",
+            "method": "POST, GET",
+            "desc": str(api_desc)
+        }
+        full_items.append(full_item)
+    result = {"name": "all_api", "data": full_items}
+    return JSONResponse(content=result)
 
 
 @app.get('/api/{item}')

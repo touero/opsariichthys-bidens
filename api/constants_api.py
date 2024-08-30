@@ -19,6 +19,29 @@ class API(Enum):
     ARTIFICIAL_INTELLIGENCE_IN_NULL = 'artificial_intelligence_in_null'  # 人工智能在普通院校占比
 
     @staticmethod
+    def _get_description() -> dict:
+        return {
+            'province': 'Each province contains a university.',
+            'dual_class': 'Each province contains the number of double first-class.',
+            'type': 'School category statistics.',
+            'major': 'All majors statistics.',
+            'admissions': 'Admissions Statistics.',
+            'big_data': 'Statistics of different big data majors.',
+            'big_data_province': 'Statistics of provincial universities including Big data majors.',
+            'big_data_type': 'Statistics of universities in provinces with big data majors.',
+            'big_data_level2': 'Big data secondary category statistics.',
+            'big_data_level3': 'Big data primary category statistics.',
+            'big_data_in_dual': 'Proportion of Big Data in 211/985.',
+            'big_data_in_null': 'The proportion of big data in ordinary colleges and universities.',
+            'artificial_intelligence_in_dual': 'The proportion of artificial intelligence in 211/985.',
+            'artificial_intelligence_in_null': 'The proportion of artificial intelligence in ordinary universities.',
+        }
+
+    def __str__(self):
+        descriptions = self._get_description()
+        return descriptions.get(self.value)
+
+    @staticmethod
     def get_api():
         for api in API:
-            yield api.value
+            yield api.value, api
