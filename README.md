@@ -62,20 +62,12 @@ pip install -r requriements.txt
 
 ## Usage
 
-If it is the first time to run, you should create a database in sqlite. In the end, it will be created in `/database`.
-```shell
-python run.py -c true
-```
-
-And then you can run it locally.
+Running in local machine:
 ```shell
 python run.py
 ```
 
 If you want to run it in docker
-> [!Important] 
-> You should make sure the database is created first.
-
 ```shell
 python docker_run.py
 ```
@@ -88,7 +80,6 @@ sudo docker build -t opsariichthys_bidens:lastest .
 ```shell
 docker run -d -v "$(pwd):/app" -p 2518:2518 --name opsariichthys_bidens opsariichthys_bidens:lastest
 ```
-
 
 
 If you want to use curl to access:
