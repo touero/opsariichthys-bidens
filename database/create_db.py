@@ -5,8 +5,10 @@ from pathlib import Path
 from logs import log
 
 
+db_path = Path('database/all_school.db')
+
+
 def create_db():
-    db_path = Path('database/all_school.db')
     sqlite_path = Path('database/all_school_sqlite.sql')
     if db_path.exists():
         log('Checking sqlite database already exists, skipping creation.')
@@ -20,10 +22,10 @@ def create_db():
         log('Waiting database to be created.')
         cursor = connection.cursor()
         cursor.executescript(sql_commands)
+        log(f'Creating the database successfully in {db_path}.')
     except Exception as e:
         log(traceback.format_exc())
         log(repr(e))
     finally:
         connection.commit()
         connection.close()
-        log(f'Creating the database successfully in {db_path}.')
