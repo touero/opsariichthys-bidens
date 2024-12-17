@@ -89,7 +89,6 @@ curl -X POST -H "Content-Type: application/json" -d '{"key": "item"}' http://127
 
 ## Related Repository
 
-- [python](https://github.com/TheAlgorithms/Python) — All Algorithms implemented in Python
 - [fastapi](https://github.com/tiangolo/fastapi) — FastAPI framework, high performance, easy to learn, fast to code, ready for production
 - [dataease](https://github.com/dataease/dataeasen) — 人人可用的开源数据可视化分析工具
 - [ctenopharyngodon-idella](https://github.com/weiensong/ctenopharyngodon-idella) — Hadoop, MapReduce distributed crawling of all Chinese university data for the handheld college entrance examination. (Hadoop,mapreduce分布式爬取掌上高考的所有中国大学数据)
