@@ -1,0 +1,41 @@
+# Python bytecode files
+__pycache__
+*.pyc
+*.pyo
+
+# Virtual environment
+env/
+venv/
+*.env
+
+# IDE/editor config files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Docker specific files
+.dockerignore
+Dockerfile
+
+# Testing and coverage reports
+.coverage
+nosetests.xml
+pytest_cache/
+cover/
+*.cover
+
+# Temporary files
+*.bak
+*.swp
+*.swo
+
